@@ -8,8 +8,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
     <title>Admission_Form</title>
     <style>
-        .data{
+        /* .data{
             display: flex;
+        } */
+        /* body{
+        background-image: url(../emoji/a1.jpg);
+        background-repeat: no-repeat; 
+        background-size:cover;
+     }
+        label , input , h1 {
+            color: white;
+        } */
+        .personal{
+            margin-top: 7%;
+        }
+        .course{
+            margin-bottom: 7%;
         }
     </style>
 </head>
@@ -18,19 +32,20 @@
 
 
     <div class="personal">
-      <div class="container m-3 p-5 text-dark mx-auto">
-         <form action="" method="POST" enctype="multipart/form-data" class="form-border w-50 bg-info">
+    <!-- background-color:rgba(0, 0, 0, 0.8); -->
+      <div class="container bg-info text-dark" style="border: 0.2px solid black;" >
+         <form action="" method="POST" enctype="multipart/form-data" class="form-border">
                 <div class="row form-head">
-                      <h2 class="text-center col-mg-12 p-1">Personal Details</h2>
+                      <h1 class="text-center col-mg-12 p-1">Personal Details</h1>
                  </div>
                 <div class=" form-row">
-                    <div class="form-group col-mg-12 ">
+                    <div class="form-group  col-sm-12">
                                 <label for="inputName" class="form-check-label">Full_Name</label>
                                 <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-mg-12 ">
+                    <div class="form-group  col-sm-12">
                         <!-- <div class="form-group "> -->
                             <label for="inputAddress" class="form-check-label">Address</label>
                             <input type="text" placeholder="Address" name="Address" class="form-control">
@@ -38,11 +53,11 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col col-sm-6 ">
+                    <div class="form-group  col-sm-6 ">
                         <label for="inputContact" class="form-check-label">Contact_No</label>
                         <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
                     </div>
-                    <div class="form-group col col-sm-6">
+                    <div class="form-group  col-sm-6">
                         <label for="inputDate" class="form-check-label">Date_Of_Birth</label>
                         <input type="date" placeholder="Date_Of_Birth" name="Date_Of_Birth" class="form-control">
                     </div>
@@ -50,7 +65,7 @@
            
 
                 <div class="form-row">
-                    <div class="form-group col col-sm-6">
+                    <div class="form-group  col-sm-6">
                         <label for="">Gender :
                                 <div class="form-check">
                                     <label for="male" class="form-check-label">
@@ -64,7 +79,7 @@
                                 </div>
                         </label>
                     </div>
-                    <div class="form-group col col-sm-6 ">
+                    <div class="form-group  col-sm-6 ">
                         <label for=""> Cast :
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" name="SC" id="SC" value="SC">
@@ -89,17 +104,17 @@
                     </div>
                 </div>
                    <div class="form-row">
-                        <div class="form-group col col-sm-6">
+                        <div class="form-group  col-sm-6">
                             <label for="inputQualification" class="form-check-label">Qualification</label>
                             <input type="text" placeholder="Qualification" name="Qualification" class="form-control">
                         </div>
-                        <div class="form-group col col-sm-6">
+                        <div class="form-group  col-sm-6">
                             <label for="inputOccupation" class="form-check-label">Occupation</label>
                             <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
                         </div>
                    </div>
                
-                    <div class="form-group ">
+                    <div class="form-group  col-sm-12 ">
                             <label for="inputCounselling_By" class="form-check-label">Counselling_By</label>
                             <input type="text" placeholder="Counselling_By" name="Counselling_By" class="form-control">
                     </div>
@@ -107,25 +122,29 @@
           </div>
      </div>
 
+
+     <hr>
+
      <div class="parents">
-       <div class="container m-3 p-5 text-dark mx-auto">
-         <form action="" method="POST" enctype="multipart/form-data" class="form-border w-50 bg-success">
+     <!-- background-color:rgba(0, 0, 0, 0.6);   -->
+       <div class="container bg-info" style="border: 0.2px solid black;">
+         <form action="" method="POST" enctype="multipart/form-data" class="form-border">
                 <div class="row form-head">
-                      <h2 class="text-center col-mg-12 p-1">Parents Details</h2>
+                      <h1 class="text-center col-mg-12 p-1">Parents Details</h1>
                  </div>
               <div class=" form-row">
-                    <div class="form-group col-mg-12  p-1 ">
+                    <div class="form-group  col-sm-12  p-1 ">
                                 <label for="inputName" class="form-check-label">Full_Name</label>
                                 <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
                     </div>
                 </div>
             
               <div class="form-row">
-                    <div class="form-group col col-sm-6">
+                    <div class="form-group  col-sm-6">
                         <label for="inputContact" class="form-check-label">Contact_No</label>
                         <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
                     </div>
-                    <div class="form-group col col-sm-6">
+                    <div class="form-group  col-sm-6">
                         <label for="inputOccupation" class="form-check-label">Occupation</label>
                         <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
                     </div>
@@ -134,14 +153,52 @@
        </div>
      </div>
 
+     <hr>
 
-        <!-- <div class="course">
-         <form action="" method="POST" enctype="multipart/form-data" class="form-border w-80 bg-success">
+        <div class="course">
+        <!-- background-color:rgba(0, 0, 0, 0.6); -->
+       <div class="container bg-info" style="border: 0.2px solid black;">
+         <form action="" method="POST" enctype="multipart/form-data" class="form-border w-80 ">
+                 <div class="row form-head">
+                      <h1 class="text-center col-mg-12 p-1">Course Details</h1>
+                 </div>
+         <div class="form-row">
+                    <div class="form-group  col-sm-6">
+                        <label for="inputFees" class="form-check-label">Fees</label>
+                        <input type="text" placeholder="Fees" name="Fees" class="form-control">
+                    </div>
+                    <div class="form-group  col-sm-6">
+                        <label for="inputDuration" class="form-check-label">Duration</label>
+                        <input type="text" placeholder="Duration" name="Duration" class="form-control">
+                    </div>
+         </div>
 
-         
+             <div class="form-row">
+                    <div class="form-group  col-sm-6">
+                        <label for="inputDiscount" class="form-check-label">Discount</label>
+                        <input type="text" placeholder="Discount" name="Discount" class="form-control">
+                    </div>
+                    <div class="form-group  col-sm-6">
+                        <label for="inputBatch" class="form-check-label">Batch_Time</label>
+                        <input type="text" placeholder="Batch_Time" name="Batch_Time" class="form-control">
+                    </div>
+             </div>
+
+             <div class="form-row">
+                    <div class="form-group  col-sm-6">
+                        <label for="inputNet_Fees" class="form-check-label">Net_Fees</label>
+                        <input type="text" placeholder="Discount" name="Discount" class="form-control">
+                    </div>
+                    <div class="form-group  col-sm-6">
+                        <label for="inputDiscount_Offer" class="form-check-label">Discount_Offer</label>
+                        <input type="text" placeholder="Discount_Offer" name="Discount_Offer" class="form-control">
+                    </div>
+             </div>
+
 
          </form>
-        </div>-->
+        </div>
+        </div>
  
 
 
