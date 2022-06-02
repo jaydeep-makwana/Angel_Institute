@@ -19,19 +19,36 @@
         label , input , h1 {
             color: white;
         } */
-        .personal{
+        .data{
             margin-top: 7%;
+            margin-bottom: 7% ;
+
         }
-        .course{
-            margin-bottom: 7%;
-        }
+        input[type=submit]:hover {
+        background-image:linear-gradient(to bottom, #404040,#317693,#073ca8); 
+
+          }   
+          input[type=submit] {
+            background-image:linear-gradient(to top, #404040,#1282d8); 
+                color: white;
+                padding: 12px 35px;
+                border: none;
+                border-radius: 10%;
+                cursor: pointer;
+                align-items: center;
+                border: 1px solid black;
+           margin-bottom: 4%;
+           margin-top: 5%;
+           margin-left: 45%;
+          /* text-align: center; */
+                }
+        
     </style>
 </head>
 <body>
  <div class="data">  
 
 
-    <div class="personal">
     <!-- background-color:rgba(0, 0, 0, 0.8); -->
       <div class="container bg-info text-dark" style="border: 0.2px solid black;" >
          <form action="" method="POST" enctype="multipart/form-data" class="form-border">
@@ -118,17 +135,11 @@
                             <label for="inputCounselling_By" class="form-check-label">Counselling_By</label>
                             <input type="text" placeholder="Counselling_By" name="Counselling_By" class="form-control">
                     </div>
-             </form>
-          </div>
-     </div>
-
-
-     <hr>
-
-     <div class="parents">
-     <!-- background-color:rgba(0, 0, 0, 0.6);   -->
-       <div class="container bg-info" style="border: 0.2px solid black;">
-         <form action="" method="POST" enctype="multipart/form-data" class="form-border">
+            <br>
+       <hr>
+       <br>
+         <!-- background-color:rgba(0, 0, 0, 0.6);   -->
+      
                 <div class="row form-head">
                       <h1 class="text-center col-mg-12 p-1">Parents Details</h1>
                  </div>
@@ -149,19 +160,24 @@
                         <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
                     </div>
              </div>
-         </form>
-       </div>
-     </div>
-
-     <hr>
-
-        <div class="course">
+       <br>
+       <hr>
+       <br>
         <!-- background-color:rgba(0, 0, 0, 0.6); -->
-       <div class="container bg-info" style="border: 0.2px solid black;">
-         <form action="" method="POST" enctype="multipart/form-data" class="form-border w-80 ">
+       
                  <div class="row form-head">
                       <h1 class="text-center col-mg-12 p-1">Course Details</h1>
                  </div>
+                 <div class="form-row">
+                    <div class="form-group  col-sm-6">
+                        <label for="inputCourse" class="form-check-label">Course</label>
+                        <input type="text" placeholder="Course" name="Course" class="form-control">
+                    </div>
+                    <div class="form-group  col-sm-6">
+                        <label for="inputAuthorisation" class="form-check-label">Authorisation</label>
+                        <input type="text" placeholder="Authorisation" name="Authorisation" class="form-control">
+                    </div>
+             </div>
          <div class="form-row">
                     <div class="form-group  col-sm-6">
                         <label for="inputFees" class="form-check-label">Fees</label>
@@ -195,11 +211,11 @@
                     </div>
              </div>
 
+             <input type="submit" value="Submit">
 
          </form>
         </div>
-        </div>
- 
+        
 
 
  </div>
