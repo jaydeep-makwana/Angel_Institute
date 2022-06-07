@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 Route::view('/', 'demo');
 Route::view('admission', 'Admission_Form');
+Route::view('navbar','navbar');
+Route::view('admin_dashboard','admin_dashboard');
