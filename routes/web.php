@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admisssion_form;
+use App\Http\Controllers\crudcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,7 @@ Route::get('/', function () {
 });
 Route::view('welcome', 'welcome');
 Route::view('navbar','navbar');
-Route::view('admin_dashboard','admin_dashboard');
+// Route::view('admin_dashboard','admin_dashboard');
 Route::post('admission_form',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
+Route::get('admin_dashboard',[crudcontroller::class,'show']);

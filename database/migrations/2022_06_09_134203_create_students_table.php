@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->id('s_id');
             $table->string('Full_Name',100);
             $table->text('Address');
-            $table->bigInteger('Contact_No',10);
+            $table->bigInteger('Contact_No');
             $table->date('BOD');
             $table->string('gender');
             $table->string('cast');

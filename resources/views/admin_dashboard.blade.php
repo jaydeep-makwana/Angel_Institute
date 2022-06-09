@@ -86,8 +86,8 @@
             </div>
         </div> -->
     </div>
-    @foreach($data as $info)
-    <div class="container-fluid">
+
+    <div class="container mr-5">
         <table class="table table-stripped">
             <tr>
                 <!-- personal detail -->
@@ -102,6 +102,8 @@
                 <th>DURATION</th>
                 <th>BATCH TIME</th>
             </tr>
+            @foreach($data as $info)
+
             <tr>
                 <td>{{$info->s_id}}</td>
                 <td>{{$info->Full_Name}}</td>
@@ -114,9 +116,11 @@
                 <td>{{$info->Duration}}</td>
                 <td>{{$info->Batch_Time}}</td>
             </tr>
+            @endforeach
+
         </table>
     </div>
-@endforeach
+
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
