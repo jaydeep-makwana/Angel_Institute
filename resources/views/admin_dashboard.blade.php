@@ -11,7 +11,6 @@
         body {
             font-family: "Lato", sans-serif;
         }
-
         .sidenav {
             height: 100%;
             width: 0;
@@ -48,12 +47,13 @@
 
         #main {
             transition: margin-left .5s;
-            padding: 16px;
+            padding: 11px;
         }
 
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
+
             }
 
             .sidenav a {
@@ -66,7 +66,7 @@
 
 <body>
     <div id="mySidenav" class="sidenav">
-        <span style="cursor:pointer;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+        <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <a href="#">Course</a>
         <a href="#">Batch</a>
         <a href="#">Birthday</a>
@@ -74,7 +74,7 @@
     </div>
 
     <div id="main" class="bg-secondary">
-        <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Angel</span>
+        <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; Angel</span>
         <!-- <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
                 Dropdown button
