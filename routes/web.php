@@ -30,8 +30,5 @@ Route::view('navbar','navbar');
 // Route::view('admin_dashboard','admin_dashboard');
 Route::post('admission_form',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
-<<<<<<< HEAD
-Route::get('admin_dashboard',[crudcontroller::class,'show']);
-=======
+Route::get('admin_dashboard',[operationcontroller::class,'show']);
 
->>>>>>> d388d7efe915d8fb8105fba40a082cd2bdccc599

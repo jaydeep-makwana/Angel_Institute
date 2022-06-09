@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\student;
 use Illuminate\Http\Request;
 
 class operationController extends Controller
@@ -45,7 +46,8 @@ class operationController extends Controller
      */
     public function show($id)
     {
-        //
+        $detail=student::all();
+        return view('admin_dashboard',['data'=>$detail]);
     }
 
     /**
