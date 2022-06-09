@@ -18,7 +18,7 @@
     <nav class="navbar bg-dark">
         <img src="images/logow.png" alt="" height="60px" width="200px">
         <ul class="nav jastify-content-end">
-            <li class="nav-item"><a href="" class="nav-link text-light">Home</a></li>
+            <li class="nav-item"><a href="/" class="nav-link text-light">Home</a></li>
             <li class="nav-item"><a href="" class="nav-link text-light">About</a></li>
             <li class="nav-item"><a href="" class="nav-link text-light">Ragister</a></li>
             <li class="nav-item"><a href="" class="nav-link text-light">Login</a></li>

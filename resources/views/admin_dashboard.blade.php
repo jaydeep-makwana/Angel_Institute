@@ -86,7 +86,37 @@
             </div>
         </div> -->
     </div>
-
+    @foreach($data as $info)
+    <div class="container-fluid">
+        <table class="table table-stripped">
+            <tr>
+                <!-- personal detail -->
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ADRESS</th>
+                <th>CONTACT NO</th>
+                <th>BOD</th>
+                <th>GENDER</th>
+                <th>COURSE</th>
+                <th>FEES</th>
+                <th>DURATION</th>
+                <th>BATCH TIME</th>
+            </tr>
+            <tr>
+                <td>{{$info->s_id}}</td>
+                <td>{{$info->Full_Name}}</td>
+                <td>{{$info->Address}}</td>
+                <td>{{$info->Contact_No}}</td>
+                <td>{{$info->BOD}}</td>
+                <td>{{$info->gender}}</td>
+                <td>{{$info->Course}}</td>
+                <td>{{$info->Fees}}</td>
+                <td>{{$info->Duration}}</td>
+                <td>{{$info->Batch_Time}}</td>
+            </tr>
+        </table>
+    </div>
+@endforeach
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";

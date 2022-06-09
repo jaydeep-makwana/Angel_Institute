@@ -19,4 +19,23 @@ input[type=submit] {
     border: 1px solid black;
     margin-bottom: 4%;
     margin-top: 5%;
+    margin-left:5%; 
+}
+.reset:hover {
+    background-image: linear-gradient(to bottom, #404040, #933131, #a80707);
+    text-decoration: none;
+    color: white;
+}
+.reset{
+    background-image: linear-gradient(to top, #404040, #d81212);
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    align-items: center;
+    border: 1px solid black;
+    margin-bottom: 4%;
+    margin-top: 5%;
+    
 }
