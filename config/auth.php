@@ -1,5 +1,7 @@
 <?php
 
+use SebastianBergmann\CodeCoverage\Driver\Driver;
+use App\Models\admin;
 return [
 
     /*
@@ -40,6 +42,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'webadmin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ]
     ],
 
     /*
@@ -64,6 +70,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\admin::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',

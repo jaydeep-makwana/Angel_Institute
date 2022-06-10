@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\admisssion_form;
 use App\Http\Controllers\operationController;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,8 @@ Route::view('ragister','ragister');
 Route::view('welcome', 'welcome');
 Route::view('navbar','navbar');
 // Route::view('admin_dashboard','admin_dashboard');
-Route::post('admission_form',[admisssion_form::class,'operation']);
+Route::post('add_student',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
 Route::get('admin_dashboard',[operationController::class,'show']);
+Route::post('admin_login',[AdminController::class,'admin_login']);
 
