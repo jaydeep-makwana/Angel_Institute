@@ -88,42 +88,8 @@
         </div> -->
     </div>
     <!-- student table -->
-    <div class="container-fluid p-5">
-        <table class="table table-stripped">
-            <tr class="bg-info">
-                <!-- personal detail -->
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ADRESS</th>
-                <th>CONTACT NO</th>
-                <th>BOD</th>
-                <th>GENDER</th>
-                <th>COURSE</th>
-                <th>FEES</th>
-                <th>DURATION</th>
-                <th>BATCH TIME</th>
-            </tr>
-            @foreach($data as $info)
-
-            <tr>
-                <td>{{$info->s_id}}</td>
-                <td>{{$info->Full_Name}}</td>
-                <td>{{$info->Address}}</td>
-                <td>{{$info->Contact_No}}</td>
-                <td>{{$info->BOD}}</td>
-                <td>{{$info->gender}}</td>
-                <td>{{$info->Course}}</td>
-                <td>{{$info->Fees}}</td>
-                <td>{{$info->Duration}}</td>
-                <td>{{$info->Batch_Time}}</td>
-            </tr>
-            @endforeach
-
-        </table>
-    </div>
-    <!-- course table -->
-    <div class="container-fluid p-5">
-        <table class="table table-stripped">
+    <div class="container-fluid p-5 text-center">
+        <table class="table table-stripped  text-center">
             <tr class="bg-info">
                 <!-- personal detail -->
                 <th>ID</th>
@@ -131,26 +97,25 @@
                 <th>CONTACT NO</th>
                 <th>GENDER</th>
                 <th>COURSE</th>
-                <th>FEES</th>
-                <th>DURATION</th>
-                <th>BATCH TIME</th>
+                <th colspan="3"></th>   
             </tr>
             @foreach($data as $info)
 
             <tr>
                 <td>{{$info->s_id}}</td>
                 <td>{{$info->Full_Name}}</td>
-                <td>{{$info->Contact_No}}</td>
+ x               <td>{{$info->Contact_No}}</td>
                 <td>{{$info->gender}}</td>
                 <td>{{$info->Course}}</td>
-                <td>{{$info->Fees}}</td>
-                <td>{{$info->Duration}}</td>
-                <td>{{$info->Batch_Time}}</td>
+                <td ><a class="btn btn-warning w-75">More Info</a></td>
+                <td ><a class="btn btn-success w-75">Update</a></td>
+                <td ><a class="btn btn-danger w-75">Delete</a></td>
             </tr>
             @endforeach
 
         </table>
     </div>
+
 
     <script>
         function openNav() {

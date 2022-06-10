@@ -20,7 +20,7 @@
         <ul class="nav jastify-content-end">
             <li class="nav-item"><a href="/" class="nav-link text-light">Home</a></li>
             <li class="nav-item"><a href="" class="nav-link text-light">About</a></li>
-            <li class="nav-item"><a href="ragister" class="nav-link text-light">Ragister</a></li>
+            <li class="nav-item"><a href="admission_form" class="nav-link text-light">Add Student</a></li>
             <li class="nav-item"><a href="login" class="nav-link text-light">Login</a></li>
         </ul>
     </nav>

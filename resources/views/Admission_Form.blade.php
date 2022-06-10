@@ -14,9 +14,9 @@
 <body>
 
     @include('navbar')
-    <div class="container-fluid bg-light h-100 p-5">
+    <div class="container-fluid bg-light h-100 p-5 ">
 
-        <form method="POST" enctype="multipart/form-data" class="border">
+        <form method="POST" enctype="multipart/form-data" class="border border-dark p-4">
             @csrf
 
             <div class="row w-100 ">
@@ -210,47 +210,37 @@
 
             <!-- parents details -->
 
-                <div class="row w-50">
-                    <h1 class="ml-auto mr-auto">Parents Details</h1>
-                </div>
-    
-                <div class="row w-50">
+            <div class="row w-100">
 
-                    <div class="col-lg-5">
+                <div class="col-6">
+                <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
+
                         <div class="form-group  ">
                             <label for="inputName" class="form-check-label">Full_Name</label>
                             <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
                         </div>
-                    </div>
 
-                    <div class="col-lg-3">
                         <div class="form-group">
                             <label for="inputContact" class="form-check-label">Contact_No</label>
                             <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
                         </div>
-                    </div>
 
-                    <div class="col-lg-3">
                         <div class="form-group">
                             <label for="inputOccupation" class="form-check-label">Occupation</label>
                             <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
                         </div>
-                    </div>
-
-
+                </div>
+                <div class="col-6 text-right" style="margin-top:15%;">
+                        <input type="submit" value="Submit">
+                        <a href="admission_form" class="reset ml-3">Reset</a>
                 </div>
 
-            
-            <div class="col-lg-4 mt-2 justify-content-center">
-                <input type="submit" value="Submit">
-                <a href="admission_form" class="reset">Reset</a>
             </div>
-
-
-
         </form>
     </div>
-
+    <div class="container p-5">
+        <div class="p-5"></div>
+    </div>
 </body>
 
 </html>
