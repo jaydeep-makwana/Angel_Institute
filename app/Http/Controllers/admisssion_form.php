@@ -13,7 +13,7 @@ class admisssion_form extends Controller
             // personal detail
             'Full_Name' => 'required',
             'Address' => 'required',
-            // 'Contact_No' => 'required | numeric',
+            'Contact_No' => 'required | numeric | digits:10',
             'BOD' => 'required | date',
             'gender' => 'required',
             'cast' => 'required',
@@ -24,12 +24,14 @@ class admisssion_form extends Controller
             // course detail
             'Course' => 'required',
             'Authorisation' => 'required',
-            // 'Fees' => 'required | numeric',
-            // 'Duration' => 'required',
+            'Fees' => 'required | numeric',
+            'Duration' => 'required',
             'Discount' => 'required',
             'Batch_Time' => 'required',
-            'Net_Fees' => 'required'
+            'Net_Fees' => 'required',
+            'Join_Date' => 'required'
         ]);
+
         DB::table('students')->insert([
             // personal detail
             'Full_Name' => $data->input('Full_Name'),
@@ -49,7 +51,8 @@ class admisssion_form extends Controller
             'Discount' => $data->input('Discount'),
             'Batch_Time' => $data->input('Batch_Time'),
             'Net_Fees' => $data->input('Net_Fees'),
-            'Discount_Offer'=>$data->input('Discount_Offer'),
+            'Discount_Offer' => $data->input('Discount_Offer'),
+            'Join_Date' => $data->input('Join_Date'),
         ]);
         return redirect('admin_dashboard');
     }

@@ -16,7 +16,7 @@
     @include('navbar')
     <div class="container-fluid bg-light h-100 p-5">
 
-        <form  method="POST" enctype="multipart/form-data" class="border">
+        <form method="POST" enctype="multipart/form-data" class="border">
             @csrf
 
             <div class="row w-100 ">
@@ -35,27 +35,27 @@
 
                             <div class="form-group  col-sm-12">
                                 <label for="inputName" class="form-check-label">Full_Name</label>
-                                <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
+                                <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control" value="{{old('Full_Name')}}">
                                 <span class="text-danger">@error('Full_Name'){{$message}} @enderror</span>
                             </div>
 
                             <div class="form-group  col-sm-12">
                                 <!-- <div class="form-group "> -->
                                 <label for="inputAddress" class="form-check-label">Address</label>
-                                <textarea name="Address" id="" placeholder="Address" class="form-control"></textarea>
+                                <textarea name="Address" id="" placeholder="Address" class="form-control">{{old('Address')}}</textarea>
                                 <span class="text-danger">@error('Address'){{$message}} @enderror</span>
                                 <!-- </div> -->
                             </div>
 
                             <div class="form-group  col-sm-6 ">
                                 <label for="inputContact" class="form-check-label">Contact_No</label>
-                                <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
+                                <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{old('Contact_No')}}">
                                 <span class="text-danger">@error('Contact_No'){{$message}} @enderror</span>
                             </div>
 
                             <div class="form-group  col-sm-6">
                                 <label for="inputDate" class="form-check-label">Date_Of_Birth</label>
-                                <input type="date" placeholder="Date_Of_Birth" name="BOD" class="form-control">
+                                <input type="date" placeholder="Date_Of_Birth" name="BOD" class="form-control" value="{{old('BOD')}}">
                                 <span class="text-danger">@error('BOD'){{$message}} @enderror</span>
                             </div>
 
@@ -67,12 +67,12 @@
 
                                 <label for="">Gender :</label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="male" value="option1" name="gender">
+                                    <input class="form-check-input" type="radio" id="male" value="male" @if(old('gender')=='male' )checked @endif name="gender">
                                     <label class="form-check-label" for="male">Male</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="female" value="option1" name="gender">
+                                    <input class="form-check-input" type="radio" id="female" value="female" @if(old('gender')=='female' )checked @endif name="gender">
                                     <label class="form-check-label" for="female">Female</label>
                                 </div>
                                 <span class="text-danger">@error('gender'){{$message}} @enderror</span>
@@ -83,22 +83,22 @@
 
                                 <label for=""> Cast :</label>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" name="cast" id="SC" value="SC">
+                                    <input type="radio" class="form-check-input" name="cast" id="SC" value="SC" @if(old('gender')=='male' )checked @endif>
                                     <label for="SC" class="form-check-label">SC</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" name="cast" id="ST" value="ST">
+                                    <input type="radio" class="form-check-input" name="cast" id="ST" value="ST" @if(old('gender')=='male' )checked @endif>
                                     <label for="ST" class="form-check-label">ST</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" name="cast" id="OBC" value="OBC">
+                                    <input type="radio" class="form-check-input" name="cast" id="OBC" value="OBC" @if(old('gender')=='male' )checked @endif>
                                     <label for="OBC" class="form-check-label">OBC</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" name="cast" id="Gen" value="Gen">
+                                    <input type="radio" class="form-check-input" name="cast" id="Gen" value="Gen" @if(old('gender')=='male' )checked @endif>
                                     <label for="Gen" class="form-check-label">Gen</label>
                                 </div>
                                 <span class="text-danger">@error('cast'){{$message}} @enderror</span>
@@ -194,6 +194,11 @@
                                     <input type="text" placeholder="Discount_Offer" name="Discount_Offer" class="form-control">
                                     <span class="text-danger">@error('Discount_Offer'){{$message}} @enderror</span>
                                 </div>
+                                <div class="form-group">
+                                    <label for="inputJoin_Date" class="form-check-label">Join Date :</label>
+                                    <input type="date" placeholder="Join_Date" name="Join_Date" class="form-control">
+                                    <span class="text-danger">@error('Join_Date'){{$message}} @enderror</span>
+                                </div>
 
                             </div>
 
@@ -204,7 +209,7 @@
             </div>
             <div class="col-lg-4 mt-2 justify-content-center">
                 <input type="submit" value="Submit">
-               <a href="admission_form" class="reset">Reset</a>
+                <a href="admission_form" class="reset">Reset</a>
             </div>
 
 
