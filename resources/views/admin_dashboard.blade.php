@@ -87,7 +87,7 @@
         </div> -->
     </div>
 
-    <div class="container mr-5">
+    <div class="container-fluid p-0 text-center">
         <table class="table table-stripped">
             <tr>
                 <!-- personal detail -->

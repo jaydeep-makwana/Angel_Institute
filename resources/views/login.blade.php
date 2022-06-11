@@ -22,13 +22,13 @@
             <div class="col-md-6 bg-white p-5">
                 <h3 class="pb-3">Login Form</h3>
                 <div class="form-style">
-                    @csrf 
-                    <form method="" action="">
+                    <form method="post" action="admin_login">
+                        @csrf
                         <div class="form-group pb-3">
-                            <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" name="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="form-group pb-3">
-                            <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <!-- <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span class="pl-2 font-weight-bold">Remember Me</span></div>
