@@ -11,6 +11,7 @@
         body {
             font-family: "Lato", sans-serif;
         }
+
         .sidenav {
             height: 100%;
             width: 0;
@@ -68,7 +69,7 @@
     <div id="mySidenav" class="sidenav">
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <a href="#">Course</a>
-        <a href="#">Batch</a>
+        <a href="#" id="batch">Batch</a>
         <a href="#">Birthday</a>
         <a href="#">Fees</a>
     </div>
@@ -86,10 +87,15 @@
             </div>
         </div> -->
     </div>
+<<<<<<< HEAD
 
     <div class="container-fluid p-0 text-center">
+=======
+    <!-- student table -->
+    <div class="container-fluid p-5">
+>>>>>>> a467740b8ebe8364841ae7bdbdf64401f4406819
         <table class="table table-stripped">
-            <tr>
+            <tr class="bg-info">
                 <!-- personal detail -->
                 <th>ID</th>
                 <th>NAME</th>
@@ -110,6 +116,36 @@
                 <td>{{$info->Address}}</td>
                 <td>{{$info->Contact_No}}</td>
                 <td>{{$info->BOD}}</td>
+                <td>{{$info->gender}}</td>
+                <td>{{$info->Course}}</td>
+                <td>{{$info->Fees}}</td>
+                <td>{{$info->Duration}}</td>
+                <td>{{$info->Batch_Time}}</td>
+            </tr>
+            @endforeach
+
+        </table>
+    </div>
+    <!-- course table -->
+    <div class="container-fluid p-5">
+        <table class="table table-stripped">
+            <tr class="bg-info">
+                <!-- personal detail -->
+                <th>ID</th>
+                <th>NAME</th>
+                <th>CONTACT NO</th>
+                <th>GENDER</th>
+                <th>COURSE</th>
+                <th>FEES</th>
+                <th>DURATION</th>
+                <th>BATCH TIME</th>
+            </tr>
+            @foreach($data as $info)
+
+            <tr>
+                <td>{{$info->s_id}}</td>
+                <td>{{$info->Full_Name}}</td>
+                <td>{{$info->Contact_No}}</td>
                 <td>{{$info->gender}}</td>
                 <td>{{$info->Course}}</td>
                 <td>{{$info->Fees}}</td>
