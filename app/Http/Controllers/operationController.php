@@ -47,7 +47,7 @@ class operationController extends Controller
     public function show()
     {
         $detail=student::all();
-        return view('admin_dashboard',['data'=>$detail]);
+        return view('Dashboard.admin_dashboard',['data'=>$detail]);
     }
 
     /**
