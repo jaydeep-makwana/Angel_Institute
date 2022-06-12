@@ -20,14 +20,12 @@ Route::get('/', function () {
     return view('demo');
 });
 Route::view('/', 'home');
-Route::view('admission', 'Admission_Form');
 Route::view('navbar','navbar');
+Route::view('signup','admin_signup');
 Route::view('login','login');
 Route::view('ragister','ragister');
 
-Route::view('welcome', 'welcome');
 Route::view('navbar','navbar');
-// Route::view('admin_dashboard','admin_dashboard');
 Route::post('add_student',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
 Route::get('admin_dashboard',[operationController::class,'show']);

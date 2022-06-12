@@ -13,7 +13,7 @@ class admisssion_form extends Controller
             // personal detail
             'Full_Name' => 'required',
             'Address' => 'required',
-            'Contact_No' => 'required | numeric | digits:10',
+            'ContactNo' => 'required | numeric | digits:10',
             'BOD' => 'required | date',
             'gender' => 'required',
             'cast' => 'required',

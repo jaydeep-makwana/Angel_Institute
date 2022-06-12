@@ -16,11 +16,7 @@
     @include('navbar')
     <div class="container-fluid bg-light h-100 p-5 ">
 
-<<<<<<< HEAD
-        <form method="POST" enctype="multipart/form-data" class="border border-dark p-4">
-=======
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
->>>>>>> a4f9fc2539ea14338d78a929b916b08b78b8d882
             @csrf
 
             <div class="row w-100 ">
@@ -39,7 +35,7 @@
 
                             <div class="form-group  col-sm-12">
                                 <label for="inputName" class="form-check-label">Full_Name</label>
-                                <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control" value="{{old('Full_Name')}}">
+                                <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control" value="{{ old('Full_Name') }}">
                                 <span class="text-danger">@error('Full_Name'){{$message}} @enderror</span>
                             </div>
 
@@ -53,8 +49,8 @@
 
                             <div class="form-group  col-sm-6 ">
                                 <label for="inputContact" class="form-check-label">Contact_No</label>
-                                <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{old('Contact_No')}}">
-                                <span class="text-danger">@error('Contact_No'){{$message}} @enderror</span>
+                                <input type="text" placeholder="Contact_No" name="ContactNo" class="form-control" value="{{old('ContactNo')}}">
+                                <span class="text-danger">@error('ContactNo'){{$message}} @enderror</span>
                             </div>
 
                             <div class="form-group  col-sm-6">
@@ -214,29 +210,29 @@
 
             <!-- parents details -->
 
-            <div class="row w-100">
+            <div class="row w-100 ml-2">
 
                 <div class="col-6">
-                <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
+                    <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
 
-                        <div class="form-group  ">
-                            <label for="inputName" class="form-check-label">Full_Name</label>
-                            <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
-                        </div>
+                    <div class="form-group  ">
+                        <label for="inputName" class="form-check-label">Full_Name</label>
+                        <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="inputContact" class="form-check-label">Contact_No</label>
-                            <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
-                        </div>
+                    <div class="form-group">
+                        <label for="inputContact" class="form-check-label">Contact_No</label>
+                        <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="inputOccupation" class="form-check-label">Occupation</label>
-                            <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
-                        </div>
+                    <div class="form-group">
+                        <label for="inputOccupation" class="form-check-label">Occupation</label>
+                        <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
+                    </div>
                 </div>
                 <div class="col-6 text-right" style="margin-top:15%;">
-                        <input type="submit" value="Submit">
-                        <a href="admission_form" class="reset ml-3">Reset</a>
+                    <input type="submit" value="Submit">
+                    <a href="admission_form" class="reset ml-3 text-light">Reset</a>
                 </div>
 
             </div>

@@ -8,13 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    function admin_login(Request $input){
-        if(Auth::attempt($input->only('email','password'))){
+    function admin_login(Request $input)
+    {
+        $input->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
 
-            return  'admin logged';
-        }else{
-            return redirect('login');
+        if (Auth::guard('admin')->attempt($input->only('email', 'password'))) {
+
+
+            echo  'admin logged';
+        } else {
+            return  $input->input();
         }
-        
     }
 }
