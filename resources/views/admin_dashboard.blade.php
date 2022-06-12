@@ -66,6 +66,7 @@
 </head>
 
 <body>
+    
     <div id="mySidenav" class="sidenav">
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <a href="#">Course</a>
@@ -87,7 +88,7 @@
             </div>
         </div> -->
     </div>
-<<<<<<< HEAD
+
 
     <div class="container-fluid p-0 text-center">
         <!-- student table -->
@@ -167,51 +168,51 @@
                         document.getElementById("main").style.marginLeft = "0";
                     }
                 </script>
-=======
-    <div class="container-fluid p-0 text-center">
 
-        <!-- course table -->
-        <div class="container-fluid p-5">
-            <table class="table table-stripped">
-                <tr class="bg-info">
-                    <!-- personal detail -->
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>CONTACT NO</th>
-                    <th>GENDER</th>
-                    <th>COURSE</th>
-                    <th colspan="3"></th>
-                </tr>
-                @foreach($data as $info)
+                <div class="container-fluid p-0 text-center">
 
-                <tr>
-                    <td>{{$info->s_id}}</td>
-                    <td>{{$info->Full_Name}}</td>
-                    <td>{{$info->Contact_No}}</td>
-                    <td>{{$info->gender}}</td>
-                    <td>{{$info->Course}}</td>
-                    <td><a class="btn btn-warning w-75">More Info</a></td>
-                    <td><a class="btn btn-success w-75">Update</a></td>
-                    <td><a class="btn btn-danger w-75">Delete</a></td>
-                </tr>
-                @endforeach
+                    <!-- course table -->
+                    <div class="container-fluid p-5">
+                        <table class="table table-stripped">
+                            <tr class="bg-info">
+                                <!-- personal detail -->
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>CONTACT NO</th>
+                                <th>GENDER</th>
+                                <th>COURSE</th>
+                                <th colspan="3"></th>
+                            </tr>
+                            @foreach($data as $info)
 
-            </table>
-        </div>
+                            <tr>
+                                <td>{{$info->s_id}}</td>
+                                <td>{{$info->Full_Name}}</td>
+                                <td>{{$info->Contact_No}}</td>
+                                <td>{{$info->gender}}</td>
+                                <td>{{$info->Course}}</td>
+                                <td><a class="btn btn-warning w-75">More Info</a></td>
+                                <td><a class="btn btn-success w-75">Update</a></td>
+                                <td><a class="btn btn-danger w-75">Delete</a></td>
+                            </tr>
+                            @endforeach
+
+                        </table>
+                    </div>
 
 
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-            }
+                    <script>
+                        function openNav() {
+                            document.getElementById("mySidenav").style.width = "250px";
+                            document.getElementById("main").style.marginLeft = "250px";
+                        }
 
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
->>>>>>> 68595553757158e34d8678b0a8c7802715594803
+                        function closeNav() {
+                            document.getElementById("mySidenav").style.width = "0";
+                            document.getElementById("main").style.marginLeft = "0";
+                        }
+                    </script>
+
 
 
 
