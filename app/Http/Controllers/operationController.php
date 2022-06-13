@@ -116,13 +116,7 @@ class operationController extends Controller
     {
         $birthday = DB::table('students')->where('BOD',date('Y-m-d'))->get();
   
-        if (count($birthday) != 0) {
-           return $birthday;
-
-        } else{
-            
-            return 'today is not have birth day of any student';
-        }
+      return view('Dashboard.birthday',['birthdays'=>$birthday]);
         
     }
     
