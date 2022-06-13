@@ -24,6 +24,7 @@ Route::view('navbar','navbar');
 Route::view('signup','admin_signup');
 Route::view('login','login');
 Route::view('ragister','ragister');
+Route::get('bDay',[operationController::class,'find_bDay']);
 
 Route::view('navbar','navbar');
 Route::post('add_student',[admisssion_form::class,'operation']);

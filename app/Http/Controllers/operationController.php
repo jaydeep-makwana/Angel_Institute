@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class operationController extends Controller
 {
@@ -83,4 +84,18 @@ class operationController extends Controller
     {
         //
     }
+    
+    public function find_bDay()
+    {
+        $birthday = DB::table('students')->where('BOD',date('Y-m-d'))->get();
+  
+        if (count($birthday) != 0) {
+           return $birthday;
+        } else {
+            
+            return 'today is not have birth day of any student';
+        }
+        
+    }
+    
 }
