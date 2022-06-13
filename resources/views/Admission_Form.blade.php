@@ -18,7 +18,7 @@
 
 
        
-        <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
+        <form action="add_student" method="POST" enctype="multipart/form-data" class="border mb-5 shadow-lg">
 
             @csrf
 
@@ -197,28 +197,11 @@
                 <div class="col-6">
                     <h1 class="ml-auto mr-auto text-center font-weight-bold">Parents Details</h1>
 
-<<<<<<< HEAD
-                    <div class="form-group">
-=======
-                        <div class="form-group  ">
-                            <label for="inputName" class="form-check-label">Full_Name</label>
-                            <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="inputContact" class="form-check-label">Contact_No</label>
-                            <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="inputOccupation" class="form-check-label">Occupation</label>
-                            <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control">
-                        </div>
                     <div class="form-group  ">
->>>>>>> 72ea5478327476e36449ae5fef18700239996e73
+
                         <label for="inputName" class="form-check-label">Full_Name</label>
                         <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
-                    </div>
+                   </div>
 
                     <div class="form-group">
                         <label for="inputContact" class="form-check-label">Contact_No</label>
