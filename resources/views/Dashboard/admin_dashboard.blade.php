@@ -76,8 +76,8 @@
                     <td>{{$info->gender}}</td>
                     <td>{{$info->Course}}</td>
                     <td><a class="btn btn-warning w-75">More Info</a></td>
-                    <td><a class="btn btn-success w-75">Update</a></td>
-                    <td><a class="btn btn-danger w-75">Delete</a></td>
+                    <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success w-75">Update</a></td>
+                    <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger w-75">Delete</a></td>
                 </tr>
                 @endforeach
         </tbody>
