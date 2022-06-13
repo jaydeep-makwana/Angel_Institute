@@ -20,29 +20,29 @@
              <div class="col-md-6 bg-white p-5">
                  <h3 class="pb-3 font-weight-bold">ADMIN</h3>
                  <div class="form-style">
-                     <form action="admin_login" method="post">
+                     <form action="admin_signup" method="post">
 
                          @csrf
                          <div class="form-group">
-                             <input type="text" class="form-control" placeholder="First name">
+                             <input type="text" class="form-control" placeholder="First name" name="fname">
                          </div>
                          <div class="form-group">
-                             <input type="text" class="form-control" placeholder="Last name">
+                             <input type="text" class="form-control" placeholder="Last name" name="lname">
                          </div>
                          <div class="form-group">
-                             <input type="text" class="form-control jk" placeholder="Phone">
+                             <input type="text" class="form-control jk" placeholder="Phone" name="phone">
                          </div>
                          <div class="form-group">
-                             <input type="email" class="form-control lm" placeholder="Example@gmail.com">
+                             <input type="email" class="form-control lm" placeholder="Example@gmail.com" name="email">
                          </div>
                          <div class="form-group">
-                             <input type="password" class="form-control" placeholder="Password">
+                             <input type="password" class="form-control" placeholder="Password" name="password">
                          </div>
                          <div class="form-group">
-                             <input type="password" class="form-control" placeholder="Confirm Password">
+                             <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password">
                          </div>
                          <div class="form-group">
-                             <input type="text" class="form-control" placeholder="Approval Code">
+                             <input type="text" class="form-control" placeholder="Approval Code" name="code">
                          </div>
                          <div class="form-group">
                              <button type="submit" class="btn btn-primary"><span>Create account</span></button>

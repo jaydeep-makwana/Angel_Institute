@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin_login;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\admisssion_form;
 use App\Http\Controllers\operationController;
@@ -22,15 +23,21 @@ Route::get('/', function () {
 Route::view('/', 'home');
 Route::view('navbar','navbar');
 Route::view('signup','admin_signup');
-Route::view('login','login');
 Route::view('ragister','ragister');
+
+//birthday
 Route::get('bDay',[operationController::class,'find_bDay']);
 
-Route::view('navbar','navbar');
+//addmission
 Route::post('admission_form',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
+
+//admin_login with signUP
+Route::post('admin_signup',[AdminController::class,'admin_login']);
+Route::post('admin_login',[admin_login::class,'login']);
+
+Route::view('login','login');
 Route::get('admin_dashboard',[operationController::class,'show']);
-Route::post('admin_login',[AdminController::class,'admin_login']);
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);

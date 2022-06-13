@@ -14,6 +14,16 @@
 <body>
 
     @include('navbar')
+
+
+    <div class="col-lg-4 mx-auto">
+        @if(session('status'))
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> {{session('status')}}
+        </div>
+        @endif
+    </div>
+    
     <div class="container">
         <div class="row m-5 no-gutters shadow-lg">
             <div class="col-md-6 d-none d-md-block">

@@ -26,7 +26,7 @@
         <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; Angel</span>
     </div> -->
 
-    <div class="container-fluid p-0 text-center">
+    <div class="container-fluid p-0 text-center" id="main">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <span style="font-size:25px;cursor:pointer;" class="mr-2" onclick="openNav()">&#9776;</span>
@@ -46,9 +46,8 @@
 
             </div>
         </nav>
-    </div>
 
-        <!-- student table -->
+<!-- student table -->
 <div class="container">
         <table class="table table-stripped  text-center">
             <thead>
@@ -60,6 +59,7 @@
                     <th>Contact No.</th>
                     <th>Gender</th>
                     <th>Course</th>
+                    <th>Duration</th>
                     <th>More Info</th>
                     <th>Update</th>
                     <th>Delete</th>
@@ -75,6 +75,7 @@
                     <td>{{$info->Contact_No}}</td>
                     <td>{{$info->gender}}</td>
                     <td>{{$info->Course}}</td>
+                    <td>{{$info->Duration}}</td>
                     <td><a class="btn btn-warning w-75">More Info</a></td>
                     <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success w-75">Update</a></td>
                     <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger w-75">Delete</a></td>
@@ -82,9 +83,8 @@
                 @endforeach
         </tbody>
         </table>
-
 </div>
-
+</div>
 
 
     <script>

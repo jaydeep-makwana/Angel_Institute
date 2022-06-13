@@ -16,15 +16,13 @@
     @include('navbar')
     <div class="container-fluid bg-light h-100 p-5 ">
 
-<<<<<<< HEAD
 
        
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border mb-5 shadow-lg">
 
-=======
+
         <form action="admission_form" method="POST" enctype="multipart/form-data" class="border">
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
->>>>>>> 8af3179964b44a41d79a81a2c904a240b9d8da87
             @csrf
 
             <div class="row w-100 ">
@@ -221,7 +219,6 @@
                 <div class="col-6">
                     <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
 
-<<<<<<< HEAD
                     <div class="form-group  ">
 
                         <label for="inputName" class="form-check-label">Full_Name</label>
@@ -237,7 +234,6 @@
                         <label for="inputOccupation" class="form-check-label">Occupation</label>
                         <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
                     </div>
-=======
                         <div class="form-group  ">
                             <label for="inputName" class="form-check-label">Full_Name</label>
                             <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
@@ -253,7 +249,6 @@
                             <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{old('parent_Occupation')}}">
                         </div>
                     
->>>>>>> 8af3179964b44a41d79a81a2c904a240b9d8da87
                 </div>
                 <div class="col-6 text-right" style="margin-top:15%;">
                     <input type="submit" value="Submit">

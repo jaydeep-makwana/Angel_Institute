@@ -22,7 +22,7 @@
         <a href="#">Fees</a>
     </div>
 
-    <div class="container-fluid p-0 text-center">
+    <div class="container-fluid p-0 text-center" id="main">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <span style="font-size:25px;cursor:pointer;" class="mr-2" onclick="openNav()">&#9776;</span>
