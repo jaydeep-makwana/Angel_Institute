@@ -96,7 +96,7 @@
 <body>
     @include('navbar');
     <div class="container d-flex justify-content-center my-5">
-        <div class="row my-2 mx-2 main">
+        <div class="row my-2 mx-2 main shadow-lg">
             <!--left-column-->
             <div class="col-md-4 col-12 mycol">
                 <!--image-->
