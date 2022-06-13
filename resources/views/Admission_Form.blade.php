@@ -41,16 +41,14 @@
                             </div>
 
                             <div class="form-group  col-sm-12">
-                                <!-- <div class="form-group "> -->
                                 <label for="inputAddress" class="form-check-label">Address</label>
                                 <textarea name="Address" id="" placeholder="Address" class="form-control">{{old('Address')}}</textarea>
                                 <span class="text-danger">@error('Address'){{$message}} @enderror</span>
-                                <!-- </div> -->
                             </div>
 
                             <div class="form-group  col-sm-6 ">
                                 <label for="inputContact" class="form-check-label">Contact_No</label>
-                                <input type="text" placeholder="Contact_No" name="ContactNo" class="form-control" value="{{old('ContactNo')}}">
+                                <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{old('ContactNo')}}">
                                 <span class="text-danger">@error('ContactNo'){{$message}} @enderror</span>
                             </div>
 
@@ -218,32 +216,19 @@
 
                         <div class="form-group  ">
                             <label for="inputName" class="form-check-label">Full_Name</label>
-                            <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control">
+                            <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
                         </div>
 
                         <div class="form-group">
                             <label for="inputContact" class="form-check-label">Contact_No</label>
-                            <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control">
+                            <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control" value="{{old('parent_Contact')}}">
                         </div>
 
                         <div class="form-group">
                             <label for="inputOccupation" class="form-check-label">Occupation</label>
-                            <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control">
+                            <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{old('parent_Occupation')}}">
                         </div>
-                    <div class="form-group  ">
-                        <label for="inputName" class="form-check-label">Full_Name</label>
-                        <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputContact" class="form-check-label">Contact_No</label>
-                        <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputOccupation" class="form-check-label">Occupation</label>
-                        <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
-                    </div>
+                    
                 </div>
                 <div class="col-6 text-right" style="margin-top:15%;">
                     <input type="submit" value="Submit">
