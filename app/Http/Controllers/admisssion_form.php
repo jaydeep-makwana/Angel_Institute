@@ -43,7 +43,7 @@ class admisssion_form extends Controller
             'Qualification' => $data->input('Qualification'),
             'Occupation' => $data->input('Occupation'),
             'Counselling_By' => $data->input('Counselling_By'),
-            //   course deatai 
+            //   course detail 
             'Course' => $data->input('Course'),
             'Authorisation' => $data->input('Authorisation'),
             'Fees' => $data->input('Fees'),

@@ -46,9 +46,10 @@
 
             </div>
         </nav>
+    </div>
 
         <!-- student table -->
-
+<div class="container">
         <table class="table table-stripped  text-center">
             <thead>
 
@@ -82,7 +83,7 @@
         </tbody>
         </table>
 
-    </div>
+</div>
 
 
 
