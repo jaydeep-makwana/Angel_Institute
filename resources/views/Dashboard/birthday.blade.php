@@ -43,50 +43,34 @@
             </div>
         </nav>
 
+        <div class="container mt-5">
 
+            @if(count($birthdays) != 0)
+            @foreach($birthdays as $student)
+            <div class="alert alert-success" role="alert">
+              <h3>Today is <span class="text-success">{{$student->Full_Name}}'s</span> Birthday </h3>  
+            </div>
+            @endforeach
+            @else
+            <div class="alert alert-warning" role="alert">
+                Today is not a student's birthday
+            </div>
+            @endif
+
+        </div>
     </div>
-    <!-- student table -->
 
-    <table class="table table-stripped  text-center">
-        <thead>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
 
-            <tr class="bg-primary text-light">
-
-                <th>Id</th>
-                <th>Name</th>
-                <th>BOD</th>
-                <th>Course</th>
-                <th>Batch-Time</th>
-            </tr>
-        </thead>
-
-        <tbody>
-                @foreach($data as $info)
-
-                <tr>
-                    <td>{{$info->s_id}}</td>
-                    <td>{{$info->Full_Name}}</td>
-                    <td>{{$info->BOD}}</td>
-                    <td>{{$info->Course}}</td>
-                    <td>{{$info->Batch-Time}}</td>
-                </tr>
-                @endforeach
-        </tbody>
-        </table>
-
-
-
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
 </body>
 
 </html>
