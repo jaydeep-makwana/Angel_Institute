@@ -47,12 +47,9 @@
             </div>
         </nav>
 
-
         <!-- student table -->
 
         <table class="table table-stripped  text-center">
-
-
             <thead>
 
                 <tr class="bg-primary text-light">
@@ -82,10 +79,8 @@
                     <td><a class="btn btn-danger w-75">Delete</a></td>
                 </tr>
                 @endforeach
-            </tbody>
-
+        </tbody>
         </table>
-
 
     </div>
 

@@ -91,7 +91,8 @@ class operationController extends Controller
   
         if (count($birthday) != 0) {
            return $birthday;
-        } else {
+
+        } else{
             
             return 'today is not have birth day of any student';
         }
