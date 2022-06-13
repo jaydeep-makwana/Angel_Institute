@@ -33,6 +33,9 @@ class CreateStudentsTable extends Migration
             $table->integer('Net_Fees');
             $table->string('Discount_Offer');
             $table->date('Join_Date');
+            $table->string('parent_Name');
+            $table->string('parent_Contact');
+            $table->string('parent_Occupation');
             $table->timestamps();
         });
     }
