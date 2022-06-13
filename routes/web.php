@@ -27,8 +27,13 @@ Route::view('ragister','ragister');
 Route::get('bDay',[operationController::class,'find_bDay']);
 
 Route::view('navbar','navbar');
-Route::post('add_student',[admisssion_form::class,'operation']);
+Route::post('admission_form',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
 Route::get('admin_dashboard',[operationController::class,'show']);
 Route::post('admin_login',[AdminController::class,'admin_login']);
+// update route
+Route::get('edit/{id}',[operationController::class,'edit']);
+Route::put('edit/{id}',[operationController::class,'update']);
+// delete route
+Route::get('delete/{id}',[operationController::class,'destroy']);
 
