@@ -12,18 +12,20 @@ class AdminController extends Controller
     function admin_login(Request $input)
     {
         $input->validate([
-            'fname' => 'required | min:14 | max:20',
-            'lname' => 'required | min:20 | max:24',
-            'email' => 'required',
-            'password' => 'required',
-            'confirm_passsword' =>  'required | same:password',
-            'code' => 'required'
+            // 'fname' => 'required | min:14 | max:20',
+            // 'lname' => 'required | min:20 | max:24',
+            // 'phone' => 'required',
+            // 'email' => 'required',
+            // 'password' => 'required',
+            // 'confirm_passsword' =>  'required | same:password',
+            // 'code' => 'required'
         ]);
 
         DB::table('admins')->insert([
 
             'fname' => $input->input('fname'),
             'lname' => $input->input('lname'),
+            'phone' => $input->input('phone'),
             'email' => $input->input('email'),
             'password' => $input->input('password'),
             'confirm_password' => $input->input('confirm_password'),
@@ -38,5 +40,24 @@ class AdminController extends Controller
         //     return  $input->input();
         // }
         return redirect('login')->with('status','you are successfully ragistered..');
+    }
+
+    function login(Request $data)
+    {
+        $data->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+        if($data = DB::table('admins')->where('email')->get())
+        
+        {
+            $data->session()->put('admin', "ADMIN");
+            return redirect('admin_dashboard');
+        }
+        else{
+            $data->session()->put('email', $data['email']);
+            return redirect('admin_dashboard');
+        }
     }
 }

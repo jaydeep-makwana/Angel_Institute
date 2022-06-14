@@ -17,6 +17,7 @@ class CreateAdminsTable extends Migration
             $table->id('admin_id');
             $table->string('fname',50);
             $table->string('lname',50);
+            $table->bigInteger('phone');
             $table->string('email',50);
             $table->string('password',10);
             $table->string('confirm_password',10);

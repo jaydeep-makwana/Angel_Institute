@@ -34,9 +34,10 @@ Route::view('admission_form', 'Admission_Form');
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
-Route::post('admin_login',[admin_login::class,'login']);
-
 Route::view('login','login');
+Route::post('admin_login',[AdminController::class,'login']);
+
+
 Route::get('admin_dashboard',[operationController::class,'show']);
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);
