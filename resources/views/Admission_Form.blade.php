@@ -16,9 +16,19 @@
     @include('navbar')
     <div class="container-fluid  h-100 p-5 ">
 
+<<<<<<< HEAD
 
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
 
+=======
+<<<<<<< HEAD
+     
+       <form action="admission_form" method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
+
+=======
+        <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
+>>>>>>> ddd1cc60ac0e548f42093c28231de5426a96f066
+>>>>>>> bec846730d0eb028f159c06d1837bb82a73b8d7c
             @csrf
 
             <div class="row w-100 ">
@@ -27,7 +37,7 @@
 
 
                     <div class="row w-100">
-                        <h1 class="mr-auto ml-auto p-1">Personal Details</h1>
+                        <h1 class="mr-auto ml-auto p-3">Personal Details</h1>
                     </div>
 
 
@@ -47,13 +57,13 @@
                                 <span class="text-danger">@error('Address'){{$message}} @enderror</span>
                             </div>
 
-                            <div class="form-group  col-sm-6 ">
+                            <div class="form-group  col-sm-12 ">
                                 <label for="inputContact" class="form-check-label">Contact_No</label>
                                 <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{old('ContactNo')}}">
                                 <span class="text-danger">@error('ContactNo'){{$message}} @enderror</span>
                             </div>
 
-                            <div class="form-group  col-sm-6">
+                            <div class="form-group  col-sm-12">
                                 <label for="inputDate" class="form-check-label">Date_Of_Birth</label>
                                 <input type="date" placeholder="Date_Of_Birth" name="BOD" class="form-control" value="{{old('BOD')}}">
                                 <span class="text-danger">@error('BOD'){{$message}} @enderror</span>
@@ -135,7 +145,7 @@
                     <div class="row w-100 ml-2">
 
                         <div class="row w-100">
-                            <h1 class="mr-auto ml-auto">Course Details</h1>
+                            <h1 class="mr-auto ml-auto p-3">Course Details</h1>
                         </div>
 
 
@@ -144,8 +154,14 @@
                             <div class="col-lg-6">
 
                                 <div class="form-group">
-                                    <label for="inputCourse" class="form-check-label">Course</label>
-                                    <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}">
+                                    <label for="Course" class="form-check-label">Course</label>
+                                    <!-- <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}"> -->
+                                    <select name="Course" class="form-control" id="Course">
+                                            <option value="" selected disabled>-->Choose Courses--</option>
+                                            <option value="Full_Stake" @if(old('Course')=='Full_Stake' )checked @endif>Full Stake</option>
+                                            <option value="Web_Development" @if(old('Course')=='Web_Development' )checked @endif>Web Development</option>
+                                            <option value="Web_Designing" @if(old('Course')=='Web_Designing' )checked @endif> Web Designing</option>
+                                    </select>
                                     <span class="text-danger">@error('Course'){{$message}} @enderror</span>
                                 </div>
 
@@ -230,7 +246,7 @@
                             <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{old('parent_Occupation')}}">
                         </div>
                                     </div>
-                <div class="col-6 text-right" style="margin-top:15%;">
+                <div class="col-6 text-center mb-4 " style="margin-top:15%;">
                     <input type="submit" value="Submit">
                     <a href="admission_form" class="reset ml-3 text-light">Reset</a>
                 </div>

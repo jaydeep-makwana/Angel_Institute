@@ -19,6 +19,8 @@
         <a href="#" id="batch">Batch</a>
         <a href="bDay">Birthday</a>
         <a href="#">Fees</a>
+        <a class="nav-link nav" href="{{ url('/') }}">Home </a>
+        <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
     </div>
 
     <!-- <div id="main" class="bg-dark text-light">
@@ -33,6 +35,7 @@
 
             <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
+<<<<<<< HEAD
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -47,13 +50,15 @@
                 </ul>
 
             </div>
+=======
+            </button> 
+>>>>>>> bec846730d0eb028f159c06d1837bb82a73b8d7c
         </nav>
 
         <!-- student table -->
         <div class="container">
-            <table class="table table-stripped  text-center">
+            <table class="table  text-center table-responsive">
                 <thead>
-
                     <tr class="bg-primary text-light">
 
                         <th>Id</th>
@@ -72,7 +77,7 @@
                     @foreach($data as $info)
 
                     <tr>
-                        <td>{{$info->id}}</td>
+                        <td>{{$info->s_id}}</td>
                         <td>{{$info->Full_Name}}</td>
                         <td>{{$info->Contact_No}}</td>
                         <td>{{$info->gender}}</td>
@@ -81,10 +86,11 @@
                         <!-- Button trigger modal -->
 
                         <td type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <a href="{{ url('student_detail', $info->id)}}" class="btn btn-warning ">More Info</a>
+                            <a href="{{ url('student_detail', $info->s_id)}}" class="btn btn-warning ">More Info</a>
                         </td>
-                        <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success ">Update</a></td>
-                        <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger">Delete</a></td>
+                        <td><a href="{{ url('edit', $info->s_id)}}" class="btn btn-success ">Update</a></td>
+                        <td><a href="{{ url('delete', $info->s_id)}}" class="btn btn-danger">Delete</a></td>
+
                     </tr>
                     @endforeach
                 </tbody>
