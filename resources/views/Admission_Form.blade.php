@@ -14,12 +14,17 @@
 <body>
 
     @include('navbar')
-    <div class="container-fluid h-100 p-5 ">
+    <div class="container-fluid bg-light h-100 p-5 ">
 
+<<<<<<< HEAD
 
        
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border mb-5 shadow-lg">
 
+=======
+        <form action="admission_form" method="POST" enctype="multipart/form-data" class="border">
+        <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
+>>>>>>> 8af3179964b44a41d79a81a2c904a240b9d8da87
             @csrf
 
             <div class="row w-100 ">
@@ -48,13 +53,13 @@
                                 <span class="text-danger">@error('Address'){{$message}} @enderror</span>
                             </div>
 
-                            <div class="form-group  col-sm-12 ">
+                            <div class="form-group  col-sm-6 ">
                                 <label for="inputContact" class="form-check-label">Contact_No</label>
                                 <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{old('ContactNo')}}">
                                 <span class="text-danger">@error('ContactNo'){{$message}} @enderror</span>
                             </div>
 
-                            <div class="form-group  col-sm-12">
+                            <div class="form-group  col-sm-6">
                                 <label for="inputDate" class="form-check-label">Date_Of_Birth</label>
                                 <input type="date" placeholder="Date_Of_Birth" name="BOD" class="form-control" value="{{old('BOD')}}">
                                 <span class="text-danger">@error('BOD'){{$message}} @enderror</span>
@@ -215,25 +220,22 @@
 
                 <div class="col-6">
                     <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
+                 
+                        <div class="form-group  ">
+                            <label for="inputName" class="form-check-label">Full_Name</label>
+                            <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
+                        </div>
 
-                    <div class="form-group  ">
+                        <div class="form-group">
+                            <label for="inputContact" class="form-check-label">Contact_No</label>
+                            <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control" value="{{old('parent_Contact')}}">
+                        </div>
 
-                        <label for="inputName" class="form-check-label">Full_Name</label>
-                        <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control">
-                   </div>
-
-                    <div class="form-group">
-                        <label for="inputContact" class="form-check-label">Contact_No</label>
-                        <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputOccupation" class="form-check-label">Occupation</label>
-                        <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control">
-                    </div>
-                        
-                    
-                </div>
+                        <div class="form-group">
+                            <label for="inputOccupation" class="form-check-label">Occupation</label>
+                            <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{old('parent_Occupation')}}">
+                        </div>
+                                    </div>
                 <div class="col-6 text-right" style="margin-top:15%;">
                     <input type="submit" value="Submit">
                     <a href="admission_form" class="reset ml-3 text-light">Reset</a>

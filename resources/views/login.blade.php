@@ -15,7 +15,6 @@
 
     @include('navbar')
 
-
     <div class="col-lg-4 mx-auto">
         @if(session('status'))
         <div class="alert alert-primary alert-dismissible fade show" role="alert">
@@ -35,7 +34,7 @@
                     <form action="admin_login" method="post">
                         @csrf
                         <div class="form-group pb-3">
-                            <input type="text" name="email" placeholder="Email" class="form-control">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
                             <span class="text-danger">@error('email'){{$message}} @enderror</span>
                         </div>
                         <div class="form-group pb-3">
