@@ -43,6 +43,9 @@ body {
     transition: margin-left .5s;
     padding: 11px;
 }
+.container{
+    transition: all 0.1s;
+}
 
 @media screen and (max-height: 450px) {
     .sidenav {
