@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin_login;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\admisssion_form;
+use App\Http\Controllers\logout;
 use App\Http\Controllers\operationController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,11 +35,11 @@ Route::view('admission_form', 'Admission_Form');
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
-Route::view('login','login');
+Route::view('login','login')->middleware('adminlogin');
 Route::post('admin_login',[AdminController::class,'login']);
+Route::get('admin_logout',[logout::class,'admin_logout']);
 
-
-Route::get('admin_dashboard',[operationController::class,'show']);
+Route::get('admin_dashboard',[operationController::class,'show'])->middleware('admin_logout');
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);

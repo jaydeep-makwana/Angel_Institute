@@ -38,8 +38,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active ml-3 mt-1">
+                    <li class="nav-item active ml-2 mt-1">
                         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
+                    </li>
+                    <li class="nav-item active ml-2 mt-1">
+                        <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>
                     </li>
                 </ul>
 
