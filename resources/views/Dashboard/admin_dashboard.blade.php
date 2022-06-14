@@ -8,8 +8,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url('CSS/dashboard.css')}}">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -47,45 +46,48 @@
             </div>
         </nav>
 
-<!-- student table -->
-<div class="container">
-        <table class="table table-stripped  text-center">
-            <thead>
+        <!-- student table -->
+        <div class="container">
+            <table class="table table-stripped  text-center">
+                <thead>
 
-                <tr class="bg-primary text-light">
+                    <tr class="bg-primary text-light">
 
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Contact No.</th>
-                    <th>Gender</th>
-                    <th>Course</th>
-                    <th>Duration</th>
-                    <th>More Info</th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Contact No.</th>
+                        <th>Gender</th>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>More Info</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                @foreach($data as $info)
+                <tbody>
+                    @foreach($data as $info)
 
-                <tr>
-                    <td>{{$info->s_id}}</td>
-                    <td>{{$info->Full_Name}}</td>
-                    <td>{{$info->Contact_No}}</td>
-                    <td>{{$info->gender}}</td>
-                    <td>{{$info->Course}}</td>
-                    <td>{{$info->Duration}}</td>
-                    <td><a class="btn btn-warning w-75">More Info</a></td>
-                    <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success w-75">Update</a></td>
-                    <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger w-75">Delete</a></td>
-                </tr>
-                @endforeach
-        </tbody>
-        </table>
-</div>
-</div>
+                    <tr>
+                        <td>{{$info->id}}</td>
+                        <td>{{$info->Full_Name}}</td>
+                        <td>{{$info->Contact_No}}</td>
+                        <td>{{$info->gender}}</td>
+                        <td>{{$info->Course}}</td>
+                        <td>{{$info->Duration}}</td>
+                        <!-- Button trigger modal -->
 
+                        <td type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="{{ url('student_detail', $info->id)}}" class="btn btn-warning ">More Info</a>
+                        </td>
+                        <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success ">Update</a></td>
+                        <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <script>
         function openNav() {
@@ -98,6 +100,8 @@
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

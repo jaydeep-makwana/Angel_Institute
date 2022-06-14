@@ -47,8 +47,8 @@ class operationController extends Controller
      */
     public function show()
     {
-        $detail=student::all();
-        return view('Dashboard.admin_dashboard',['data'=>$detail]);
+        $detail = student::all();
+        return view('Dashboard.admin_dashboard', ['data' => $detail]);
     }
 
     /**
@@ -59,7 +59,7 @@ class operationController extends Controller
      */
     public function edit($id)
     {
-        $stud = DB::table('students')->where('id',$id)->get();
+        $stud = DB::table('students')->where('id', $id)->get();
         return view('update', ['student' => $stud]);
     }
 
@@ -111,13 +111,17 @@ class operationController extends Controller
         DB::table('students')->where('id', $id)->delete();
         return redirect('admin_dashboard');
     }
-    
+
     public function find_bDay()
     {
-        $birthday = DB::table('students')->where('BOD',date('Y-m-d'))->get();
-  
-      return view('Dashboard.birthday',['birthdays'=>$birthday]);
-        
+        $birthday = DB::table('students')->where('BOD', date('Y-m-d'))->get();
+
+        return view('Dashboard.birthday', ['birthdays' => $birthday]);
     }
-    
+
+    public function student_detail($id)
+    {
+        $detail = DB::table('students')->where('id', $id)->get();
+        return view('student_detail', ['student' => $detail]);
+    }
 }
