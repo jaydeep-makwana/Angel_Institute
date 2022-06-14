@@ -219,17 +219,17 @@
                     <div class="form-group  ">
 
                         <label for="inputName" class="form-check-label">Full_Name</label>
-                        <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control">
+                        <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control">
                    </div>
 
                     <div class="form-group">
                         <label for="inputContact" class="form-check-label">Contact_No</label>
-                        <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control">
+                        <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label for="inputOccupation" class="form-check-label">Occupation</label>
-                        <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
+                        <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control">
                     </div>
                         
                     
