@@ -35,7 +35,6 @@
 
             <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-<<<<<<< HEAD
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,9 +49,8 @@
                 </ul>
 
             </div>
-=======
             </button> 
->>>>>>> bec846730d0eb028f159c06d1837bb82a73b8d7c
+
         </nav>
 
         <!-- student table -->
