@@ -14,15 +14,12 @@
 <body>
 
     @include('navbar')
-    <div class="container-fluid bg-light h-100 p-5 ">
+    <div class="container-fluid h-100 p-5 ">
 
 
        
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border mb-5 shadow-lg">
 
-
-        <form action="admission_form" method="POST" enctype="multipart/form-data" class="border">
-        <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
             @csrf
 
             <div class="row w-100 ">
@@ -51,13 +48,13 @@
                                 <span class="text-danger">@error('Address'){{$message}} @enderror</span>
                             </div>
 
-                            <div class="form-group  col-sm-6 ">
+                            <div class="form-group  col-sm-12 ">
                                 <label for="inputContact" class="form-check-label">Contact_No</label>
                                 <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{old('ContactNo')}}">
                                 <span class="text-danger">@error('ContactNo'){{$message}} @enderror</span>
                             </div>
 
-                            <div class="form-group  col-sm-6">
+                            <div class="form-group  col-sm-12">
                                 <label for="inputDate" class="form-check-label">Date_Of_Birth</label>
                                 <input type="date" placeholder="Date_Of_Birth" name="BOD" class="form-control" value="{{old('BOD')}}">
                                 <span class="text-danger">@error('BOD'){{$message}} @enderror</span>
@@ -234,20 +231,7 @@
                         <label for="inputOccupation" class="form-check-label">Occupation</label>
                         <input type="text" placeholder="Occupation" name="Occupation" class="form-control">
                     </div>
-                        <div class="form-group  ">
-                            <label for="inputName" class="form-check-label">Full_Name</label>
-                            <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="inputContact" class="form-check-label">Contact_No</label>
-                            <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control" value="{{old('parent_Contact')}}">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="inputOccupation" class="form-check-label">Occupation</label>
-                            <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{old('parent_Occupation')}}">
-                        </div>
+                        
                     
                 </div>
                 <div class="col-6 text-right" style="margin-top:15%;">

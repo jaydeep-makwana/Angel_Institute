@@ -29,7 +29,7 @@ Route::view('ragister','ragister');
 Route::get('bDay',[operationController::class,'find_bDay']);
 
 //addmission
-Route::post('admission_form',[admisssion_form::class,'operation']);
+Route::post('add_student',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
 
 //admin_login with signUP
