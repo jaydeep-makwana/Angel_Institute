@@ -44,4 +44,5 @@ Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);
 // delete route
 Route::get('delete/{id}',[operationController::class,'destroy']);
+Route::get('student_detail/{id}',[operationController::class,'student_detail']);
 
