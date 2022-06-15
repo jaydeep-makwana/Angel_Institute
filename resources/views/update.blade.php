@@ -15,8 +15,8 @@
 <body>
 
     @include('navbar')
-    <div class="container-fluid bg-light h-100 p-5 ">
-        <form  method="POST" enctype="multipart/form-data" class="border">
+    <div class="container-fluid  h-100 p-5 ">
+        <form  method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
             @csrf
             @method('PUT')
             <div class="row w-100 ">
@@ -25,7 +25,7 @@
 
 
                     <div class="row w-100">
-                        <h1 class="mr-auto ml-auto p-1">Personal Details</h1>
+                        <h1 class="mr-auto ml-auto p-3">Personal Details</h1>
                     </div>
 
 
@@ -47,13 +47,13 @@
                                 <!-- </div> -->
                             </div>
 
-                            <div class="form-group  col-sm-6 ">
+                            <div class="form-group  col-sm-12">
                                 <label for="inputContact" class="form-check-label">Contact_No</label>
                                 <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{$info->Contact_No}}">
                                 <span class="text-danger">@error('Contact_No'){{$message}} @enderror</span>
                             </div>
 
-                            <div class="form-group  col-sm-6">
+                            <div class="form-group  col-sm-12">
                                 <label for="inputDate" class="form-check-label">Date_Of_Birth</label>
                                 <input type="date" placeholder="Date_Of_Birth" name="BOD" class="form-control" value="{{$info->BOD}}">
                                 <span class="text-danger">@error('BOD'){{$message}} @enderror</span>
@@ -135,7 +135,7 @@
                     <div class="row w-100 ml-2">
 
                         <div class="row w-100">
-                            <h1 class="mr-auto ml-auto">Course Details</h1>
+                            <h1 class="mr-auto ml-auto p-3">Course Details</h1>
                         </div>
 
 
@@ -210,7 +210,7 @@
 
             <!-- parents details -->
 
-            <div class="row w-100">
+            <div class="row w-100 ml-2">
 
                 <div class="col-6">
                     <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
@@ -230,7 +230,7 @@
                         <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{$info->parent_Occupation}}">
                     </div>
                 </div>
-                <div class="col-6 text-right" style="margin-top:15%;">
+                <div class="col-6 text-center mb-2" style="margin-top:15%;">
                     <input type="submit" value="Update">
                     <a href="admission_form" class="reset ml-3">Reset</a>
                 </div>
