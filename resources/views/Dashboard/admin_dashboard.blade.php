@@ -69,7 +69,7 @@
                     @foreach($data as $info)
 
                     <tr>
-                        <td>{{$info->id}}</td>
+                        <td>{{$info->s_id}}</td>
                         <td>{{$info->Full_Name}}</td>
                         <td>{{$info->Contact_No}}</td>
                         <td>{{$info->gender}}</td>
@@ -80,7 +80,7 @@
                         <td type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <a href="{{ url('student_detail', $info->id)}}" class="btn btn-warning ">More Info</a>
                         </td>
-                        <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success ">Update</a></td>
+                        <td><a href="{{ url('edit', $info->s_id)}}" class="btn btn-success ">Update</a></td>
                         <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger">Delete</a></td>
                     </tr>
                     @endforeach

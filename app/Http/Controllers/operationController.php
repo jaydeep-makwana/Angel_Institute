@@ -59,7 +59,7 @@ class operationController extends Controller
      */
     public function edit($id)
     {
-        $stud = DB::table('students')->where('id', $id)->get();
+        $stud = DB::table('students')->where('s_id', $id)->get();
         return view('update', ['student' => $stud]);
     }
 
