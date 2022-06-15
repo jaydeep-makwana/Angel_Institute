@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,9 +83,9 @@
                         <!-- Button trigger modal -->
 
                         <td type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <a href="{{ url('student_detail', $info->s_id)}}" class="btn btn-warning ">More Info</a>
+                            <a href="{{ url('student_detail', $info->s_id)}}" class="btn btn-warning text-light">More Info</a>
                         </td>
-                        <td><a href="{{ url('edit', $info->s_id)}}" class="btn btn-success ">Update</a></td>
+                        <td><a href="{{ url('edit', $info->s_id)}}" class="btn btn-success">Update</a></td>
                         <td><a href="{{ url('delete', $info->s_id)}}" class="btn btn-danger">Delete</a></td>
 
                     </tr>

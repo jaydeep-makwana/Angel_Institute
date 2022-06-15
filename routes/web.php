@@ -35,11 +35,11 @@ Route::view('admission_form', 'Admission_Form');
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
-Route::view('login','login')->middleware('adminlogin');
+// Route::view('login','login')->middleware('adminlogin');
 Route::post('admin_login',[AdminController::class,'login']);
 Route::get('admin_logout',[logout::class,'admin_logout']);
 
-Route::get('admin_dashboard',[operationController::class,'show'])->middleware('admin_logout');
+Route::get('admin_dashboard',[operationController::class,'show']);
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);
