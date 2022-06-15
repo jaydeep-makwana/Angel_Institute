@@ -39,7 +39,7 @@ class AdminController extends Controller
         // } else {
         //     return  $input->input();
         // }
-        return redirect('login')->with('status','you are successfully ragistered..');
+        return redirect('login')->with('status', 'you are successfully ragistered..');
     }
 
     function login(Request $data)
@@ -49,8 +49,12 @@ class AdminController extends Controller
             'password' => 'required'
         ]);
 
-        $data = DB::table('admins')->where('email')->get();
-        return redirect('admin_dasboard');
-        
+        $email = DB::table('admins')->where('email')->get();
+        if ($data == $email) {
+
+            $$email->session()->put('email', $data['email']);
+            return redirect('admin_dasboard');
+        }
+        // return redirect('admin_dasboard');
     }
 }
