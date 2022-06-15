@@ -121,7 +121,7 @@ class operationController extends Controller
 
     public function student_detail($id)
     {
-        $detail = DB::table('students')->where('id', $id)->get();
+        $detail = DB::table('students')->where('s_id', $id)->get();
         return view('student_detail', ['student' => $detail]);
     }
 }
