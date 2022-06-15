@@ -19,6 +19,8 @@
         <a href="#" id="batch">Batch</a>
         <a href="bDay">Birthday</a>
         <a href="#">Fees</a>
+        <a class="nav-link nav" href="{{ url('/') }}">Home </a>
+        <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
     </div>
 
     <!-- <div id="main" class="bg-dark text-light">
@@ -35,15 +37,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active ml-3 mt-1">
-                        <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Back </a>
-                    </li>
-                </ul>
-
-            </div>
+           
         </nav>
         @foreach($student as $info)
         @endforeach

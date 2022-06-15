@@ -72,7 +72,7 @@ class operationController extends Controller
      */
     public function update(Request $data, $id)
     {
-        DB::table('students')->where('id', $id)->update([
+        DB::table('students')->where('s_id', $id)->update([
             // personal detail
             'Full_Name' => $data->input('Full_Name'),
             'Address' => $data->input('Address'),
@@ -108,7 +108,7 @@ class operationController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('students')->where('id', $id)->delete();
+        DB::table('students')->where('s_id', $id)->delete();
         return redirect('admin_dashboard');
     }
 
