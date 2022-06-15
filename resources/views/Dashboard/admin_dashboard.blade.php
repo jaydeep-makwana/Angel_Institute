@@ -72,11 +72,8 @@
                             <a href="{{ url('student_detail', $info->s_id)}}" class="btn btn-warning ">More Info</a>
                         </td>
                         <td><a href="{{ url('edit', $info->s_id)}}" class="btn btn-success ">Update</a></td>
-<<<<<<< HEAD
                         <td><a href="{{ url('delete', $info->s_id)}}" class="btn btn-danger">Delete</a></td>
-=======
-                        <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger">Delete</a></td>
->>>>>>> 7f2c72c671f4bc2015f0dac3bcf7d8be58fff477
+
                     </tr>
                     @endforeach
                 </tbody>

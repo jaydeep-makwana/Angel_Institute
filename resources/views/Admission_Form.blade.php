@@ -16,14 +16,6 @@
     @include('navbar')
     <div class="container-fluid bg-light h-100 p-5 ">
 
-
-<<<<<<< HEAD
-       
-        <form action="add_student" method="POST" enctype="multipart/form-data" class="border mb-5 shadow-lg">
-
-        <form action="admission_form" method="POST" enctype="multipart/form-data" class="border">
-=======
->>>>>>> 04bd8a5660d974132052927c16e0e82099809c5b
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
             @csrf
 
