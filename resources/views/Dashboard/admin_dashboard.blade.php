@@ -16,7 +16,7 @@
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <a href="#">Course</a>
         <a href="#" id="batch">Batch</a>
-        <a href="bDay">Birthday</a>
+        <a href="{{url('bDay')}}">Birthday</a>
         <a href="#">Fees</a>
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
@@ -48,7 +48,6 @@
                 </ul>
 
             </div>
-            </button> 
 
         </nav>
 
