@@ -15,10 +15,15 @@
 
     @include('navbar')
     <div class="container-fluid  h-100 p-5 ">
+    
+        <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
 
+<<<<<<< HEAD
 
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow">
 
+=======
+>>>>>>> 3228b508b8a3196dd5c136e0102808e51ac8e1d1
             @csrf
 
             <div class="row w-100 ">
@@ -146,11 +151,18 @@
                                     <label for="Course" class="form-check-label">Course</label>
                                     <!-- <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}"> -->
                                     <select name="Course" class="form-control" id="Course">
+<<<<<<< HEAD
                                         <option value="" selected disabled>-->Choose Courses--</option>
                                         @foreach($course as $coursename)
                                         <option value="{{$coursename->courseName}}">{{$coursename->courseName}}</option>
                                         <option value="Web_Development" @if(old('Course')=='Web_Development' )checked @endif>Web Development</option>
                                         <option value="Web_Designing" @if(old('Course')=='Web_Designing' )checked @endif> Web Designing</option>
+=======
+                                            <option value="" selected disabled>-->Choose Courses--</option>
+                                            <option value="Full_Stack" @if(old('Course')=='Full_Stack' )checked @endif>Full Stake</option>
+                                            <option value="Web_Development" @if(old('Course')=='Web_Development' )checked @endif>Web Development</option>
+                                            <option value="Web_Designing" @if(old('Course')=='Web_Designing' )checked @endif> Web Designing</option>
+>>>>>>> 3228b508b8a3196dd5c136e0102808e51ac8e1d1
                                     </select>
                                     <span class="text-danger">@error('Course'){{$message}} @enderror</span>
                                 </div>
