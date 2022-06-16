@@ -14,23 +14,7 @@
 
 <body>
 
-    <div id="mySidenav" class="sidenav">
-        <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
-        <a href="#">Course</a>
-        <a href="#" id="batch">Batch</a>
-        <a href="#">Birthday</a>
-        <a href="#">Fees</a>
-    </div>
-
-    <div class="container-fluid p-0 text-center" id="main">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
-            <span style="font-size:25px;cursor:pointer;" class="mr-2" onclick="openNav()">&#9776;</span>
-            <img src="{{asset('Images/angel.png')}}" alt="">
-
-            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    @include('sidebar')
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -59,18 +43,6 @@
 
         </div>
     </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
 </body>
 
 </html>

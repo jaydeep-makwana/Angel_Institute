@@ -10,11 +10,11 @@
     <title>Admission_Form</title>
 
 </head>
+
+<body>
 @foreach($student as $info)
 @endforeach 
-<body>
-
-    @include('navbar')
+    @include('sidebar')
     <div class="container-fluid bg-light h-100 p-5 ">
         <form  method="POST" enctype="multipart/form-data" class="border">
             @csrf
@@ -232,7 +232,7 @@
                 </div>
                 <div class="col-6 text-right" style="margin-top:15%;">
                     <input type="submit" value="Update">
-                    <a href="admission_form" class="reset ml-3">Reset</a>
+                    <a href="admission_form" class="reset text-white ml-3">Reset</a>
                 </div>
 
             </div>

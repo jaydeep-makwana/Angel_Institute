@@ -21,6 +21,7 @@ Route::get('/', function () {
     return view('demo');
 });
 Route::view('/', 'home');
+Route::view('sidebar','sidebar');
 Route::view('navbar','navbar');
 Route::view('signup','admin_signup');
 Route::view('ragister','ragister');
@@ -31,13 +32,14 @@ Route::get('bDay',[operationController::class,'find_bDay']);
 //addmission
 Route::post('add_student',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
+Route::get('add_course',[operationController::class,'course']);
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
 Route::view('login','login');
 Route::post('admin_login',[AdminController::class,'login']);
 
-
+// display route
 Route::get('admin_dashboard',[operationController::class,'show']);
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);

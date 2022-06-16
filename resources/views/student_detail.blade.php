@@ -12,34 +12,7 @@
 </head>
 
 <body>
-
-    <div id="mySidenav" class="sidenav">
-        <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
-        <a href="#">Course</a>
-        <a href="#" id="batch">Batch</a>
-        <a href="bDay">Birthday</a>
-        <a href="#">Fees</a>
-        <a class="nav-link nav" href="{{ url('/') }}">Home </a>
-        <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
-    </div>
-
-    <!-- <div id="main" class="bg-dark text-light">
-        <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; Angel</span>
-    </div> -->
-
-    <div class="container-fluid p-0 text-center" id="main">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
-            <span style="font-size:25px;cursor:pointer;" class="mr-2" onclick="openNav()">&#9776;</span>
-            <img src="{{asset('Images/angel.png')}}" alt="">
-
-            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-           
-        </nav>
-        @foreach($student as $info)
+     @foreach($student as $info)
         @endforeach
 
         <div class="container-fluid mt-4">
@@ -181,17 +154,6 @@
             </div>
         </div>
         <div class="container-fluid p-5"></div>
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

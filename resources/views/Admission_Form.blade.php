@@ -16,13 +16,9 @@
     @include('navbar')
     <div class="container-fluid  h-100 p-5 ">
 
-<<<<<<< HEAD
-     
-       <form action="admission_form" method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
 
-=======
-        <form action="add_student" method="POST" enctype="multipart/form-data" class="border">
->>>>>>> ddd1cc60ac0e548f42093c28231de5426a96f066
+        <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow">
+
             @csrf
 
             <div class="row w-100 ">
@@ -146,15 +142,15 @@
                         <div class="row w-100 p-4">
 
                             <div class="col-lg-6">
-
                                 <div class="form-group">
                                     <label for="Course" class="form-check-label">Course</label>
                                     <!-- <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}"> -->
                                     <select name="Course" class="form-control" id="Course">
-                                            <option value="" selected disabled>-->Choose Courses--</option>
-                                            <option value="Full_Stake" @if(old('Course')=='Full_Stake' )checked @endif>Full Stake</option>
-                                            <option value="Web_Development" @if(old('Course')=='Web_Development' )checked @endif>Web Development</option>
-                                            <option value="Web_Designing" @if(old('Course')=='Web_Designing' )checked @endif> Web Designing</option>
+                                        <option value="" selected disabled>-->Choose Courses--</option>
+                                        @foreach($course as $coursename)
+                                        <option value="{{$coursename->courseName}}">{{$coursename->courseName}}</option>
+                                        <option value="Web_Development" @if(old('Course')=='Web_Development' )checked @endif>Web Development</option>
+                                        <option value="Web_Designing" @if(old('Course')=='Web_Designing' )checked @endif> Web Designing</option>
                                     </select>
                                     <span class="text-danger">@error('Course'){{$message}} @enderror</span>
                                 </div>
@@ -224,22 +220,22 @@
 
                 <div class="col-6">
                     <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
-                 
-                        <div class="form-group  ">
-                            <label for="inputName" class="form-check-label">Full_Name</label>
-                            <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
-                        </div>
 
-                        <div class="form-group">
-                            <label for="inputContact" class="form-check-label">Contact_No</label>
-                            <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control" value="{{old('parent_Contact')}}">
-                        </div>
+                    <div class="form-group  ">
+                        <label for="inputName" class="form-check-label">Full_Name</label>
+                        <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="inputOccupation" class="form-check-label">Occupation</label>
-                            <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{old('parent_Occupation')}}">
-                        </div>
-                                    </div>
+                    <div class="form-group">
+                        <label for="inputContact" class="form-check-label">Contact_No</label>
+                        <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control" value="{{old('parent_Contact')}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputOccupation" class="form-check-label">Occupation</label>
+                        <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{old('parent_Occupation')}}">
+                    </div>
+                </div>
                 <div class="col-6 text-center mb-4 " style="margin-top:15%;">
                     <input type="submit" value="Submit">
                     <a href="admission_form" class="reset ml-3 text-light">Reset</a>
