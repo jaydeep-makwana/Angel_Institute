@@ -23,7 +23,7 @@
             <li class="nav-item"><a href="admission_form" class="nav-link text-light">Add Student</a></li>
             <li class="nav-item"><a href="signup" class="nav-link text-light">Signup</a></li>
             <li class="nav-item"><a href="login" class="nav-link text-light">Signin</a></li>
-            <li class="nav-item"><a href="admin_dashboard" class="nav-link text-light">Dashboard</a></li>
+            <li class="nav-item"><a href="{{url('admin_dashboard')}}" class="nav-link text-light">Dashboard</a></li>
         </ul>
     </nav>
 </body>
