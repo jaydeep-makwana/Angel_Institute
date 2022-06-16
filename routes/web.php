@@ -35,11 +35,8 @@ Route::view('admission_form', 'Admission_Form');
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
-<<<<<<< HEAD
-// Route::view('login','login')->middleware('adminlogin');
-=======
+
 Route::view('login','login');
->>>>>>> e5dce40652f24ff0e106057e66e9fe25aab07c47
 Route::post('admin_login',[AdminController::class,'login']);
 Route::get('admin_logout',[logout::class,'admin_logout']);
 
