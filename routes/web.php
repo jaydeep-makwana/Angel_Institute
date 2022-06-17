@@ -22,6 +22,7 @@ Route::get('/', function () {
     return view('demo');
 });
 Route::view('/', 'home');
+Route::view('sidebar','sidebar');
 Route::view('navbar','navbar');
 Route::view('signup','admin_signup');
 Route::view('ragister','ragister');
@@ -32,6 +33,7 @@ Route::get('bDay',[operationController::class,'find_bDay']);
 //addmission
 Route::post('add_student',[admisssion_form::class,'operation']);
 Route::view('admission_form', 'Admission_Form');
+Route::get('add_course',[operationController::class,'course']);
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
@@ -40,7 +42,19 @@ Route::view('login','login');
 Route::post('admin_login',[AdminController::class,'login']);
 Route::get('admin_logout',[logout::class,'admin_logout']);
 
+<<<<<<< HEAD
 Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
+=======
+<<<<<<< HEAD
+// display route
+=======
+<<<<<<< HEAD
+Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
+=======
+>>>>>>> 3228b508b8a3196dd5c136e0102808e51ac8e1d1
+Route::get('admin_dashboard',[operationController::class,'show']);
+>>>>>>> 5bb03a56fc016c4f04242fdc0c22e277aca1a514
+>>>>>>> 555d20ea73b9b41ba710582b6d136de2b2037abb
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);

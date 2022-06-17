@@ -10,13 +10,21 @@
     <title>Admission_Form</title>
 
 </head>
+
+<body>
 @foreach($student as $info)
 @endforeach 
+<<<<<<< HEAD
+    @include('sidebar')
+    <div class="container-fluid bg-light h-100 p-5 ">
+        <form  method="POST" enctype="multipart/form-data" class="border">
+=======
 <body>
 
     @include('navbar')
     <div class="container-fluid  h-100 p-5 ">
         <form  method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
+>>>>>>> 3228b508b8a3196dd5c136e0102808e51ac8e1d1
             @csrf
             @method('PUT')
             <div class="row w-100 ">
@@ -232,7 +240,7 @@
                 </div>
                 <div class="col-6 text-center mb-2" style="margin-top:15%;">
                     <input type="submit" value="Update">
-                    <a href="admission_form" class="reset ml-3">Reset</a>
+                    <a href="admission_form" class="reset text-white ml-3">Reset</a>
                 </div>
 
             </div>

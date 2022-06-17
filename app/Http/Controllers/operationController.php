@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\course;
 use App\Models\student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -124,4 +125,17 @@ class operationController extends Controller
         $detail = DB::table('students')->where('s_id', $id)->get();
         return view('student_detail', ['student' => $detail]);
     }
+    //course table
+    public function course(Request $display)
+    {
+        $display->validate([
+            'courseName'=>'required'
+        ]);
+        DB::table('courses')->insert([
+            'courseName'=>$display->input('courseName')
+        ]);
+        return redirect('admin_dashboard');
+        
+    }
+    
 }
