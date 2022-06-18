@@ -49,12 +49,14 @@ class AdminController extends Controller
             'password' => 'required'
         ]);
 
-        $email = DB::table('admins')->where('email')->get();
-        if ($data == $email) {
+        $email = DB::table('admins')->where('email',$data['email'])->get();
+        
+        // if ($email) {
 
-            $$email->session()->put('email', $data['email']);
-            return redirect('admin_dasboard');
-        }
-        // return redirect('admin_dasboard');
+        //     $data->session()->put('email', $data['email']);
+        //     return redirect('admin_dasboard');
+        // } else {
+        //     return redirect('admin_login');
+        // }
     }
 }

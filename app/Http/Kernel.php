@@ -67,6 +67,10 @@ class Kernel extends HttpKernel
         'admission'=>\App\Http\Middleware\admission::class,
         'adminlogin' => \App\Http\Middleware\adminlogin::class,
         'adminlogout' => \App\Http\Middleware\adminlogout::class,
+<<<<<<< HEAD
+=======
+        'adminlogout' => \App\Http\Middleware\adminlogout::class,
+>>>>>>> 0ecb81c5e511147e1cc179dbecbedf32b9efbf36
         'admin_logout' => \App\Http\Middleware\adminlogout::class,
     ];
 }

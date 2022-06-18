@@ -26,12 +26,12 @@
     <div class="container">
         <div class="row m-5 no-gutters shadow-lg">
             <div class="col-md-6 d-none d-md-block">
-                <img src="https://images.unsplash.com/photo-1566888596782-c7f41cc184c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" class="img-fluid" style="min-height:100%;" />
+                <!-- <img src="https://images.unsplash.com/photo-1566888596782-c7f41cc184c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" class="img-fluid" style="min-height:100%;" /> -->
             </div>
             <div class="col-md-6 bg-white p-5">
                 <h3 class="pb-3">ADMIN</h3>
                 <div class="form-style">
-                    <form action="admin_login" method="post">
+                    <form action="admin_login" method="POST">
                         @csrf
                         <div class="form-group pb-3">
                             <input type="email" name="email" placeholder="Email" class="form-control">
