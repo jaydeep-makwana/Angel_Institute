@@ -14,10 +14,10 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
+        <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a href="#" id="batch">Batch</a>
         <a href="bDay">Birthday</a>
         <a href="#">Course Payment</a>
-        <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
     </div>
     <div class="container-fluid p-0 text-center" id="main">

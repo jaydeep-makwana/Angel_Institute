@@ -31,14 +31,14 @@
             <div class="col-md-6 bg-white p-5">
                 <h3 class="pb-3">ADMIN</h3>
                 <div class="form-style">
-                    <form action="admin_login" method="POST">
+                    <form action="admin_login" method="post">
                         @csrf
                         <div class="form-group pb-3">
-                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <input type="text" name="email" placeholder="Email" class="form-control">
                             <span class="text-danger">@error('email'){{$message}} @enderror</span>
                         </div>
                         <div class="form-group pb-3">
-                            <input type="text" name="password" placeholder="Password" class="form-control">
+                            <input type="password" name="password" placeholder="Password" class="form-control">
                             <span class="text-danger">@error('password'){{$message}} @enderror</span>
                         </div>
                         <!-- <div class="d-flex align-items-center justify-content-between">
