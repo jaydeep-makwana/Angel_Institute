@@ -18,11 +18,8 @@
 
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
 
-            <<<<<<< HEAD <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow">
-
-                =======
-                >>>>>>> 3228b508b8a3196dd5c136e0102808e51ac8e1d1
-                @csrf
+           <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow">
+                   @csrf
 
                 <div class="row w-100 ">
 
