@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="container-fluid bg-light mt-1">
-            <div class="row align-items-center border border-dark">+
+            <div class="row align-items-center border border-dark">
                 <div class="col-3">
                     <h3>Student Detail</h3>
                 </div>

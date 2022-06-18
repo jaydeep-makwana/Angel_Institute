@@ -50,18 +50,18 @@
         </nav>
 
         <!-- student table -->
-        <div class="container">
+        <div class="container p-5 justify-content-center">
             <table class="table  text-center table-responsive">
-                <thead>
-                    <tr class="bg-primary text-light">
-
+                <thead >
+                    <tr class="text-light" style="background-color:darkslategrey ;">
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Contact No.</th>
                         <th>Gender</th>
                         <th>Course</th>
+                        <th>Contact No.</th>
                         <th>Duration</th>
-                        <th>More Info</th>
+                        <th>View</th>
+                        <th>Fees Pay</th>
                         <th>Update</th>
                         <th>Delete</th>
                     </tr>
@@ -73,15 +73,16 @@
                     <tr>
                         <td>{{$info->s_id}}</td>
                         <td>{{$info->Full_Name}}</td>
-                        <td>{{$info->Contact_No}}</td>
                         <td>{{$info->gender}}</td>
                         <td>{{$info->Course}}</td>
+                        <td>{{$info->Contact_No}}</td>
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
 
-                        <td type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <a href="{{ url('student_detail', $info->s_id)}}" class="btn btn-warning text-light">More Info</a>
+                        <td>
+                            <a href="{{ url('student_detail', $info->s_id)}}" class="btn text-light" style="background-color:darkcyan;">View</a>
                         </td>
+                        <td><a href="#" class="btn text-light" style="background-color:palevioletred;">Fees</a></td>
                         <td><a href="{{ url('edit', $info->s_id)}}" class="btn btn-success">Update</a></td>
                         <td><a href="{{ url('delete', $info->s_id)}}" class="btn btn-danger">Delete</a></td>
 
@@ -95,28 +96,28 @@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="add_course" method="POST">
-            @csrf
-          <div class="mb-3">
-            <label for="courseName" class="col-form-label">Add Course :</label>
-            <input type="text" class="form-control" id="courseName" name="courseName">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="add_course" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="courseName" class="col-form-label">Add Course :</label>
+                            <input type="text" class="form-control" id="courseName" name="courseName">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
     <div class="container">
     </div>
     <script>
