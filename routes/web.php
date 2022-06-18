@@ -42,19 +42,10 @@ Route::view('login','login');
 Route::post('admin_login',[AdminController::class,'login']);
 Route::get('admin_logout',[logout::class,'admin_logout']);
 
-<<<<<<< HEAD
 Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
-=======
-<<<<<<< HEAD
 // display route
-=======
-<<<<<<< HEAD
 Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
-=======
->>>>>>> 3228b508b8a3196dd5c136e0102808e51ac8e1d1
 Route::get('admin_dashboard',[operationController::class,'show']);
->>>>>>> 5bb03a56fc016c4f04242fdc0c22e277aca1a514
->>>>>>> 555d20ea73b9b41ba710582b6d136de2b2037abb
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);
