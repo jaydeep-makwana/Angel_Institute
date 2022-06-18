@@ -14,10 +14,9 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
-        <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add Course</a>
         <a href="#" id="batch">Batch</a>
         <a href="bDay">Birthday</a>
-        <a href="#">Fees</a>
+        <a href="#">Course Payment</a>
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
     </div>

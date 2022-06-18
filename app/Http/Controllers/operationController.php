@@ -48,7 +48,7 @@ class operationController extends Controller
      */
     public function show()
     {
-        $detail = student::all();
+        $detail = student::paginate(5);
         return view('Dashboard.admin_dashboard', ['data' => $detail]);
     }
 
@@ -135,6 +135,9 @@ class operationController extends Controller
             'courseName'=>$display->input('courseName')
         ]);
         return redirect('admin_dashboard');
+        
+    }
+    public function payment(Request $pay){
         
     }
     

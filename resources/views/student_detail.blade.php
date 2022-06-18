@@ -14,21 +14,24 @@
 <body>
      @foreach($student as $info)
         @endforeach
-
+    @include('sidebar')
         <div class="container-fluid mt-4">
             <div class="row">
-                <div class="col-3">
-                    <h1>Student Detail</h1>
+            <div class="col-4 mt-2">
+                    <hr style="height:1%;" class="bg-light">
                 </div>
-                <div class="col-9 mt-2">
+                <div class="col-4 text-center">
+                    <h1>{{$info->s_id}} . {{$info->Full_Name}}</h1>
+                </div>
+                <div class="col-4 mt-2">
                     <hr style="height:1%;" class="bg-light">
                 </div>
             </div>
         </div>
         <div class="container-fluid bg-light mt-1">
-            <div class="row align-items-center border border-dark">
+            <div class="row align-items-center border border-dark">+
                 <div class="col-3">
-                    <h3>{{$info->Full_Name}}</h3>
+                    <h3>Student Detail</h3>
                 </div>
                 <div class="col-9 text-left  border border-start-0 ">
                     <div class="row justify-content-around space">
