@@ -96,17 +96,17 @@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="add_course" method="POST">
                         @csrf
                         <div class="mb-3">
-                            <label for="courseName" class="col-form-label">Add Course :</label>
+                            <label for="courseName" class="col-form-label">Course Name:</label>
                             <input type="text" class="form-control" id="courseName" name="courseName">
                         </div>
                     </form>
@@ -119,6 +119,7 @@
         </div>
     </div>
     <div class="container">
+        {{$info->links()}}
     </div>
     <script>
         function openNav() {
