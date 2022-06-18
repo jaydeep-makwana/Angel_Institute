@@ -43,9 +43,7 @@ Route::view('login','login');
 Route::post('admin_login',[AdminController::class,'login']);
 Route::get('admin_logout',[logout::class,'admin_logout']);
 
-// display route
-Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
-Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
+Route::view('course','course_category');
 // display route
 Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
 Route::get('admin_dashboard',[operationController::class,'show']);

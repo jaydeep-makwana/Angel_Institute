@@ -20,6 +20,7 @@
         <a href="#" id="batch">Batch</a>
         <a href="{{url('bDay')}}">Birthday</a>
         <a href="#">Course Payment</a>
+        <a href="course">Course category</a>
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
         <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>

@@ -14,17 +14,14 @@
 <body>
 @foreach($student as $info)
 @endforeach 
-<<<<<<< HEAD
     @include('sidebar')
     <div class="container-fluid bg-light h-100 p-5 ">
         <form  method="POST" enctype="multipart/form-data" class="border">
-=======
 <body>
 
     @include('navbar')
     <div class="container-fluid  h-100 p-5 ">
         <form  method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
->>>>>>> 3228b508b8a3196dd5c136e0102808e51ac8e1d1
             @csrf
             @method('PUT')
             <div class="row w-100 ">
