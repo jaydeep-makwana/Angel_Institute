@@ -18,8 +18,9 @@
         <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
         <a href="#" id="batch">Batch</a>
         <a href="{{url('bDay')}}">Birthday</a>
-        <a href="#">Course Payment</a>
-        <a href="course">Course category</a>
+        <!-- <a href="#">Course Payment</a> -->
+        <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-whatever="@getbootstrap">Add Payment</a>
+
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
         <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>
@@ -92,8 +93,40 @@
     <div class="container pagination">
         {{$data->links()}}
     </div>
-<button id="cm">modal shoe</button>
     <!--  Add Course Modal -->
+    <!-- modal for fees payment -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="add_payment" method="POST">
+                        <label for="">Student Id</label>
+                        <input type="text" name="sid" placeholder="Sid" class="form-control">
+                        <label for="">Name</label>
+                        <input type="text" name="name" placeholder="Full Name" class="form-control">
+                        <label for="">Course</label>
+                        <input type="text" name="course" placeholder="XYZ" class="form-control">
+                        <label for="">Date</label>
+                        <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
+                        <label for="">Payment</label>
+                        <input type="text" name="fees" placeholder="Fess" class="form-control">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -133,8 +166,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script>
         $('#cm').on("click", function() {
             $('#exampleModal').modal('show');
