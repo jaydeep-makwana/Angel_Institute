@@ -19,7 +19,7 @@
         <a href="#" id="batch">Batch</a>
         <a href="{{url('bDay')}}">Birthday</a>
         <!-- <a href="#">Course Payment</a> -->
-        <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-whatever="@getbootstrap">Add Payment</a>
+        <a type="button" data-toggle="modal" data-target="#staticBackdrop" data-bs-whatever="@getbootstrap">Add Payment</a>
 
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
@@ -165,6 +165,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="add_payment" method="POST">
+                        @csrf
                         <label for="">Student Id</label>
                         <input type="text" name="sid" placeholder="Sid" class="form-control">
                         <label for="">Name</label>
@@ -176,10 +177,10 @@
                         <label for="">Payment</label>
                         <input type="text" name="fees" placeholder="Fess" class="form-control">
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,12 +190,15 @@
 
     <!-- Add Course Modal -->
 
+    <!-- Modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <form action="add_course" method="POST">
