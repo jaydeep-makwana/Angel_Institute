@@ -19,8 +19,9 @@
         <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
         <a href="#" id="batch">Batch</a>
         <a href="{{url('bDay')}}">Birthday</a>
-        <a href="#">Course Payment</a>
-        <a href="course">Course category</a>
+        <!-- <a href="#">Course Payment</a> -->
+        <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-whatever="@getbootstrap">Add Payment</a>
+
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
         <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>
@@ -53,7 +54,7 @@
         <!-- student table -->
         <div class="container p-5 justify-content-center">
             <table class="table  text-center table-responsive">
-                <thead >
+                <thead>
                     <tr class="text-light" style="background-color:darkslategrey ;">
                         <th>Id</th>
                         <th>Name</th>
@@ -91,9 +92,43 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="container">
+                {{$data->links()}}
+            </div>
         </div>
     </div>
 
+    <!-- modal for fees payment -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="add_payment" method="POST">
+                        <label for="">Student Id</label>
+                        <input type="text" name="sid" placeholder="Sid" class="form-control">
+                        <label for="">Name</label>
+                        <input type="text" name="name" placeholder="Full Name" class="form-control">
+                        <label for="">Course</label>
+                        <input type="text" name="course" placeholder="XYZ" class="form-control">
+                        <label for="">Date</label>
+                        <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
+                        <label for="">Payment</label>
+                        <input type="text" name="fees" placeholder="Fess" class="form-control">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,9 +154,9 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        {{$info->links()}}
-    </div>
+    <!-- <div class="container">
+        {{$data->links()}}
+    </div> -->
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";

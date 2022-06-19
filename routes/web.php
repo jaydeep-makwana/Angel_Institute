@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\admisssion_form;
 use App\Http\Controllers\logout;
 use App\Http\Controllers\operationController;
+use App\Http\Controllers\payment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,3 +55,5 @@ Route::put('edit/{id}',[operationController::class,'update']);
 Route::get('delete/{id}',[operationController::class,'destroy']);
 Route::get('student_detail/{id}',[operationController::class,'student_detail']);
 
+// Payment
+Route::post('add_payment',[payment::class,'add_fees']);
