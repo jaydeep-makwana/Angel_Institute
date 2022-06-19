@@ -146,7 +146,7 @@
                                         <label for="Course" class="form-check-label">Course</label>
                                         <!-- <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}"> -->
                                         <select name="Course" class="form-control" id="Course">
-                                            <option value="" selected disabled>-->Choose Courses--</option>
+                                            <option value="" selected disabled>--Choose Courses--</option>
                                             <option value="Full_Stack" @if(old('Course')=='Full_Stack' )checked @endif>Full Stake</option>
                                             <option value="Web_Development" @if(old('Course')=='Web_Development' )checked @endif>Web Development</option>
                                             <option value="Web_Designing" @if(old('Course')=='Web_Designing' )checked @endif> Web Designing</option>
