@@ -60,3 +60,7 @@ body {
     margin: 5%;
     font-size: large ;
 }
+/* paginate */
+.w-5{
+    display: none;
+}
