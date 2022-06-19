@@ -21,7 +21,7 @@
                     <hr style="height:1%;" class="bg-light">
                 </div>
                 <div class="col-4 text-center">
-                    <h1>{{$info->s_id}} . {{$info->Full_Name}}</h1>
+                    <h1>{{$info->id}} . {{$info->Full_Name}}</h1>
                 </div>
                 <div class="col-4 mt-2">
                     <hr style="height:1%;" class="bg-light">

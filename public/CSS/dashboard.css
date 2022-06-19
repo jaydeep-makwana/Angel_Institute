@@ -43,7 +43,8 @@ body {
     transition: margin-left .5s;
     padding: 11px;
 }
-.container{
+
+.container {
     transition: all 0.1s;
 }
 
@@ -55,8 +56,30 @@ body {
         font-size: 18px;
     }
 }
+
+
 /* student detail */
-.space{
+
+.space {
     margin: 5%;
-    font-size: large ;
+    font-size: large;
+}
+
+.z-0 {
+    display: none;
+}
+
+.pagination nav {
+    width: fit-content;
+    margin: auto;
+}
+
+.prLabel {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.table-container {
+    width: fit-content;
 }

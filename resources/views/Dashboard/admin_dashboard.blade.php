@@ -8,7 +8,6 @@
     <title>Admin</title>
     <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url('CSS/dashboard.css')}}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,10 +25,6 @@
         <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>
 
     </div>
-
-    <!-- <div id="main" class="bg-dark text-light">
-        <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; Angel</span>
-    </div> -->
 
     <div class="container-fluid p-0 text-center" id="main">
         <!-- Navbar -->
@@ -51,9 +46,9 @@
         </nav>
 
         <!-- student table -->
-        <div class="container p-5 justify-content-center">
+        <div class="mx-auto table-container">
             <table class="table  text-center table-responsive">
-                <thead >
+                <thead>
                     <tr class="text-light" style="background-color:darkslategrey ;">
                         <th>Id</th>
                         <th>Name</th>
@@ -72,7 +67,7 @@
                     @foreach($data as $info)
 
                     <tr>
-                        <td>{{$info->s_id}}</td>
+                        <td>{{$info->id}}</td>
                         <td>{{$info->Full_Name}}</td>
                         <td>{{$info->gender}}</td>
                         <td>{{$info->Course}}</td>
@@ -81,11 +76,11 @@
                         <!-- Button trigger modal -->
 
                         <td>
-                            <a href="{{ url('student_detail', $info->s_id)}}" class="btn text-light" style="background-color:darkcyan;">View</a>
+                            <a href="{{ url('student_detail', $info->id)}}" class="btn text-light" style="background-color:darkcyan;">View</a>
                         </td>
                         <td><a href="#" class="btn text-light" style="background-color:palevioletred;">Fees</a></td>
-                        <td><a href="{{ url('edit', $info->s_id)}}" class="btn btn-success">Update</a></td>
-                        <td><a href="{{ url('delete', $info->s_id)}}" class="btn btn-danger">Delete</a></td>
+                        <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success">Update</a></td>
+                        <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger">Delete</a></td>
 
                     </tr>
                     @endforeach
@@ -94,8 +89,11 @@
         </div>
     </div>
 
-
-    <!-- Modal -->
+    <div class="container pagination">
+        {{$data->links()}}
+    </div>
+<button id="cm">modal shoe</button>
+    <!--  Add Course Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -119,9 +117,8 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        {{$info->links()}}
-    </div>
+    <!--  Finish Add Course Modal -->
+
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -135,6 +132,14 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script>
+        $('#cm').on("click", function() {
+            $('#exampleModal').modal('show');
+        });
+    </script>
 </body>
 
 </html>
