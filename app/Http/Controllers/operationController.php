@@ -133,7 +133,7 @@ class operationController extends Controller
         DB::table('courses')->insert([
             'courseName'=>$display->input('courseName')
         ]);
-        return redirect('admin_dashboard')->with('course added successfully...');
+        return redirect('admin_dashboard');
         
     }
     public function payment(Request $pay){

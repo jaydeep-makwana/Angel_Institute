@@ -33,9 +33,9 @@ Route::get('bDay',[operationController::class,'find_bDay']);
 
 //addmission
 Route::post('add_student',[admisssion_form::class,'operation']);
-Route::post('add_course',[operationController::class,'course']);
 Route::get('admission_form',[operationController::class,'course_show']);
 // Route::view('admission_form', 'Admission_Form');
+Route::post('add_course',[operationController::class,'course']);
 
 
 //admin_login with signUP
