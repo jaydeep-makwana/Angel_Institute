@@ -12,19 +12,17 @@
 </head>
 
 <body>
-
     @include('navbar')
     <div class="container-fluid  h-100 p-5 ">
 
         <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">
 
-           <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow">
-                   @csrf
+            <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow">
+                @csrf
 
                 <div class="row w-100 ">
 
                     <div class="col-lg-6">
-
 
                         <div class="row w-100">
                             <h1 class="mr-auto ml-auto p-3">Personal Details</h1>
@@ -147,9 +145,9 @@
                                         <!-- <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}"> -->
                                         <select name="Course" class="form-control" id="Course">
                                             <option value="" selected disabled>--Choose Courses--</option>
-                                            <option value="Full_Stack" @if(old('Course')=='Full_Stack' )checked @endif>Full Stake</option>
-                                            <option value="Web_Development" @if(old('Course')=='Web_Development' )checked @endif>Web Development</option>
-                                            <option value="Web_Designing" @if(old('Course')=='Web_Designing' )checked @endif> Web Designing</option>
+                                            @foreach($data as $info)
+                                            <option value="{{$info->courseName}}" @if(old('Course')=='{{$info->courseName}}' )checked @endif>{{$info->courseName}}</option>
+                                            @endforeach
                                         </select>
                                         <span class="text-danger">@error('Course'){{$message}} @enderror</span>
                                     </div>
@@ -241,7 +239,7 @@
                     </div>
 
                 </div>
-        </form>
+            </form>
     </div>
     <div class="container p-5">
         <div class="p-5"></div>

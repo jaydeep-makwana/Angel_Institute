@@ -31,10 +31,12 @@ Route::view('ragister','ragister');
 //birthday
 Route::get('bDay',[operationController::class,'find_bDay']);
 
-//addmission
+//addmission form
 Route::post('add_student',[admisssion_form::class,'operation']);
+Route::get('admission_form',[operationController::class,'course_show']);
+
+// course
 Route::post('add_course',[operationController::class,'course']);
-Route::view('admission_form', 'Admission_Form');
 
 
 //admin_login with signUP
@@ -53,7 +55,6 @@ Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);
 // delete route
 Route::get('delete/{id}',[operationController::class,'destroy']);
-Route::get('student_detail/{id}',[operationController::class,'student_detail']);
 
 // Payment
 Route::post('add_payment',[payment::class,'add_fees']);

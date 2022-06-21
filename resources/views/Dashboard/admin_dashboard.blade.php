@@ -8,6 +8,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url('CSS/dashboard.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
@@ -15,12 +16,11 @@
     <div id="mySidenav" class="sidenav">
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <!-- Button trigger modal -->
-        <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
+        <a href="admission_form" >Add Student</a>
+        <a type="button" data-toggle="modal" data-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
         <a href="#" id="batch">Batch</a>
         <a href="{{url('bDay')}}">Birthday</a>
-        <!-- <a href="#">Course Payment</a> -->
-        <a type="button" data-toggle="modal" data-target="#staticBackdrop" data-bs-whatever="@getbootstrap">Add Payment</a>
-
+        <a type="button" data-toggle="modal" data-target="#staticBackdrop" data-bs-whatever="@getbootstrap">Payment</a>
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
         <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>
@@ -48,7 +48,7 @@
         <div class="mx-auto table-container">
             <table class="table  text-center table-responsive">
                 <thead>
-                    <tr class="text-light" style="background-color:darkslategrey ;">
+                    <tr class="text-light" style="background-color:darkslategrey;">
                         <th>Id</th>
                         <th>Name</th>
                         <th>Gender</th>
@@ -72,10 +72,16 @@
                         <td>{{$info->Course}}</td>
                         <td>{{$info->Contact_No}}</td>
                         <td>{{$info->Duration}}</td>
+                        <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-                        <td><a href="#" class="btn text-light" style="background-color:palevioletred;">Fees</a></td>
-                        <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success">Update</a></td>
-                        <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger">Delete</a></td>
+                      <td><a type="button" data-toggle="modal" data-target="#staticBackdrop">Add Payment</a></td>  
+                        <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
+                        <td><a href="{{ url('edit', $info->id)}}">
+                                <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
+                            </a></td>
+                        <td><a href="{{ url('delete', $info->id)}}">
+                                <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
+                            </a></td>
 
                         <!-- Modal for student details -->
                         <div class="modal fade" id="id-{{$info->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -144,47 +150,45 @@
                     @endforeach
                 </tbody>
             </table>
-
-
             <div class="container pagination">
                 {{$data->links()}}
             </div>
         </div>
     </div>
 
-
     <!-- modal for fees payment -->
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="add_payment" method="POST">
-                        @csrf
-                        <label for="">Student Id</label>
-                        <input type="text" name="sid" placeholder="Sid" class="form-control">
-                        <label for="">Name</label>
-                        <input type="text" name="name" placeholder="Full Name" class="form-control">
-                        <label for="">Course</label>
-                        <input type="text" name="course" placeholder="XYZ" class="form-control">
-                        <label for="">Date</label>
-                        <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
-                        <label for="">Payment</label>
-                        <input type="text" name="fees" placeholder="Fess" class="form-control">
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <!-- <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="add_payment" method="POST">
+                            @csrf
+                            <label for="">Student Id</label>
+                            <input type="text" name="sid" placeholder="Sid" class="form-control">
+                            <label for="">Name</label>
+                            <input type="text" name="name" placeholder="Full Name" class="form-control">
+                            <label for="">Course</label>
+                            <input type="text" name="course" placeholder="XYZ" class="form-control">
+                            <label for="">Date</label>
+                            <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
+                            <label for="">Payment</label>
+                            <input type="text" name="fees" placeholder="Fess" class="form-control">
+                        </form>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> -->
     <!--  Finish modal for fees payment -->
 
 
@@ -192,35 +196,32 @@
 
     <!-- Modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-dialog modal modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form action="add_course" method="POST">
                         @csrf
-                        <div class="mb-3">
+                        <div class="form-group">
                             <label for="courseName" class="col-form-label">Course Name:</label>
                             <input type="text" class="form-control" id="courseName" name="courseName">
                         </div>
-                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                </form>
+
             </div>
         </div>
     </div>
     <!--  Finish Add Course Modal -->
-
-
-
-
 
     <script>
         function openNav() {
@@ -233,21 +234,21 @@
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script>
-        // $('#details').on("click", function() {
-        //     $('#stu_details').modal('show');
-        // });
-        // $('#close-modal').on("click", function() {
-        //     $('#stu_details').modal('hide');
-        // });
-        // function details(id){
-        //     console.log(id);
-        // }
+        $('#details').on("click", function() {
+            $('#stu_details').modal('show');
+        });
+        $('#close-modal').on("click", function() {
+            $('#stu_details').modal('hide');
+        });
+
+        function details(id) {
+            console.log(id);
+        }
     </script>
 </body>
 

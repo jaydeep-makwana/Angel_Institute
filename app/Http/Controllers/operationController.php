@@ -48,8 +48,13 @@ class operationController extends Controller
      */
     public function show()
     {
-        $detail = student::paginate(5);
+        $detail = student::paginate(8);
         return view('Dashboard.admin_dashboard', ['data' => $detail]);
+    } 
+    public function course_show()
+    {
+        $course = course::all();
+        return view('Admission_Form', ['data' => $course]);
     }
 
     /**
@@ -118,12 +123,6 @@ class operationController extends Controller
         $birthday = DB::table('students')->where('BOD', date('Y-m-d'))->get();
 
         return view('Dashboard.birthday', ['birthdays' => $birthday]);
-    }
-
-    public function student_detail($id)
-    {
-        $detail = DB::table('students')->where('id', $id)->get();
-        return view('student_detail', ['student' => $detail]);
     }
     //course table
     public function course(Request $display)

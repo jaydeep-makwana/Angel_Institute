@@ -16,7 +16,7 @@ class Add_Student extends Seeder
     public function run()
     {
         $faker = Factory::create();
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 15; $i++) {
 
             DB::table('students')->insert([
                 'Full_Name' => $faker->firstName() . ' ' . $faker->lastName(),
