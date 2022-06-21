@@ -76,13 +76,6 @@
                         <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
                         <td><a href="{{ url('edit', $info->id)}}" ><h5><i class="fa-solid fa-pen-to-square text-success"></i></h5></a></td>
                         <td><a href="{{ url('delete', $info->id)}}" ><h5><i class="fa-solid fa-trash-can text-danger"></i></h5></a></td>
-                        <td><a href="#" class="btn text-light" style="background-color:palevioletred;">Fees</a></td>
-                        <td><a href="{{ url('edit', $info->id)}}">
-                                <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
-                            </a></td>
-                        <td><a href="{{ url('delete', $info->id)}}">
-                                <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
-                            </a></td>
 
                         <!-- Modal for student details -->
                         <div class="modal fade" id="id-{{$info->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

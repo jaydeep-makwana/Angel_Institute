@@ -48,7 +48,7 @@ class operationController extends Controller
      */
     public function show()
     {
-        $detail = student::paginate(10);
+        $detail = student::paginate(8);
         return view('Dashboard.admin_dashboard', ['data' => $detail]);
     }
 
