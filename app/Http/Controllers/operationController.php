@@ -119,12 +119,6 @@ class operationController extends Controller
 
         return view('Dashboard.birthday', ['birthdays' => $birthday]);
     }
-
-    public function student_detail($id)
-    {
-        $detail = DB::table('students')->where('id', $id)->get();
-        return view('student_detail', ['student' => $detail]);
-    }
     //course table
     public function course(Request $display)
     {

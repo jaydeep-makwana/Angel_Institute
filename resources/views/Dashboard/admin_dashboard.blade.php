@@ -8,10 +8,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url('CSS/dashboard.css')}}">
-<<<<<<< HEAD
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-=======
->>>>>>> f82c8048b138594c6dcbcd6b75a232413c425430
 </head>
 
 <body>
@@ -52,7 +49,7 @@
         <div class="mx-auto table-container">
             <table class="table  text-center table-responsive">
                 <thead>
-                    <tr class="text-light" style="background-color:darkslategrey ;">
+                    <tr class="text-light" style="background-color:darkslategrey;">
                         <th>Id</th>
                         <th>Name</th>
                         <th>Gender</th>
@@ -76,20 +73,11 @@
                         <td>{{$info->Course}}</td>
                         <td>{{$info->Contact_No}}</td>
                         <td>{{$info->Duration}}</td>
-<<<<<<< HEAD
                         <!-- Button trigger modal -->
-
-                        <td>
-                            <a href="{{ url('student_detail', $info->s_id)}}" class="btn text-light" style="background-color:darkcyan;">View</a>
-                        </td>
-                        <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
-                        <td><a href="{{ url('edit', $info->s_id)}}" ><h5><i class="fa-solid fa-pen-to-square text-success"></i></h5></a></td>
-                        <td><a href="{{ url('delete', $info->s_id)}}" ><h5><i class="fa-solid fa-trash-can text-danger"></i></h5></a></td>
-=======
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-                        <td><a href="#" class="btn text-light" style="background-color:palevioletred;">Fees</a></td>
-                        <td><a href="{{ url('edit', $info->id)}}" class="btn btn-success">Update</a></td>
-                        <td><a href="{{ url('delete', $info->id)}}" class="btn btn-danger">Delete</a></td>
+                        <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
+                        <td><a href="{{ url('edit', $info->id)}}" ><h5><i class="fa-solid fa-pen-to-square text-success"></i></h5></a></td>
+                        <td><a href="{{ url('delete', $info->id)}}" ><h5><i class="fa-solid fa-trash-can text-danger"></i></h5></a></td>
 
                         <!-- Modal for student details -->
                         <div class="modal fade" id="id-{{$info->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -153,28 +141,16 @@
                             </div>
                         </div>
                         <!-- Ends Modal for student details -->
->>>>>>> f82c8048b138594c6dcbcd6b75a232413c425430
 
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-
-
             <div class="container pagination">
                 {{$data->links()}}
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-    <!-- modal  -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-=======
 
 
     <!-- modal for fees payment -->
@@ -220,8 +196,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
->>>>>>> f82c8048b138594c6dcbcd6b75a232413c425430
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -242,18 +217,12 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-    <div class="container">
-        {{$data->links()}}
-    </div>
-=======
-    <!--  Finish Add Course Modal -->
+        <!--  Finish Add Course Modal -->
 
 
 
 
 
->>>>>>> f82c8048b138594c6dcbcd6b75a232413c425430
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -267,26 +236,19 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
-
-<<<<<<< HEAD
-=======
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script>
-        // $('#details').on("click", function() {
-        //     $('#stu_details').modal('show');
-        // });
-        // $('#close-modal').on("click", function() {
-        //     $('#stu_details').modal('hide');
-        // });
-        // function details(id){
-        //     console.log(id);
-        // }
+        $('#details').on("click", function() {
+            $('#stu_details').modal('show');
+        });
+        $('#close-modal').on("click", function() {
+            $('#stu_details').modal('hide');
+        });
+        function details(id){
+            console.log(id);
+        }
     </script>
->>>>>>> f82c8048b138594c6dcbcd6b75a232413c425430
 </body>
 
 </html>
