@@ -16,12 +16,10 @@
     <div id="mySidenav" class="sidenav">
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <!-- Button trigger modal -->
-        <a type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Add course</a>
+        <a type="button" data-toggle="modal" data-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
         <a href="#" id="batch">Batch</a>
         <a href="{{url('bDay')}}">Birthday</a>
-        <!-- <a href="#">Course Payment</a> -->
         <a type="button" data-toggle="modal" data-target="#staticBackdrop" data-bs-whatever="@getbootstrap">Add Payment</a>
-
         <a class="nav-link nav" href="{{ url('/') }}">Home </a>
         <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
         <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>
@@ -78,6 +76,13 @@
                         <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
                         <td><a href="{{ url('edit', $info->id)}}" ><h5><i class="fa-solid fa-pen-to-square text-success"></i></h5></a></td>
                         <td><a href="{{ url('delete', $info->id)}}" ><h5><i class="fa-solid fa-trash-can text-danger"></i></h5></a></td>
+                        <td><a href="#" class="btn text-light" style="background-color:palevioletred;">Fees</a></td>
+                        <td><a href="{{ url('edit', $info->id)}}">
+                                <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
+                            </a></td>
+                        <td><a href="{{ url('delete', $info->id)}}">
+                                <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
+                            </a></td>
 
                         <!-- Modal for student details -->
                         <div class="modal fade" id="id-{{$info->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -152,7 +157,6 @@
         </div>
     </div>
 
-
     <!-- modal for fees payment -->
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -192,7 +196,7 @@
 
     <!-- Modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-dialog modal modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
@@ -212,16 +216,11 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
-
                 </div>
             </div>
         </div>
     </div>
         <!--  Finish Add Course Modal -->
-
-
-
-
 
     <script>
         function openNav() {
@@ -245,7 +244,8 @@
         $('#close-modal').on("click", function() {
             $('#stu_details').modal('hide');
         });
-        function details(id){
+
+        function details(id) {
             console.log(id);
         }
     </script>
