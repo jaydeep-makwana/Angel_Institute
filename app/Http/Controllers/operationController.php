@@ -50,6 +50,11 @@ class operationController extends Controller
     {
         $detail = student::paginate(8);
         return view('Dashboard.admin_dashboard', ['data' => $detail]);
+    } 
+    public function course_show()
+    {
+        $course = course::all();
+        return view('Admission_Form', ['data' => $course]);
     }
 
     /**
