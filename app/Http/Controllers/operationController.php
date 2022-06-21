@@ -141,4 +141,7 @@ class operationController extends Controller
         
     }
     
+    public function admin_signup(){
+        return 'admin';
+    }
 }

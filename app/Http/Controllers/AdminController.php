@@ -12,23 +12,22 @@ class AdminController extends Controller
     function admin_login(Request $input)
     {
         $input->validate([
-            // 'fname' => 'required | min:14 | max:20',
-            // 'lname' => 'required | min:20 | max:24',
-            // 'phone' => 'required',
-            // 'email' => 'required',
-            // 'password' => 'required',
-            // 'confirm_passsword' =>  'required | same:password',
-            // 'code' => 'required'
+            'fname' => 'required | min:5 | max:20',
+            'lname' => 'required | min:5 | max:24',
+            'mobile' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'confirm_password' =>  'required | same:password',
+            'code' => 'required'
         ]);
 
         DB::table('admins')->insert([
 
             'fname' => $input->input('fname'),
             'lname' => $input->input('lname'),
-            'phone' => $input->input('phone'),
+            'mobile' => $input->input('mobile'),
             'email' => $input->input('email'),
             'password' => $input->input('password'),
-            'confirm_password' => $input->input('confirm_password'),
             'code' => $input->input('code')
         ]);
 
