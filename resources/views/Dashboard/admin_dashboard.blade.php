@@ -16,7 +16,7 @@
     <div id="mySidenav" class="sidenav">
         <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <!-- Button trigger modal -->
-        <a href="admission_form" >Add Student</a>
+        <a href="admission_form">Add Student</a>
         <a type="button" data-toggle="modal" data-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
         <a href="#" id="batch">Batch</a>
         <a href="{{url('bDay')}}">Birthday</a>
@@ -74,7 +74,7 @@
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-                      <td><a type="button" data-toggle="modal" data-target="#staticBackdrop">Add Payment</a></td>  
+                        <td><a type="button" data-toggle="modal" data-target="#staticBackdrop">Add Payment</a></td>
                         <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
                         <td><a href="{{ url('edit', $info->id)}}">
                                 <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
@@ -82,7 +82,10 @@
                         <td><a href="{{ url('delete', $info->id)}}">
                                 <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
                             </a></td>
-
+                            </tr>
+                    @endforeach
+                </tbody>
+            </table>
                         <!-- Modal for student details -->
                         <div class="modal fade" id="id-{{$info->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
@@ -146,10 +149,7 @@
                         </div>
                         <!-- Ends Modal for student details -->
 
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                        
             <div class="container pagination">
                 {{$data->links()}}
             </div>
@@ -158,7 +158,7 @@
 
     <!-- modal for fees payment -->
 
-        <!-- <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
