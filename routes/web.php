@@ -41,7 +41,6 @@ Route::post('add_course',[operationController::class,'course']);
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
-
 Route::view('login','login');
 Route::post('admin_login',[AdminController::class,'login']);
 Route::get('admin_logout',[logout::class,'admin_logout']);
