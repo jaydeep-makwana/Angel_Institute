@@ -142,7 +142,6 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="Course" class="form-check-label">Course</label>
-                                        <!-- <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}"> -->
                                         <select name="Course" class="form-control" id="Course">
                                             <option value="" selected disabled>--Choose Courses--</option>
                                             @foreach($data as $info)

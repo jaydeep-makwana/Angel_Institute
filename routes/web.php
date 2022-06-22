@@ -50,9 +50,11 @@ Route::view('course','course_category');
 // display route
 Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
 Route::get('admin_dashboard',[operationController::class,'show']);
+
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);
 Route::put('edit/{id}',[operationController::class,'update']);
+
 // delete route
 Route::get('delete/{id}',[operationController::class,'destroy']);
 

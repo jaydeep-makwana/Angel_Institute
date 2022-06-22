@@ -74,7 +74,6 @@
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-                      <td><a type="button" data-toggle="modal" data-target="#staticBackdrop">Add Payment</a></td>  
                         <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
                         <td><a href="{{ url('edit', $info->id)}}">
                                 <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
@@ -158,7 +157,7 @@
 
     <!-- modal for fees payment -->
 
-        <!-- <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -188,7 +187,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     <!--  Finish modal for fees payment -->
 
 
