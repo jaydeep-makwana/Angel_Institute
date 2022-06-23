@@ -55,6 +55,7 @@
                         <th>Contact No.</th>
                         <th>Duration</th>
                         <th>View</th>
+                        <th>Batch Time</th>
                         <th>Fees Pay</th>
                         <th>Update</th>
                         <th>Delete</th>
@@ -73,78 +74,112 @@
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-                        <td><a data-toggle="modal" data-target="#fees-{{$info->id}}" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
+                        <td><a href="#" class="btn text-light" data-target="#batch-{{$info->id}}" style="background-color:lightcoral">Batch</a></td>
+                        <td><a data-toggle="modal" data-target="#fees-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">fees</a></td>
                         <td><a href="{{ url('edit', $info->id)}}">
                                 <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
                             </a></td>
                         <td><a href="{{ url('delete', $info->id)}}">
                                 <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
                             </a></td>
+
                     </tr>
-                    </tbody>
+                </tbody>
 
 
-                    <!-- Modal for student details -->
-                    <div class="modal fade" id="id-{{$info->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="container-fluid row p-0">
-                                        <div class="col-lg-2">
+                <!-- Modal for student details -->
+                <div class="modal fade" id="id-{{$info->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="container-fluid row p-0">
+                                    <div class="col-lg-2">
 
-                                            <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> ID : </span>{{$info->id}}</h5>
-                                        </div>
-                                        <div class="col-lg-9">
+                                        <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> ID : </span>{{$info->id}}</h5>
+                                    </div>
+                                    <div class="col-lg-9">
 
-                                            <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> Full Name : </span>{{$info->Full_Name}}</h5>
-                                        </div>
-                                        <div class="col-lg-1 p-0">
+                                        <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> Full Name : </span>{{$info->Full_Name}}</h5>
+                                    </div>
+                                    <div class="col-lg-1 p-0">
 
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span id="close-modal" aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span id="close-modal" aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <h4 class="font-weight-bold">Personal Details</h4>
-                                            <hr>
-                                            <p><span class="font-weight-bold"> DOB : </span>{{$info->BOD}}</p>
-                                            <p><span class="font-weight-bold"> Gender : </span>{{$info->gender}}</p>
-                                            <p><span class="font-weight-bold"> Cast : </span>{{$info->cast}}</p>
-                                            <p><span class="font-weight-bold"> Qualification : </span>{{$info->Qualification}}</p>
-                                            <p><span class="font-weight-bold"> Occupation : </span>{{$info->Occupation}}</p>
-                                            <p><span class="font-weight-bold"> Counselling By : </span>{{$info->Counselling_By}}</p>
-                                            <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
-                                            <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <h4 class="font-weight-bold">Course Details</h4>
-                                            <hr>
-                                            <p><span class="font-weight-bold"> Course : </span>{{$info->Course}}</p>
-                                            <p><span class="font-weight-bold"> Authorisation : </span>{{$info->Authorisation}}</p>
-                                            <p><span class="font-weight-bold"> Fees : </span>{{$info->Fees}}</p>
-                                            <p><span class="font-weight-bold"> Duration : </span>{{$info->Duration}}</p>
-                                            <p><span class="font-weight-bold"> Discount : </span>{{$info->Discount}}</p>
-                                            <p><span class="font-weight-bold"> Batch Time : </span>{{$info->Batch_Time}}</p>
-                                            <p><span class="font-weight-bold"> Net Fees : </span>{{$info->Net_Fees}}</p>
-                                            <p><span class="font-weight-bold"> Discount Offer : </span>{{$info->Discount_Offer}}</p>
-                                            <p><span class="font-weight-bold"> Joining Date : </span>{{$info->Join_Date}}</p>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <h4 class="font-weight-bold">Parents Details</h4>
-                                            <hr>
-                                            <p><span class="font-weight-bold"> Full Name : </span>{{$info->parent_Name}}</p>
-                                            <p><span class="font-weight-bold"> Contact No : </span>{{$info->parent_Contact}}</p>
-                                            <p><span class="font-weight-bold"> Occupation : </span>{{$info->parent_Occupation}}</p>
-                                        </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <h4 class="font-weight-bold">Personal Details</h4>
+                                        <hr>
+                                        <p><span class="font-weight-bold"> DOB : </span>{{$info->BOD}}</p>
+                                        <p><span class="font-weight-bold"> Gender : </span>{{$info->gender}}</p>
+                                        <p><span class="font-weight-bold"> Cast : </span>{{$info->cast}}</p>
+                                        <p><span class="font-weight-bold"> Qualification : </span>{{$info->Qualification}}</p>
+                                        <p><span class="font-weight-bold"> Occupation : </span>{{$info->Occupation}}</p>
+                                        <p><span class="font-weight-bold"> Counselling By : </span>{{$info->Counselling_By}}</p>
+                                        <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
+                                        <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h4 class="font-weight-bold">Course Details</h4>
+                                        <hr>
+                                        <p><span class="font-weight-bold"> Course : </span>{{$info->Course}}</p>
+                                        <p><span class="font-weight-bold"> Authorisation : </span>{{$info->Authorisation}}</p>
+                                        <p><span class="font-weight-bold"> Fees : </span>{{$info->Fees}}</p>
+                                        <p><span class="font-weight-bold"> Duration : </span>{{$info->Duration}}</p>
+                                        <p><span class="font-weight-bold"> Discount : </span>{{$info->Discount}}</p>
+                                        <p><span class="font-weight-bold"> Batch Time : </span>{{$info->Batch_Time}}</p>
+                                        <p><span class="font-weight-bold"> Net Fees : </span>{{$info->Net_Fees}}</p>
+                                        <p><span class="font-weight-bold"> Discount Offer : </span>{{$info->Discount_Offer}}</p>
+                                        <p><span class="font-weight-bold"> Joining Date : </span>{{$info->Join_Date}}</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h4 class="font-weight-bold">Parents Details</h4>
+                                        <hr>
+                                        <p><span class="font-weight-bold"> Full Name : </span>{{$info->parent_Name}}</p>
+                                        <p><span class="font-weight-bold"> Contact No : </span>{{$info->parent_Contact}}</p>
+                                        <p><span class="font-weight-bold"> Occupation : </span>{{$info->parent_Occupation}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
+                </div>
+                <!-- Ends Modal for student details -->
+
+                <!-- modal for fees payment -->
+                <div class="modal fade" id="fees-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-l">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="add_payment" method="POST">
+                                    @csrf
+                                    <label>Student Id :</label>
+                                    <input type="text" name="id" placeholder="id" class="form-control" value="{{$info->id}}">
+                                    <label for="">Name :</label>
+                                    <input type="text" name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
+                                    <label for="">Course :</label>
+                                    <input type="text" name="Course" placeholder="XYZ" class="form-control" value="{{$info->Course}}">
+                                    <label for="">Date :</label>
+                                    <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
+                                    <label for="">Payment :</label>
+                                    <input type="text" name="fees" placeholder="Fess" class="form-control">
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+=======
                     <!-- Ends Modal for student details -->
                     
                     <!-- modal for fees payment -->
@@ -161,9 +196,9 @@
                                     <form action="add_payment" method="POST">
                                         @csrf
                                         <label>Student Id :</label>
-                                        <input type="text" name="id" placeholder="id" class="form-control" value="{{$info->id}}">
+                                        <input name="id" placeholder="id" class="form-control" value="{{$info->id}}">
                                         <label for="">Name :</label>
-                                        <input type="text" name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
+                                        <input name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
                                         <label for="">Course :</label>
                                         <input type="text" name="Course" placeholder="XYZ" class="form-control" value="{{$info->Course}}">
                                         <label for="">Date :</label>
@@ -175,14 +210,35 @@
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </form>
+>>>>>>> da93d3c95442c869d1916c1d90d3980405733ec2
 
-                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!--  Finish modal for fees payment -->
-                    @endforeach
+                <!--  Finish modal for fees payment -->
+                
+                <!-- modal for batch time -->
+                <div class="modal fade" id="batch-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-l">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">{{$info->id}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Finish modal for batch time -->
+                @endforeach
             </table>
             <div class="container pagination">
                 {{$data->links()}}
@@ -191,6 +247,47 @@
     </div>
 
 
+
+    <div class="modal fade" id="fees" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-lg-2">
+                        <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> ID : </span>{{$info->id}}</h5>
+
+                    </div>
+                    <div class="col-lg-9">
+                        <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> Full Name : </span>{{$info->Full_Name}}</h5>
+                    </div>
+                    <form action="add_payment" method="POST">
+                        @csrf
+                        <!-- <label for="">Student Id</label>
+                        <input type="text" name="sid" placeholder="Sid" class="form-control">
+                        <label for="">Name</label>
+                        <input type="text" name="name" placeholder="Full Name" class="form-control">
+                        <label for="">Course</label>
+                        <input type="text" name="course" placeholder="XYZ" class="form-control">
+                        <label for="">Date</label>
+                        <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
+                        <label for="">Payment</label>
+                        <input type="text" name="fees" placeholder="Fess" class="form-control"> -->
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Finish modal for fees payment -->
 
 
     <!-- Add Course Modal -->
@@ -240,12 +337,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script>
-        $('#details').on("click", function() {
-            $('#stu_details').modal('show');
-        });
-        $('#close-modal').on("click", function() {
-            $('#stu_details').modal('hide');
-        });
+        // $('#details').on("click", function() {
+        //     $('#stu_details').modal('show');
+        // });
+        // $('#close-modal').on("click", function() {
+        //     $('#stu_details').modal('hide');
+        // });
 
         function details(id) {
             console.log(id);
