@@ -14,7 +14,7 @@
 <body>
 
     <div id="mySidenav" class="sidenav">
-        <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
+            <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
         <!-- Button trigger modal -->
         <a href="admission_form">Add Student</a>
         <a type="button" data-toggle="modal" data-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
@@ -39,7 +39,7 @@
                 <ul class="navbar-nav ml-auto">
 
                 </ul>
-
+ 
             </div>
 
         </nav>
@@ -74,11 +74,8 @@
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-<<<<<<< HEAD
                         <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
-=======
                         <td><a data-toggle="modal" data-target="#fees"  class="btn text-light" style="background-color:darkcyan;">fees</a></td>
->>>>>>> 33d22c34e8da4caff1e948af980bc961c6feee2b
                         <td><a href="{{ url('edit', $info->id)}}">
                                 <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
                             </a></td>
@@ -162,7 +159,6 @@
 
     <!-- modal for fees payment -->
 
-<<<<<<< HEAD
         <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -171,20 +167,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-=======
-    <div class="modal fade" id="fees" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-lg-2">
-                        <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> ID : </span>{{$info->id}}</h5>
->>>>>>> 33d22c34e8da4caff1e948af980bc961c6feee2b
+
                     </div>
                     <div class="col-lg-9">
                         <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> Full Name : </span>{{$info->Full_Name}}</h5>
@@ -209,10 +192,8 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
+
     </div>
->>>>>>> 33d22c34e8da4caff1e948af980bc961c6feee2b
     <!--  Finish modal for fees payment -->
 
 
