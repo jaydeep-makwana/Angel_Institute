@@ -56,6 +56,7 @@
                         <th>Contact No.</th>
                         <th>Duration</th>
                         <th>View</th>
+                        <th>Batch Time</th>
                         <th>Fees Pay</th>
                         <th>Update</th>
                         <th>Delete</th>
@@ -74,17 +75,14 @@
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-<<<<<<< HEAD
-                        <td><a href="#" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
-=======
-                        <td><a data-toggle="modal" data-target="#fees"  class="btn text-light" style="background-color:darkcyan;">fees</a></td>
->>>>>>> 33d22c34e8da4caff1e948af980bc961c6feee2b
-                        <td><a href="{{ url('edit', $info->id)}}">
-                                <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
-                            </a></td>
-                        <td><a href="{{ url('delete', $info->id)}}">
-                                <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
-                            </a></td>
+                         <td><a href="#" class="btn text-light" style="background-color:lightcoral">Batch</a></td>
+                            <td><a data-toggle="modal" data-target="#fees" class="btn text-light" style="background-color:darkcyan;">fees</a></td>
+                            <td><a href="{{ url('edit', $info->id)}}">
+                                    <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
+                                </a></td>
+                            <td><a href="{{ url('delete', $info->id)}}">
+                                    <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
+                                </a></td>
                     </tr>
 
 
@@ -162,16 +160,7 @@
 
     <!-- modal for fees payment -->
 
-<<<<<<< HEAD
-        <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-=======
+
     <div class="modal fade" id="fees" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -184,7 +173,7 @@
                 <div class="modal-body">
                     <div class="col-lg-2">
                         <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> ID : </span>{{$info->id}}</h5>
->>>>>>> 33d22c34e8da4caff1e948af980bc961c6feee2b
+
                     </div>
                     <div class="col-lg-9">
                         <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> Full Name : </span>{{$info->Full_Name}}</h5>
@@ -209,71 +198,69 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
-    </div>
->>>>>>> 33d22c34e8da4caff1e948af980bc961c6feee2b
-    <!--  Finish modal for fees payment -->
+         </div>
+           
+            <!--  Finish modal for fees payment -->
 
 
-    <!-- Add Course Modal -->
+            <!-- Add Course Modal -->
 
-    <!-- Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="add_course" method="POST">
-                        @csrf
-                        <div class="form-group">
-                            <label for="courseName" class="col-form-label">Course Name:</label>
-                            <input type="text" class="form-control" id="courseName" name="courseName">
+            <!-- Modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </form>
+                        <div class="modal-body">
+                            <form action="add_course" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="courseName" class="col-form-label">Course Name:</label>
+                                    <input type="text" class="form-control" id="courseName" name="courseName">
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        </form>
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!--  Finish Add Course Modal -->
+            <!--  Finish Add Course Modal -->
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                    document.getElementById("main").style.marginLeft = "250px";
+                }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script>
-        $('#details').on("click", function() {
-            $('#stu_details').modal('show');
-        });
-        $('#close-modal').on("click", function() {
-            $('#stu_details').modal('hide');
-        });
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft = "0";
+                }
+            </script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script>
+                $('#details').on("click", function() {
+                    $('#stu_details').modal('show');
+                });
+                $('#close-modal').on("click", function() {
+                    $('#stu_details').modal('hide');
+                });
 
-        function details(id) {
-            console.log(id);
-        }
-    </script>
+                function details(id) {
+                    console.log(id);
+                }
+            </script>
 </body>
 
 </html>
