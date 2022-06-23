@@ -14,9 +14,9 @@ class CreateFeesTable extends Migration
     public function up()
     {
         Schema::create('fees', function (Blueprint $table) {
-            $table->id('S_id');
-            $table->string('name');
-            $table->string('course');
+            $table->id('id');
+            $table->string('Full_Name');
+            $table->string('Course');
             $table->date('date_of_payment');
             $table->integer('fees');
             $table->timestamps();
