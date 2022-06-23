@@ -162,9 +162,9 @@
                                     <form action="add_payment" method="POST">
                                         @csrf
                                         <label>Student Id :</label>
-                                        <input type="text" name="id" placeholder="id" class="form-control" value="{{$info->id}}">
+                                        <input name="id" placeholder="id" class="form-control" value="{{$info->id}}">
                                         <label for="">Name :</label>
-                                        <input type="text" name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
+                                        <input name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
                                         <label for="">Course :</label>
                                         <input type="text" name="Course" placeholder="XYZ" class="form-control" value="{{$info->Course}}">
                                         <label for="">Date :</label>
