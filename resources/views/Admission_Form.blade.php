@@ -34,8 +34,8 @@
                             <div class="col-lg-6">
 
                                 <div class="form-group  col-sm-12">
-                                    <label for="inputName" class="form-check-label">Full_Name</label>
-                                    <input type="text" placeholder="Full_Name" name="Full_Name" class="form-control" value="{{ old('Full_Name') }}">
+                                    <label for="inputName" class="form-check-label">Full Name</label>
+                                    <input type="text" placeholder="Full Name" name="Full_Name" class="form-control" value="{{ old('Full_Name') }}">
                                     <span class="text-danger">@error('Full_Name'){{$message}} @enderror</span>
                                 </div>
 
@@ -46,14 +46,14 @@
                                 </div>
 
                                 <div class="form-group  col-sm-12 ">
-                                    <label for="inputContact" class="form-check-label">Contact_No</label>
-                                    <input type="text" placeholder="Contact_No" name="Contact_No" class="form-control" value="{{old('ContactNo')}}">
+                                    <label for="inputContact" class="form-check-label">Contact No</label>
+                                    <input type="text" placeholder="Contact No" name="Contact_No" class="form-control" value="{{old('ContactNo')}}">
                                     <span class="text-danger">@error('ContactNo'){{$message}} @enderror</span>
                                 </div>
 
                                 <div class="form-group  col-sm-12">
-                                    <label for="inputDate" class="form-check-label">Date_Of_Birth</label>
-                                    <input type="date" placeholder="Date_Of_Birth" name="BOD" class="form-control" value="{{old('BOD')}}">
+                                    <label for="inputDate" class="form-check-label">Date Of Birth</label>
+                                    <input type="date" placeholder="Date Of Birth" name="BOD" class="form-control" value="{{old('BOD')}}">
                                     <span class="text-danger">@error('BOD'){{$message}} @enderror</span>
                                 </div>
 
@@ -117,8 +117,8 @@
 
 
                                 <div class="form-group">
-                                    <label for="inputCounselling_By" class="form-check-label">Counselling_By</label>
-                                    <input type="text" placeholder="Counselling_By" name="Counselling_By" class="form-control" value="{{old('Counselling_By')}}">
+                                    <label for="inputCounselling_By" class="form-check-label">Counselling By</label>
+                                    <input type="text" placeholder="Counselling By" name="Counselling_By" class="form-control" value="{{old('Counselling_By')}}">
                                     <span class="text-danger">@error('Counselling_By'){{$message}} @enderror</span>
                                 </div>
 
@@ -180,20 +180,20 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputBatch" class="form-check-label">Batch_Time</label>
-                                        <input type="text" placeholder="Batch_Time" name="Batch_Time" class="form-control" value="{{old('Batch_Time')}}">
+                                        <label for="inputBatch" class="form-check-label">Batch Time</label>
+                                        <input type="text" placeholder="Batch Time" name="Batch_Time" class="form-control" value="{{old('Batch_Time')}}">
                                         <span class="text-danger">@error('Batch_Time'){{$message}} @enderror</span>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputNet_Fees" class="form-check-label">Net_Fees</label>
-                                        <input type="text" placeholder="Net-Amount" name="Net_Fees" class="form-control" value="{{old('Net_Fees')}}">
+                                        <label for="inputNet_Fees" class="form-check-label">Net Fees</label>
+                                        <input type="text" placeholder="Net Amount" name="Net_Fees" class="form-control" value="{{old('Net_Fees')}}">
                                         <span class="text-danger">@error('Net_Fees'){{$message}} @enderror</span>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputDiscount_Offer" class="form-check-label">Discount_Offer</label>
-                                        <input type="text" placeholder="Discount_Offer" name="Discount_Offer" class="form-control" value="{{old('Discount_Offer')}}">
+                                        <label for="inputDiscount_Offer" class="form-check-label">Discount Offer</label>
+                                        <input type="text" placeholder="Discount Offer" name="Discount_Offer" class="form-control" value="{{old('Discount_Offer')}}">
                                         <span class="text-danger">@error('Discount_Offer'){{$message}} @enderror</span>
                                     </div>
                                     <div class="form-group">
@@ -218,13 +218,13 @@
                         <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
 
                         <div class="form-group  ">
-                            <label for="inputName" class="form-check-label">Full_Name</label>
-                            <input type="text" placeholder="Full_Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
+                            <label for="inputName" class="form-check-label">Full Name</label>
+                            <input type="text" placeholder="Full Name" name="parent_Name" class="form-control" value="{{old('parent_Name')}}">
                         </div>
 
                         <div class="form-group">
-                            <label for="inputContact" class="form-check-label">Contact_No</label>
-                            <input type="text" placeholder="Contact_No" name="parent_Contact" class="form-control" value="{{old('parent_Contact')}}">
+                            <label for="inputContact" class="form-check-label">Contact No</label>
+                            <input type="text" placeholder="Contact No" name="parent_Contact" class="form-control" value="{{old('parent_Contact')}}">
                         </div>
 
                         <div class="form-group">

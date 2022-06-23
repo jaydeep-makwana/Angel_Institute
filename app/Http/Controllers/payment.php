@@ -12,9 +12,9 @@ class payment extends Controller
 
         $fees->validate([
 
-            "sid" => 'required',
-            "name" => 'required',
-            "course" => 'required',
+            "id" => 'required',
+            "Full_Name" => 'required',
+            "Course" => 'required',
             "date_of_payment" => 'required',
             "fees" => 'required'
 
@@ -22,9 +22,9 @@ class payment extends Controller
 
         DB::table('fees')->insert([
 
-            "sid" =>$fees->input('sid'),
-            "name" =>$fees->input('name'),
-            "course" =>$fees->input('course'),
+            "id" =>$fees->input('id'),
+            "Full_Name" =>$fees->input('Full_Name'),
+            "Course" =>$fees->input('Course'),
             "date_of_payment" =>$fees->input('date_of_payment'),
             "fees" =>$fees->input('fees'),
 

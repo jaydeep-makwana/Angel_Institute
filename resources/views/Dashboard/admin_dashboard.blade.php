@@ -75,6 +75,7 @@
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
+<<<<<<< HEAD
                          <td><a href="#" class="btn text-light" style="background-color:lightcoral">Batch</a></td>
                             <td><a data-toggle="modal" data-target="#fees" class="btn text-light" style="background-color:darkcyan;">fees</a></td>
                             <td><a href="{{ url('edit', $info->id)}}">
@@ -83,7 +84,17 @@
                             <td><a href="{{ url('delete', $info->id)}}">
                                     <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
                                 </a></td>
+=======
+                        <td><a data-toggle="modal" data-target="#fees-{{$info->id}}" class="btn text-light" style="background-color:lightcoral">Fees</a></td>
+                        <td><a href="{{ url('edit', $info->id)}}">
+                                <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
+                            </a></td>
+                        <td><a href="{{ url('delete', $info->id)}}">
+                                <h5><i class="fa-solid fa-trash-can text-danger"></i></h5>
+                            </a></td>
+>>>>>>> 9cce3f9f176e7a24a3a3523b5684f04c9e3620cd
                     </tr>
+                    </tbody>
 
 
                     <!-- Modal for student details -->
@@ -148,9 +159,43 @@
                         </div>
                     </div>
                     <!-- Ends Modal for student details -->
-                    </tr>
+                    
+                    <!-- modal for fees payment -->
+                    <div class="modal fade" id="fees-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-l">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="add_payment" method="POST">
+                                        @csrf
+                                        <label>Student Id :</label>
+                                        <input type="text" name="id" placeholder="id" class="form-control" value="{{$info->id}}">
+                                        <label for="">Name :</label>
+                                        <input type="text" name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
+                                        <label for="">Course :</label>
+                                        <input type="text" name="Course" placeholder="XYZ" class="form-control" value="{{$info->Course}}">
+                                        <label for="">Date :</label>
+                                        <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
+                                        <label for="">Payment :</label>
+                                        <input type="text" name="fees" placeholder="Fess" class="form-control">
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  Finish modal for fees payment -->
                     @endforeach
-                </tbody>
             </table>
             <div class="container pagination">
                 {{$data->links()}}
@@ -158,8 +203,8 @@
         </div>
     </div>
 
-    <!-- modal for fees payment -->
 
+<<<<<<< HEAD
 
     <div class="modal fade" id="fees" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -201,6 +246,8 @@
          </div>
            
             <!--  Finish modal for fees payment -->
+=======
+>>>>>>> 9cce3f9f176e7a24a3a3523b5684f04c9e3620cd
 
 
             <!-- Add Course Modal -->
