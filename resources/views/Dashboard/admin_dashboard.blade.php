@@ -75,7 +75,7 @@
                         <td>{{$info->Duration}}</td>
                         <!-- Button trigger modal -->
                         <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
-                        <td><a href="#" class="btn text-light" data-target="#batch-{{$info->id}}" style="background-color:lightcoral">Batch</a></td>
+                        <td><a href="#" class="btn text-light" data-toggle="modal" data-target="#batch-{{$info->id}}" style="background-color:lightcoral">Batch</a></td>
                         <td><a data-toggle="modal" data-target="#fees-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">fees</a></td>
                         <td><a href="{{ url('edit', $info->id)}}">
                                 <h5><i class="fa-solid fa-pen-to-square text-success"></i></h5>
@@ -148,6 +148,7 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
                 <!-- Ends Modal for student details -->
 
@@ -180,13 +181,11 @@
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+=======
 
-                <!--  Finish modal for fees payment -->
-                
+                </div>
+                <!-- Ends Modal for student details -->
+
                 <!-- modal for batch time -->
                 <div class="modal fade" id="batch-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-l">
@@ -198,14 +197,54 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                
 
+                                <h1>hello</h1>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!--  Finish modal for batch time -->
+
+                <!-- modal for fees payment -->
+                <div class="modal fade" id="fees-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-l">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="add_payment" method="POST">
+                                    @csrf
+                                    <label>Student Id :</label>
+                                    <input type="text" name="id" placeholder="id" class="form-control" value="{{$info->id}}">
+                                    <label for="">Name :</label>
+                                    <input type="text" name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
+                                    <label for="">Course :</label>
+                                    <input type="text" name="Course" placeholder="XYZ" class="form-control" value="{{$info->Course}}">
+                                    <label for="">Date :</label>
+                                    <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
+                                    <label for="">Payment :</label>
+                                    <input type="text" name="fees" placeholder="Fess" class="form-control">
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+
+
+>>>>>>> 3e4c92255f0b4541f3fe63f1a22c60821a450ff4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Finish modal for fees payment -->
+
+
                 @endforeach
             </table>
             <div class="container pagination">
@@ -224,6 +263,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
 
+<<<<<<< HEAD
     
                 </div>
                 <div class="modal-body">
@@ -261,6 +301,8 @@
     <!--  Finish modal for fees payment -->
 
 
+=======
+>>>>>>> 3e4c92255f0b4541f3fe63f1a22c60821a450ff4
     <!-- Add Course Modal -->
 
     <!-- Modal-->
