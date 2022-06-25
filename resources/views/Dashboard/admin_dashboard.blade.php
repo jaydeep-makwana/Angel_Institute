@@ -207,7 +207,6 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
                     </div>
                 </div>
                 <!-- Ends Modal for student details -->
@@ -235,7 +234,6 @@
                                     <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
                                     <label for="">Payment :</label>
                                     <input type="text" name="fees" placeholder="Fess" class="form-control">
-=======
 
 
 
@@ -259,23 +257,18 @@
                                                 <input type="text" class="form-control" id="courseName" name="courseName">
                                             </div>
                                     </div>
->>>>>>> dae5bb9ab911c080c23d19cc32dff045bb6e482d
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
-<<<<<<< HEAD
                                 </form>
-=======
                                     </form>
->>>>>>> dae5bb9ab911c080c23d19cc32dff045bb6e482d
 
                                 </div>
                             </div>
                         </div>
                         <!-- Ends Modal for student details -->
 
-<<<<<<< HEAD
                 <!--  Finish modal for fees payment -->
 
                 <!-- modal for batch time -->
@@ -290,8 +283,6 @@
                             </div>
                             <div class="modal-body">
 
-=======
->>>>>>> dae5bb9ab911c080c23d19cc32dff045bb6e482d
 
                         <!-- modal for batch time -->
                         <div class="modal fade" id="batch-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -319,7 +310,6 @@
         </div>
     </div>
 
-<<<<<<< HEAD
 
     <!-- Add Course Modal -->
 
@@ -352,8 +342,6 @@
     </div>
     <!--  Finish Add Course Modal -->
 
-=======
->>>>>>> dae5bb9ab911c080c23d19cc32dff045bb6e482d
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";

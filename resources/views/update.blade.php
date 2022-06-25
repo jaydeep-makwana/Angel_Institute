@@ -133,6 +133,7 @@
                             </div>
                         </div>
 
+
                         <div class="col-lg-6">
 
 
@@ -146,103 +147,98 @@
                                 <div class="row w-100 p-4">
 
                                     <div class="col-lg-6">
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                    
-                                            <div class="form-group">
-                                                <label for="inputCourse" class="form-check-label">Course</label>
-                                                <input type="text" placeholder="Course" name="Course" class="form-control" value="{{$info->Course}}">
-                                                <span class="text-danger">@error('Course'){{$message}} @enderror</span>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="inputAuthorisation" class="form-check-label">Authorisation</label>
-                                                <input type="text" placeholder="Authorisation" name="Authorisation" class="form-control" value="{{$info->Authorisation}}">
-                                                <span class="text-danger">@error('Authorisation'){{$message}} @enderror</span>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="inputFees" class="form-check-label">Fees</label>
-                                                <input type="text" placeholder="Fees" name="Fees" class="form-control" value="{{$info->Fees}}">
-                                                <span class="text-danger">@error('Fees'){{$message}} @enderror</span>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="inputDuration" class="form-check-label">Duration</label>
-                                                <input type="text" placeholder="Duration" name="Duration" class="form-control" value="{{$info->Duration}}">
-                                                <span class="text-danger">@error('Duration'){{$message}} @enderror</span>
-                                            </div>
-
+                                        <div class="form-group">
+                                            <label for="Course" class="form-check-label">Course :</label>
+                                                <input type="text" class="form-control" value="{{$info->Course}}" name="Course">
+                                            <span class="text-danger">@error('Course'){{$message}} @enderror</span>
                                         </div>
 
-                                        <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="inputAuthorisation" class="form-check-label">Authorisation</label>
+                                            <input type="text" placeholder="Authorisation" name="Authorisation" class="form-control" value="{{$info->Authorisation}}">
+                                            <span class="text-danger">@error('Authorisation'){{$message}} @enderror</span>
+                                        </div>
 
-                                            <div class="form-group">
-                                                <label for="inputDiscount" class="form-check-label">Discount</label>
-                                                <input type="text" placeholder="Discount" name="Discount" class="form-control" value="{{$info->Discount}}">
-                                                <span class="text-danger">@error('Discount'){{$message}} @enderror</span>
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="inputFees" class="form-check-label">Fees</label>
+                                            <input type="text" placeholder="Fees" name="Fees" class="form-control" value="{{$info->Fees}}">
+                                            <span class="text-danger">@error('Fees'){{$message}} @enderror</span>
+                                        </div>
 
-                                            <div class="form-group">
-                                                <label for="inputBatch" class="form-check-label">Batch Time</label>
-                                                <input type="text" placeholder="Batch Time" name="Batch_Time" class="form-control" value="{{$info->Batch_Time}}">
-                                                <span class="text-danger">@error('Batch_Time'){{$message}} @enderror</span>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="inputNet_Fees" class="form-check-label">Net Fees</label>
-                                                <input type="text" placeholder="Net Amount" name="Net_Fees" class="form-control" value="{{$info->Net_Fees}}">
-                                                <span class="text-danger">@error('Net_Fees'){{$message}} @enderror</span>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="inputDiscount_Offer" class="form-check-label">Discount Offer</label>
-                                                <input type="text" placeholder="Discount Offer" name="Discount_Offer" class="form-control" value="{{$info->Discount_Offer}}">
-                                                <span class="text-danger">@error('Discount_Offer'){{$message}} @enderror</span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputJoin_Date" class="form-check-label">Join Date :</label>
-                                                <input type="date" placeholder="Join_Date" name="Join_Date" class="form-control" value="{{$info->Join_Date}}">
-                                                <span class="text-danger">@error('Join_Date'){{$message}} @enderror</span>
-                                            </div>
-
+                                        <div class="form-group">
+                                            <label for="inputDuration" class="form-check-label">Duration</label>
+                                            <input type="text" placeholder="Duration" name="Duration" class="form-control" value="{{$info->Duration}}">
+                                            <span class="text-danger">@error('Duration'){{$message}} @enderror</span>
                                         </div>
 
                                     </div>
-                                </div>
 
+                                    <div class="col-lg-6">
+
+                                        <div class="form-group">
+                                            <label for="inputDiscount" class="form-check-label">Discount</label>
+                                            <input type="text" placeholder="Discount" name="Discount" class="form-control" value="{{$info->Discount}}">
+                                            <span class="text-danger">@error('Discount'){{$message}} @enderror</span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputBatch" class="form-check-label">Batch Time</label>
+                                            <input type="text" placeholder="Batch Time" name="Batch_Time" class="form-control" value="{{$info->Batch_Time}}">
+                                            <span class="text-danger">@error('Batch_Time'){{$message}} @enderror</span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputNet_Fees" class="form-check-label">Net Fees</label>
+                                            <input type="text" placeholder="Net Amount" name="Net_Fees" class="form-control" value="{{$info->Net_Fees}}">
+                                            <span class="text-danger">@error('Net_Fees'){{$message}} @enderror</span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputDiscount_Offer" class="form-check-label">Discount Offer</label>
+                                            <input type="text" placeholder="Discount Offer" name="Discount_Offer" class="form-control" value="{{$info->Discount_Offer}}">
+                                            <span class="text-danger">@error('Discount_Offer'){{$message}} @enderror</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputJoin_Date" class="form-check-label">Join Date :</label>
+                                            <input type="date" placeholder="Join_Date" name="Join_Date" class="form-control" value="{{$info->Join_Date}}">
+                                            <span class="text-danger">@error('Join_Date'){{$message}} @enderror</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- parents details -->
+
+                    <div class="row w-100 ml-2">
+
+                        <div class="col-6">
+                            <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
+
+                            <div class="form-group  ">
+                                <label for="inputName" class="form-check-label">Full Name</label>
+                                <input type="text" placeholder="Full Name" name="parent_Name" class="form-control" value="{{$info->parent_Name}}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputContact" class="form-check-label">Contact No</label>
+                                <input type="text" placeholder="Contact No" name="parent_Contact" class="form-control" value="{{$info->parent_Contact}}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputOccupation" class="form-check-label">Occupation</label>
+                                <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{$info->parent_Occupation}}">
                             </div>
                         </div>
-
-                        <!-- parents details -->
-
-                        <div class="row w-100 ml-2">
-
-                            <div class="col-6">
-                                <h1 class="ml-auto mr-auto text-center">Parents Details</h1>
-
-                                <div class="form-group  ">
-                                    <label for="inputName" class="form-check-label">Full Name</label>
-                                    <input type="text" placeholder="Full Name" name="parent_Name" class="form-control" value="{{$info->parent_Name}}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="inputContact" class="form-check-label">Contact No</label>
-                                    <input type="text" placeholder="Contact No" name="parent_Contact" class="form-control" value="{{$info->parent_Contact}}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="inputOccupation" class="form-check-label">Occupation</label>
-                                    <input type="text" placeholder="Occupation" name="parent_Occupation" class="form-control" value="{{$info->parent_Occupation}}">
-                                </div>
-                            </div>
-                            <div class="col-6 text-center mb-2" style="margin-top:15%;">
-                                <input type="submit" value="Update">
-                                <a href="admission_form" class="reset text-white ml-3">Reset</a>
-                            </div>
-
+                        <div class="col-6 text-center mb-2" style="margin-top:15%;">
+                            <input type="submit" value="Update">
+                            <a href="admission_form" class="reset text-white ml-3">Reset</a>
                         </div>
+
+                    </div>
                 </form>
         </div>
         <div class="container p-5">
