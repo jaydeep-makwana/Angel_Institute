@@ -213,7 +213,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputJoin_Date" class="form-check-label">Join Date :</label>
-                                                <input type="date" placeholder="Join_Date" name="Join_Date" class="form-control" value="{{$info->Join_Date}}">
+                                                <input type="date" placeholder="Join Date" name="Join_Date" class="form-control" value="{{$info->Join_Date}}">
                                                 <span class="text-danger">@error('Join_Date'){{$message}} @enderror</span>
                                             </div>
 
