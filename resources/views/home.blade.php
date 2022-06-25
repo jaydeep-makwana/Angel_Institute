@@ -24,7 +24,7 @@
     <div class="container-fluid p-5">
         <div class="row p-5 justify-content-center">
             <div class="col-12 p-5 text-center">
-                <h1 class="anim">welcome to angle multimedia education </h1>
+                <h1 class="anim">welcome to angel multimedia education </h1>
             </div>
         </div>
     </div>
