@@ -31,8 +31,6 @@
         <nav class="navbar navbar-expand-lg">
             <span style="font-size:25px;cursor:pointer;" class="mr-2" onclick="openNav()">&#9776;</span>
             <img src="{{asset('Images/angel.png')}}" alt="">
-
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <ul class="navbar-nav ml-auto">
@@ -147,7 +145,6 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
                 </div>
                 <!-- Ends Modal for student details -->
 
@@ -165,9 +162,9 @@
                                 <form action="add_payment" method="POST">
                                     @csrf
                                     <label>Student Id :</label>
-                                    <input type="text" name="id" placeholder="id" class="form-control" value="{{$info->id}}">
+                                    <input name="id" placeholder="id" class="form-control" value="{{$info->id}}">
                                     <label for="">Name :</label>
-                                    <input type="text" name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
+                                    <input name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
                                     <label for="">Course :</label>
                                     <input type="text" name="Course" placeholder="XYZ" class="form-control" value="{{$info->Course}}">
                                     <label for="">Date :</label>
@@ -179,38 +176,6 @@
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                 </form>
-=======
-                    <!-- Ends Modal for student details -->
-                    
-                    <!-- modal for fees payment -->
-                    <div class="modal fade" id="fees-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-l">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="add_payment" method="POST">
-                                        @csrf
-                                        <label>Student Id :</label>
-                                        <input name="id" placeholder="id" class="form-control" value="{{$info->id}}">
-                                        <label for="">Name :</label>
-                                        <input name="Full_Name" placeholder="Full Name" class="form-control" value="{{$info->Full_Name}}">
-                                        <label for="">Course :</label>
-                                        <input type="text" name="Course" placeholder="XYZ" class="form-control" value="{{$info->Course}}">
-                                        <label for="">Date :</label>
-                                        <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
-                                        <label for="">Payment :</label>
-                                        <input type="text" name="fees" placeholder="Fess" class="form-control">
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </form>
->>>>>>> da93d3c95442c869d1916c1d90d3980405733ec2
 
                             </div>
                         </div>
@@ -218,7 +183,7 @@
                 </div>
 
                 <!--  Finish modal for fees payment -->
-                
+
                 <!-- modal for batch time -->
                 <div class="modal fade" id="batch-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-l">
@@ -230,7 +195,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                
+
 
                             </div>
                         </div>
@@ -245,49 +210,6 @@
             </div>
         </div>
     </div>
-
-
-
-    <div class="modal fade" id="fees" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add Payment</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-lg-2">
-                        <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> ID : </span>{{$info->id}}</h5>
-
-                    </div>
-                    <div class="col-lg-9">
-                        <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> Full Name : </span>{{$info->Full_Name}}</h5>
-                    </div>
-                    <form action="add_payment" method="POST">
-                        @csrf
-                        <!-- <label for="">Student Id</label>
-                        <input type="text" name="sid" placeholder="Sid" class="form-control">
-                        <label for="">Name</label>
-                        <input type="text" name="name" placeholder="Full Name" class="form-control">
-                        <label for="">Course</label>
-                        <input type="text" name="course" placeholder="XYZ" class="form-control">
-                        <label for="">Date</label>
-                        <input type="date" name="date_of_payment" placeholder="Date" class="form-control">
-                        <label for="">Payment</label>
-                        <input type="text" name="fees" placeholder="Fess" class="form-control"> -->
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--  Finish modal for fees payment -->
 
 
     <!-- Add Course Modal -->

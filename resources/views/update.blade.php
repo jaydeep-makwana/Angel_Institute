@@ -149,22 +149,12 @@
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="Course" class="form-check-label">Course</label>
-                                                <!-- <input type="text" placeholder="Course" name="Course" class="form-control" value="{{old('Course')}}"> -->
-                                                <select name="Course" class="form-control" id="Course">
-                                                    <option value="" selected disabled>--Choose Courses--</option>
-                                                    @foreach($data as $info)
-                                                    <option value="{{$info->courseName}}" @if(old('Course')=='{{$info->courseName}}' )checked @endif>{{$info->courseName}}</option>
-                                                    @endforeach
-                                                </select>
-                                                <span class="text-danger">@error('Course'){{$message}} @enderror</span>
-                                            </div>
-
-                                            <!-- <div class="form-group">
+                    
+                                            <div class="form-group">
                                                 <label for="inputCourse" class="form-check-label">Course</label>
                                                 <input type="text" placeholder="Course" name="Course" class="form-control" value="{{$info->Course}}">
                                                 <span class="text-danger">@error('Course'){{$message}} @enderror</span>
-                                            </div> -->
+                                            </div>
 
                                             <div class="form-group">
                                                 <label for="inputAuthorisation" class="form-check-label">Authorisation</label>
