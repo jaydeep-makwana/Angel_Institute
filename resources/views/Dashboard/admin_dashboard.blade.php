@@ -75,15 +75,7 @@
                             <td><a href="{{ url('edit', $info->id)}}"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
 
                             <td><a href="{{ url('delete', $info->id)}}"><i class="fa-solid fa-trash-can text-danger"></i></a></td>
-                            <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
 
-                            <td><a href="#" class="btn text-light" data-toggle="modal" data-target="#batch-{{$info->id}}" style="background-color:lightcoral">Batch</a></td>
-
-                            <td><a data-toggle="modal" data-target="#fees-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">fees</a></td>
-
-                            <td><a href="{{ url('edit', $info->id)}}"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
-
-                            <td><a href="{{ url('delete', $info->id)}}"><i class="fa-solid fa-trash-can text-danger"></i></a></td>
 
                         </tr>
                         <!-- Modal for student details -->
@@ -118,17 +110,6 @@
                                                 <p><span class="font-weight-bold"> Counselling By : </span>{{$info->Counselling_By}}</p>
                                                 <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
                                                 <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
-                                                <p><span class="font-weight-bold"> Qualification : </span>{{$info->Qualification}}</p>
-                                                <p><span class="font-weight-bold"> Occupation : </span>{{$info->Occupation}}</p>
-                                                <p><span class="font-weight-bold"> Counselling By : </span>{{$info->Counselling_By}}</p>
-                                                <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
-                                                <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
-                                            </div>
-                                                <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
-                                                <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
-                                            </div>
-                                                <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
-                                                <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
                                             </div>
                                             <div class="col-lg-4">
                                                 <h4 class="font-weight-bold">Course Details</h4>
@@ -149,18 +130,13 @@
                                                 <p><span class="font-weight-bold"> Full Name : </span>{{$info->parent_Name}}</p>
                                                 <p><span class="font-weight-bold"> Contact No : </span>{{$info->parent_Contact}}</p>
                                                 <p><span class="font-weight-bold"> Occupation : </span>{{$info->parent_Occupation}}</p>
-                                                <h5 class="modal-title" id="exampleModalLabel"><span class="font-weight-bold"> ID : </span>{{$info->id}}</h5>
-                                            </div>
-                                            <div class="col-lg-1 p-0">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span id="close-modal" aria-hidden="true">&times;</span>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- modal for fees payment -->
                         <div class="modal fade" id="fees-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -257,15 +233,15 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </form>
-
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+
         </div>
+    </div>
     </div>
     <!--  Finish Add Course Modal -->
     <script>
@@ -278,6 +254,7 @@
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
+
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
