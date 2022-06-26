@@ -117,6 +117,7 @@ class operationController extends Controller
         DB::table('students')->where('id', $id)->delete();
         return redirect('admin_dashboard');
     }
+    
 
     public function find_bDay()
     {
