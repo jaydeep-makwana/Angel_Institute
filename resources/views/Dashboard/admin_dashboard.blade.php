@@ -124,6 +124,12 @@
                                                 <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
                                                 <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
                                             </div>
+                                                <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
+                                                <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
+                                            </div>
+                                                <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
+                                                <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
+                                            </div>
                                             <div class="col-lg-4">
                                                 <h4 class="font-weight-bold">Course Details</h4>
                                                 <hr>
