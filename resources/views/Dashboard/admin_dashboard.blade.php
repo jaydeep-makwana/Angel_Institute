@@ -75,6 +75,15 @@
                             <td><a href="{{ url('edit', $info->id)}}"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
 
                             <td><a href="{{ url('delete', $info->id)}}"><i class="fa-solid fa-trash-can text-danger"></i></a></td>
+                            <td><a data-toggle="modal" data-target="#id-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">View</a></td>
+
+                            <td><a href="#" class="btn text-light" data-toggle="modal" data-target="#batch-{{$info->id}}" style="background-color:lightcoral">Batch</a></td>
+
+                            <td><a data-toggle="modal" data-target="#fees-{{$info->id}}" class="btn text-light" style="background-color:darkcyan;">fees</a></td>
+
+                            <td><a href="{{ url('edit', $info->id)}}"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
+
+                            <td><a href="{{ url('delete', $info->id)}}"><i class="fa-solid fa-trash-can text-danger"></i></a></td>
 
                         </tr>
                         <!-- Modal for student details -->
@@ -104,6 +113,11 @@
                                                 <p><span class="font-weight-bold"> DOB : </span>{{$info->BOD}}</p>
                                                 <p><span class="font-weight-bold"> Gender : </span>{{$info->gender}}</p>
                                                 <p><span class="font-weight-bold"> Cast : </span>{{$info->cast}}</p>
+                                                <p><span class="font-weight-bold"> Qualification : </span>{{$info->Qualification}}</p>
+                                                <p><span class="font-weight-bold"> Occupation : </span>{{$info->Occupation}}</p>
+                                                <p><span class="font-weight-bold"> Counselling By : </span>{{$info->Counselling_By}}</p>
+                                                <p><span class="font-weight-bold"> Address : </span>{{$info->Address}}</p>
+                                                <p><span class="font-weight-bold"> Contact No : </span>{{$info->Contact_No}}</p>
                                                 <p><span class="font-weight-bold"> Qualification : </span>{{$info->Qualification}}</p>
                                                 <p><span class="font-weight-bold"> Occupation : </span>{{$info->Occupation}}</p>
                                                 <p><span class="font-weight-bold"> Counselling By : </span>{{$info->Counselling_By}}</p>
@@ -155,6 +169,10 @@
                                     <div class="modal-body">
                                         <div class="container text-left">
                                             <h4>
+                                                <p> Student Id : {{$info->id}}</p>
+                                                <p>Name : {{$info->Full_Name}}</p>
+                                                <p class="mb-4">Course : {{$info->Course}}
+                                                </p>
                                                 <p> Student Id : {{$info->id}}</p>
                                                 <p>Name : {{$info->Full_Name}}</p>
                                                 <p class="mb-4">Course : {{$info->Course}}
@@ -221,6 +239,17 @@
                             <label for="courseName" class="col-form-label">Course Name:</label>
                             <input type="text" class="form-control" id="courseName" name="courseName">
                         </div>
+                        @csrf
+                        <div class="form-group">
+                            <label for="courseName" class="col-form-label">Course Name:</label>
+                            <input type="text" class="form-control" id="courseName" name="courseName">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -233,6 +262,15 @@
     </div>
     <!--  Finish Add Course Modal -->
     <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
