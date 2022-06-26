@@ -22,16 +22,6 @@
         <h1>Welcome to Angel multimedia Eduction </h1>
 
     </div>
-    <div class="container-fluid p-5">
-        <div class="row p-5 justify-content-center">
-            <div class="p-5 text-center">
-            </div>
-        </div>
-    </div>
-    <div>
-        <h1>Welcome to Angel multimedia Eduction </h1>
-
-    </div>
 </body>
 
 </html>
