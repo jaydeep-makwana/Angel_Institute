@@ -27,6 +27,7 @@ Route::view('sidebar','sidebar');
 Route::view('navbar','navbar');
 Route::view('signup','admin_signup');
 Route::view('ragister','ragister');
+Route::view('login','login');
 
 //birthday
 Route::get('bDay',[operationController::class,'find_bDay']);
@@ -39,16 +40,14 @@ Route::get('admission_form',[operationController::class,'course_show']);
 Route::post('add_course',[operationController::class,'course']);
 
 
-//admin_login with signUP
-Route::post('admin_signup',[AdminController::class,'admin_login']);
-Route::view('login','login');
-Route::post('admin_login',[AdminController::class,'login']);
-Route::get('admin_logout',[logout::class,'admin_logout']);
-
 Route::view('course','course_category');
 // display route
 Route::get('admin_dashboard',[operationController::class,'show'])->middleware('adminlogout');
-Route::get('admin_dashboard',[operationController::class,'show']);
+
+//admin_login with signUP
+Route::post('admin_signup',[AdminController::class,'admin_login']);
+Route::post('admin_login',[AdminController::class,'login'])->middleware('adminlogin');
+Route::get('admin_logout',[logout::class,'admin_logout']);
 
 // update route
 Route::get('edit/{id}',[operationController::class,'edit']);

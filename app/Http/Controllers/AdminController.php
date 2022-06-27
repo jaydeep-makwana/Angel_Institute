@@ -31,13 +31,6 @@ class AdminController extends Controller
             'code' => $input->input('code')
         ]);
 
-        // if (Auth::guard('admin')->attempt($input->only('email', 'password'))) {
-
-
-        //     echo  'admin logged';
-        // } else {
-        //     return  $input->input();
-        // }
         return redirect('login')->with('status', 'you are successfully ragistered..');
     }
 
@@ -48,11 +41,15 @@ class AdminController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::guard('admin')->attempt($data->only('email', 'password'))) {
-            return   redirect('admin_dashboard');
-        } else {
+        $value = $data->input('email');
+        $data->session()->put('email',$value);
+        return redirect('admin_dashboard');
 
-            return   redirect('login');
-        }
+        // if (Auth::guard('admin')->attempt($data->only('email', 'password'))) {
+        //     return   redirect('admin_dashboard');
+        // } else {
+
+        //     return   redirect('login');
+        // }
     }
 }

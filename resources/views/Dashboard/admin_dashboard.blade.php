@@ -33,6 +33,7 @@
             <img src="{{asset('Images/angel.png')}}" alt="">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
+                    <li><h3 class="text-success">{{session('email')}}</h3></li>
                 </ul>
             </div>
         </nav>
@@ -137,6 +138,7 @@
                             </div>
                         </div>
 
+                        <!-- end modal for student datails -->
 
                         <!-- modal for fees payment -->
                         <div class="modal fade" id="fees-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -151,10 +153,6 @@
                                     <div class="modal-body">
                                         <div class="container text-left">
                                             <h4>
-                                                <p> Student Id : {{$info->id}}</p>
-                                                <p>Name : {{$info->Full_Name}}</p>
-                                                <p class="mb-4">Course : {{$info->Course}}
-                                                </p>
                                                 <p> Student Id : {{$info->id}}</p>
                                                 <p>Name : {{$info->Full_Name}}</p>
                                                 <p class="mb-4">Course : {{$info->Course}}
@@ -176,7 +174,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Ends Modal for student details -->
+                        <!-- Ends Modal for fees payment -->
 
                         <!-- modal for batch time -->
                         <div class="modal fade" id="batch-{{$info->id}}" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -204,8 +202,9 @@
             </div>
         </div>
     </div>
-    <!-- Ends Modal for student details -->
+    <!-- end modal for batch time -->
 
+    <!-- start Course modsal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal modal-dialog-centered">
             <div class="modal-content">
@@ -222,39 +221,17 @@
                             <label for="courseName" class="col-form-label">Course Name:</label>
                             <input type="text" class="form-control" id="courseName" name="courseName">
                         </div>
-                        @csrf
-                        <div class="form-group">
-                            <label for="courseName" class="col-form-label">Course Name:</label>
-                            <input type="text" class="form-control" id="courseName" name="courseName">
-                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-            </form>
-
         </div>
     </div>
     </div>
     <!--  Finish Add Course Modal -->
     <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
