@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url('CSS/style.css')}}">
     <script src="https://use.fontawesome.com/f59bcd8580.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Login</title>
+    <style>
+            .my-element {
+                animation: backInDown; 
+             /* animation-iteration-count: infinite; */
+               animation-duration: 2s; 
+           }
+    </style>
 </head>
 
 <body>
@@ -22,7 +30,7 @@
         </div>
         @endif
     </div>
-    
+    <div class="my-element">
     <div class="container">
         <div class="row m-5 no-gutters shadow-lg">
             <div class="col-md-6 d-none d-md-block">
@@ -58,6 +66,7 @@
 
             </div>
         </div>
+    </div>
     </div>
 </body>
 
