@@ -87,25 +87,24 @@
 
                                         <label for=""> Cast :</label>
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="SC" value="SC" @if(str_contains($info->cast, 'SC')) checked @endif>
+                                            <input type="radio" class="form-check-input" name="cast" id="SC" value="SC" @if(str_contains($info->cast, 'SC')) selected @endif>
                                             <label for="SC" class="form-check-label">SC</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="ST" value="ST" @if(str_contains($info->cast, 'ST')) checked @endif>
+                                            <input type="radio" class="form-check-input" name="cast" id="ST" value="ST" @if(str_contains($info->cast, 'ST')) selected @endif>
                                             <label for="ST" class="form-check-label">ST</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="OBC" value="OBC" @if(str_contains($info->cast, 'OBC')) checked @endif>
+                                            <input type="radio" class="form-check-input" name="cast" id="OBC" value="OBC" @if(str_contains($info->cast, 'OBC')) selected @endif>
                                             <label for="OBC" class="form-check-label">OBC</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="Gen" value="Gen" @if(str_contains($info->cast, 'Gen')) checked @endif>
+                                            <input type="radio" class="form-check-input" name="cast" id="Gen" value="Gen" @if(str_contains($info->cast, 'Gen')) selected @endif>
                                             <label for="Gen" class="form-check-label">Gen</label>
                                         </div>
-                                        <span class="text-danger">@error('cast'){{$message}} @enderror</span>
 
                                     </div>
 
@@ -148,8 +147,13 @@
 
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label for="Course" class="form-check-label">Course :</label>
-                                            <input type="text" class="form-control" value="{{$info->Course}}" name="Course">
+                                            <label for="Course" class="form-check-label">Course</label>
+                                            <select name="Course" class="form-control" id="Course">
+                                                <option value="" selected disabled>--Choose Courses--</option>
+                                                @foreach($course_Data as $data)
+                                                <option value="{{$data->courseName}}" @if($data->courseName==$info->Course) selected @endif>{{$data->courseName}}</option>
+                                                @endforeach
+                                            </select>
                                             <span class="text-danger">@error('Course'){{$message}} @enderror</span>
                                         </div>
 
@@ -158,16 +162,21 @@
                                             <input type="text" placeholder="Authorisation" name="Authorisation" class="form-control" value="{{$info->Authorisation}}">
                                             <span class="text-danger">@error('Authorisation'){{$message}} @enderror</span>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label for="inputFees" class="form-check-label">Fees</label>
-                                            <input type="text" placeholder="Fees" name="Fees" class="form-control" value="{{old('Fees')}}">
+                                            <input type="text" placeholder="Fees" name="Fees" class="form-control" value="{{$info->Fees}}">
                                             <span class="text-danger">@error('Fees'){{$message}} @enderror</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputNet_Fees" class="form-check-label">Net Fees</label>
+                                            <input type="text" placeholder="Net Amount" name="Net_Fees" class="form-control" value="{{$info->Net_Fees}}">
+                                            <span class="text-danger">@error('Net_Fees'){{$message}} @enderror</span>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="inputDuration" class="form-check-label">Duration</label>
-                                            <input type="text" placeholder="Duration" name="Duration" class="form-control" value="{{old('Duration')}}">
+                                            <input type="text" placeholder="Duration" name="Duration" class="form-control" value="{{$info->Duration}}">
                                             <span class="text-danger">@error('Duration'){{$message}} @enderror</span>
                                         </div>
 

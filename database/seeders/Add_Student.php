@@ -24,7 +24,7 @@ class Add_Student extends Seeder
                 'Contact_No' => 1234567890,
                 'BOD' => date('Y-m-d'),
                 'gender' => 'male',
-                'cast' => '-',
+                'cast' => 'ST',
                 'Qualification' => '12th',
                 'Occupation' => '-',
                 'Counselling_By' => 'by me',

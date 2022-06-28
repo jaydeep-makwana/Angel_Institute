@@ -16,7 +16,6 @@ class admisssion_form extends Controller
             // 'Contact_No' => 'required | numeric | digits:10',
             // 'BOD' => 'required | date',
             // 'gender' => 'required',
-            // 'cast' => 'required',
             // 'Qualification' => 'required',
             // 'Occupation' => 'required',
             // 'Counselling_By' => 'required',
