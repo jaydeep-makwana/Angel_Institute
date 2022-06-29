@@ -20,7 +20,6 @@ class CreateStudentsTable extends Migration
             $table->bigInteger('Contact_No');
             $table->date('BOD');
             $table->string('gender');
-            $table->string('cast',null);
             $table->string('Qualification');
             $table->string('Occupation');
             $table->string('Counselling_By');

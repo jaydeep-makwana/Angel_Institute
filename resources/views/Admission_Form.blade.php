@@ -67,26 +67,7 @@
                                     </div>
                                     <span class="text-danger">@error('gender'){{$message}} @enderror</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for=""> Cast :</label>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="cast" id="SC" value="SC" @if(old('cast')=='SC' )checked @endif>
-                                        <label for="SC" class="form-check-label">SC</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="cast" id="ST" value="ST" @if(old('cast')=='ST' )checked @endif>
-                                        <label for="ST" class="form-check-label">ST</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="cast" id="OBC" value="OBC" @if(old('cast')=='OBC' )checked @endif>
-                                        <label for="OBC" class="form-check-label">OBC</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="cast" id="Gen" value="Gen" @if(old('cast')=='Gen' )checked @endif>
-                                        <label for="Gen" class="form-check-label">Gen</label>
-                                    </div>
-                                    <span class="text-danger">@error('cast'){{$message}} @enderror</span>
-                                </div>
+                               
                                 <div class="form-group">
                                     <label for="inputQualification" class="form-check-label">Qualification</label>
                                     <input type="text" placeholder="Qualification" name="Qualification" class="form-control" value="{{old('Qualification')}}">

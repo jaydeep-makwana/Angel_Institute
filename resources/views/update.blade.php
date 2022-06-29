@@ -83,31 +83,7 @@
 
                                     </div>
 
-                                    <div class="form-group">
-
-                                        <label for=""> Cast :</label>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="SC" value="SC" @if(str_contains($info->cast, 'SC')) selected @endif>
-                                            <label for="SC" class="form-check-label">SC</label>
-                                        </div>
-
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="ST" value="ST" @if(str_contains($info->cast, 'ST')) selected @endif>
-                                            <label for="ST" class="form-check-label">ST</label>
-                                        </div>
-
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="OBC" value="OBC" @if(str_contains($info->cast, 'OBC')) selected @endif>
-                                            <label for="OBC" class="form-check-label">OBC</label>
-                                        </div>
-
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="cast" id="Gen" value="Gen" @if(str_contains($info->cast, 'Gen')) selected @endif>
-                                            <label for="Gen" class="form-check-label">Gen</label>
-                                        </div>
-
-                                    </div>
-
+                                   
                                     <div class="form-group">
                                         <label for="inputQualification" class="form-check-label">Qualification</label>
                                         <input type="text" placeholder="Qualification" name="Qualification" class="form-control" value="{{$info->Qualification}}">

@@ -10,29 +10,25 @@ class admisssion_form extends Controller
     function operation(Request $data)
     {
         $data->validate([
-            // personal detail
-            // 'Full_Name' => 'required',
-            // 'Address' => 'required',
-            // 'Contact_No' => 'required | numeric | digits:10',
-            // 'BOD' => 'required | date',
-            // 'gender' => 'required',
-            // 'Qualification' => 'required',
-            // 'Occupation' => 'required',
-            // 'Counselling_By' => 'required',
-
-            // // course detail
-            // 'Course' => 'required',
-            // 'Authorisation' => 'required',
-            // 'Fees' => 'required | numeric',
-            // 'Duration' => 'required',
-            // 'Discount' => 'required',
-            // 'Batch_Time' => 'required',
-            // 'Net_Fees' => 'required',
-            // 'Join_Date' => 'required',
-             // parents detail
-            // "parent_Name"=>"required",
-            //  "p arent_Contact"=>"required | digits:10 |numeric",
-            //  "parent_Occupation"=>"required"
+            'Full_Name' => 'required',
+            'Address' => 'required',
+            'Contact_No' => 'required | numeric | digits:10',
+            'BOD' => 'required | date',
+            'gender' => 'required',
+            'Qualification' => 'required',
+            'Occupation' => 'required',
+            'Counselling_By' => 'required',
+            'Course' => 'required',
+            'Authorisation' => 'required',
+            'Fees' => 'required | numeric',
+            'Duration' => 'required',
+            'Discount' => 'required',
+            'Batch_Time' => 'required',
+            'Net_Fees' => 'required',
+            'Join_Date' => 'required',
+            "parent_Name"=>"required",
+             "p arent_Contact"=>"required | digits:10 |numeric",
+             "parent_Occupation"=>"required"
         ]);
 
         DB::table('students')->insert([
@@ -42,7 +38,6 @@ class admisssion_form extends Controller
             'Contact_No' => $data->input('Contact_No'),
             'BOD' => $data->input('BOD'),
             'gender' => $data->input('gender'),
-            'cast' => $data->input('cast'),
             'Qualification' => $data->input('Qualification'),
             'Occupation' => $data->input('Occupation'),
             'Counselling_By' => $data->input('Counselling_By'),
