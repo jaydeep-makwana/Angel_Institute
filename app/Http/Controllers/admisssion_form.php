@@ -10,6 +10,7 @@ class admisssion_form extends Controller
     function operation(Request $data)
     {
         $data->validate([
+<<<<<<< HEAD
             'Full_Name' => 'required',
             'Address' => 'required',
             'Contact_No' => 'required | numeric | digits:10',
@@ -29,6 +30,34 @@ class admisssion_form extends Controller
             "parent_Name"=>"required",
              "p arent_Contact"=>"required | digits:10 |numeric",
              "parent_Occupation"=>"required"
+=======
+            
+            // personal detail
+            // 'Full_Name' => 'required',
+            // 'Address' => 'required',
+            // 'Contact_No' => 'required | numeric | digits:10',
+            // 'BOD' => 'required | date',
+            // 'gender' => 'required',
+            // 'cast' => 'required',
+            // 'Qualification' => 'required',
+            // 'Occupation' => 'required',
+            // 'Counselling_By' => 'required',
+
+            // course detail
+            // 'Course' => 'required',
+            // 'Authorisation' => 'required',
+            // 'Fees' => 'required | numeric',
+            // 'Duration' => 'required',
+            // 'Discount' => 'required',
+            // 'Batch_Time' => 'required',
+            // 'Net_Fees' => 'required',
+            // 'Join_Date' => 'required',
+
+            //  parents detail
+            // "parent_Name"=>"required",
+            //  "parent_Contact"=>"required | digits:10 |numeric",
+            //  "parent_Occupation"=>"required"
+>>>>>>> d8bedf3a8874edac8877f3ead8a02f0115067834
         ]);
 
         DB::table('students')->insert([

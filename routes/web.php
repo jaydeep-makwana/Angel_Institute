@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::view('/', 'home');
 Route::view('sidebar','sidebar');
 Route::view('navbar','navbar');
-Route::view('signup','admin_signup');
+Route::view('signup','admin_signup')->middleware('adminlogin');
 Route::view('ragister','ragister');
 Route::view('login','login');
 
@@ -46,7 +46,7 @@ Route::get('admin_dashboard',[operationController::class,'show'])->middleware('a
 
 //admin_login with signUP
 Route::post('admin_signup',[AdminController::class,'admin_login']);
-Route::post('admin_login',[AdminController::class,'login'])->middleware('adminlogin');
+Route::post('admin_login',[AdminController::class,'login']);
 Route::get('admin_logout',[logout::class,'admin_logout']);
 
 // update route

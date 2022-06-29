@@ -28,7 +28,8 @@ class CreateStudentsTable extends Migration
             $table->integer('Fees');
             $table->string('Duration');
             $table->string('Discount');
-            $table->string('Batch_Time');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->integer('Net_Fees');
             $table->string('Discount_Offer');
             $table->date('Join_Date');
