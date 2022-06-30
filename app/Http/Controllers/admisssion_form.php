@@ -10,30 +10,32 @@ class admisssion_form extends Controller
     function operation(Request $data)
     {
         $data->validate([
+            
             // personal detail
-            // 'Full_Name' => 'required',
-            // 'Address' => 'required',
-            // 'Contact_No' => 'required | numeric | digits:10',
-            // 'BOD' => 'required | date',
-            // 'gender' => 'required',
-            // 'cast' => 'required',
-            // 'Qualification' => 'required',
-            // 'Occupation' => 'required',
-            // 'Counselling_By' => 'required',
+            'Full_Name' => 'required',
+            'Address' => 'required',
+            'Contact_No' => 'required | numeric | digits:10',
+            'BOD' => 'required | date',
+            'gender' => 'required',
+            'cast' => 'required',
+            'Qualification' => 'required',
+            'Occupation' => 'required',
+            'Counselling_By' => 'required',
 
-            // // course detail
-            // 'Course' => 'required',
-            // 'Authorisation' => 'required',
-            // 'Fees' => 'required | numeric',
-            // 'Duration' => 'required',
-            // 'Discount' => 'required',
-            // 'Batch_Time' => 'required',
-            // 'Net_Fees' => 'required',
-            // 'Join_Date' => 'required',
-             // parents detail
-            // "parent_Name"=>"required",
-            //  "p arent_Contact"=>"required | digits:10 |numeric",
-            //  "parent_Occupation"=>"required"
+            // course detail
+            'Course' => 'required',
+            'Authorisation' => 'required',
+            'Fees' => 'required | numeric',
+            'Duration' => 'required',
+            'Discount' => 'required',
+            'Batch_Time' => 'required',
+            'Net_Fees' => 'required',
+            'Join_Date' => 'required',
+
+            //  parents detail
+            "parent_Name"=>"required",
+             "p arent_Contact"=>"required | digits:10 |numeric",
+             "parent_Occupation"=>"required"
         ]);
 
         DB::table('students')->insert([
