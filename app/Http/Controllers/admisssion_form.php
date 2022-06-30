@@ -12,41 +12,30 @@ class admisssion_form extends Controller
         $data->validate([
             
             // personal detail
-<<<<<<< HEAD
-            'Full_Name' => 'required',
-            'Address' => 'required',
-            'Contact_No' => 'required | numeric | digits:10',
-            'BOD' => 'required | date',
-            'gender' => 'required',
-            'cast' => 'required',
-            'Qualification' => 'required',
-            'Occupation' => 'required',
-            'Counselling_By' => 'required',
-=======
             // 'Full_Name' => 'required',
             // 'Address' => 'required',
             // 'Contact_No' => 'required | numeric | digits:10',
             // 'BOD' => 'required | date',
             // 'gender' => 'required',
+            // 'cast' => 'required',
             // 'Qualification' => 'required',
             // 'Occupation' => 'required',
             // 'Counselling_By' => 'required',
->>>>>>> 07b314d49c07f9b9d9078cc39499349e935678e5
 
             // course detail
-            'Course' => 'required',
-            'Authorisation' => 'required',
-            'Fees' => 'required | numeric',
-            'Duration' => 'required',
-            'Discount' => 'required',
-            'Batch_Time' => 'required',
-            'Net_Fees' => 'required',
-            'Join_Date' => 'required',
+            // 'Course' => 'required',
+            // 'Authorisation' => 'required',
+            // 'Fees' => 'required | numeric',
+            // 'Duration' => 'required',
+            // 'Discount' => 'required',
+            // 'Batch_Time' => 'required',
+            // 'Net_Fees' => 'required',
+            // 'Join_Date' => 'required',
 
             //  parents detail
-            "parent_Name"=>"required",
-             "p arent_Contact"=>"required | digits:10 |numeric",
-             "parent_Occupation"=>"required"
+            // "parent_Name"=>"required",
+            //  "parent_Contact"=>"required | digits:10 |numeric",
+            //  "parent_Occupation"=>"required"
         ]);
 
         DB::table('students')->insert([
