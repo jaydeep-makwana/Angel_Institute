@@ -12,6 +12,7 @@ class admisssion_form extends Controller
         $data->validate([
             
             // personal detail
+<<<<<<< HEAD
             'Full_Name' => 'required',
             'Address' => 'required',
             'Contact_No' => 'required | numeric | digits:10',
@@ -21,6 +22,16 @@ class admisssion_form extends Controller
             'Qualification' => 'required',
             'Occupation' => 'required',
             'Counselling_By' => 'required',
+=======
+            // 'Full_Name' => 'required',
+            // 'Address' => 'required',
+            // 'Contact_No' => 'required | numeric | digits:10',
+            // 'BOD' => 'required | date',
+            // 'gender' => 'required',
+            // 'Qualification' => 'required',
+            // 'Occupation' => 'required',
+            // 'Counselling_By' => 'required',
+>>>>>>> 07b314d49c07f9b9d9078cc39499349e935678e5
 
             // course detail
             'Course' => 'required',

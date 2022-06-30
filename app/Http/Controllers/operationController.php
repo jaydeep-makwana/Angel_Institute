@@ -65,8 +65,9 @@ class operationController extends Controller
      */
     public function edit($id)
     {
+        $course = course::all();
         $stud = DB::table('students')->where('id', $id)->get();
-        return view('update', ['student' => $stud]);
+        return view('update', ['student' => $stud],['course_Data'=>$course]);
     }
    
     /**
@@ -85,7 +86,7 @@ class operationController extends Controller
             'Contact_No' => $data->input('Contact_No'),
             'BOD' => $data->input('BOD'),
             'gender' => $data->input('gender'),
-            // 'cast' => $data->input('cast'),
+            'cast' => $data->input('cast'),
             'Qualification' => $data->input('Qualification'),
             'Occupation' => $data->input('Occupation'),
             'Counselling_By' => $data->input('Counselling_By'),

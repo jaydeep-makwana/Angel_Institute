@@ -13,7 +13,7 @@ class CreateFeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('fees', function (Blueprint $table) {
+        Schema::create('fees_Payment', function (Blueprint $table) {
             $table->id('id');
             $table->string('Full_Name');
             $table->string('Course');
