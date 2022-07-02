@@ -17,7 +17,7 @@
 
 
     <div class="container-fluid  h-100">
-        @include('sidebar')
+        @include('Dashboard.sidebar')
         <div class="h-100 ">
             <form method="POST" enctype="multipart/form-data" class="border">
                 <form method="POST" enctype="multipart/form-data" class="border shadow-lg mb-5">

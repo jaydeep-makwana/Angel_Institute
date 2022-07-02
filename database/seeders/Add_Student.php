@@ -23,6 +23,7 @@ class Add_Student extends Seeder
                 'Address' => $faker->address(),
                 'Contact_No' => 1234567890,
                 'BOD' => date('Y-m-d'),
+                'cast' => 'SC',
                 'gender' => 'male',
                 'Qualification' => '12th',
                 'Occupation' => '-',

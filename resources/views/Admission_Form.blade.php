@@ -144,15 +144,11 @@
                                     <input type="text" placeholder="Discount" name="Discount" class="form-control" value="{{old('Discount')}}">
                                     <span class="text-danger">@error('Discount'){{$message}} @enderror</span>
                                 </div>
-<<<<<<< HEAD
-                               
-=======
                                 <div class="form-group">
                                     <label for="inputBatch" class="form-check-label">Start Batch Time</label>
                                     <input type="time" name="start_time" class="form-control" value="{{old('start_time')}}"> 
                                     <span class="text-danger">@error('start_time'){{$message}} @enderror</span>
                                 </div>
->>>>>>> d8bedf3a8874edac8877f3ead8a02f0115067834
                                 <div class="form-group">
                                     <label for="inputBatch" class="form-check-label">End Batch Time</label>
                                     <input type="time" name="end_time" class="form-control" value="{{old('end_time')}}">

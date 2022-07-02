@@ -26,9 +26,10 @@ input[type=submit] {
 
 /* Login with home page css */
 
-body {
+
+/* body {
     background: #c9ccd1;
-}
+} */
 
 .form-style input {
     border: 0;
@@ -96,9 +97,10 @@ button {
 
 /* Admin Signup form */
 
-body {
+
+/* body {
     background: lightgrey;
-}
+} */
 
 .main {
     background-color: #fff;
@@ -115,7 +117,7 @@ body {
 }
 
 .btn {
-    background-color: #6200EA;
+    /* background-color: #002bea; */
     width: 100%;
     height: 50px;
     border: none;
@@ -127,10 +129,11 @@ body {
     font-weight: bold;
 }
 
-a {
+
+/* a {
     text-decoration: underline;
     color: #ff39c2!important;
-}
+} */
 
 .form-control {
     border: none;
@@ -167,4 +170,8 @@ a {
     font-size: 80%!important;
     transform: translate3d(0, -100%, 0)!important;
     opacity: 1!important;
+}
+
+nav {
+    border-bottom: 1px solid black;
 }

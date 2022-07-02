@@ -23,11 +23,10 @@ Route::get('/', function () {
     return view('demo');
 });
 Route::view('/', 'home');
-Route::view('sidebar','sidebar');
+Route::view('sidebar','Dashboard.sidebar');
 Route::view('navbar','navbar');
 Route::view('signup','admin_signup')->middleware('adminlogin');
-Route::view('ragister','ragister');
-Route::view('login','login');
+Route::view('login','login')->middleware('adminlogin');
 
 //birthday
 Route::get('bDay',[operationController::class,'find_bDay']);

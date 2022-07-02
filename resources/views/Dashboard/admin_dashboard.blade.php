@@ -12,37 +12,27 @@
 </head>
 
 <body>
-
-    <div id="mySidenav" class="sidenav">
-        <span style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
-        <!-- Button trigger modal -->
-        <a href="admission_form">Add Student</a>
-        <a type="button" data-toggle="modal" data-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
-        <a href="#" id="batch">Batch</a>
-        <a href="{{url('bDay')}}">Birthday</a>
-        <a class="nav-link nav" href="{{ url('/') }}">Home </a>
-        <a class="nav-link nav" href="{{ url('/admin_dashboard') }}">Dashboard </a>
-        <a class="nav-link nav" href="{{ url('admin_logout') }}">Logout</a>
-
-    </div>
+  
 
     <div class="container-fluid p-0 text-center" id="main">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
-            <span style="font-size:25px;cursor:pointer;" class="mr-2" onclick="openNav()">&#9776;</span>
-            <img src="{{asset('Images/angel.png')}}" alt="">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li><h3 class="text-success">{{session('email')}}</h3></li>
-                </ul>
+        <div class="row">
+            <div class="col-lg-12">
+
+                @include('navbar')
             </div>
-        </nav>
-        <div>
-            <!-- student table -->
-            <div class="mx-auto table-container">
-                <table class="table  text-center table-responsive">
+
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+
+                @include('Dashboard.sidebar')
+            </div>
+            <div class="col-lg-10 table-responsive table-container">
+                <!-- student table -->
+
+                <table class="table">
                     <thead>
-                        <tr class="text-light" style="background-color:darkslategrey;">
+                        <tr class="text-light  bg-dark">
                             <th>Id</th>
                             <th>Name</th>
                             <th>Gender</th>
@@ -193,12 +183,13 @@
                             </div>
                         </div>
                         @endforeach
-                        
+
                     </tbody>
                 </table>
-            </div>
-            <div class="container pagination">
-                {{$data->links()}}
+                <div class="container pagination">
+                    {{$data->links()}}
+                </div>
+
             </div>
         </div>
     </div>
@@ -227,11 +218,12 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 </form>
+            </div>
         </div>
     </div>
-    </div>
     <!--  Finish Add Course Modal -->
-    <script>
+
+    <!-- <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
@@ -241,7 +233,7 @@
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
-    </script>
+    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

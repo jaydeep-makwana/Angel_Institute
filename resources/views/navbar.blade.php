@@ -1,31 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
-    <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
-    <style>
-        .img{
-            display: flex;
-            flex-direction: row-reverse;
-        }
-    </style>
-</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <img src="{{asset('Images/angel.png')}}" height="50" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<body>
-    <nav class="navbar bg-dark">
-        <img src="images/logow.png" alt="" height="60px" width="200px">
-        <ul class="nav jastify-content-end">
-            <li class="nav-item"><a href="/" class="nav-link text-light">Home</a></li>
-            <li class="nav-item"><a href="" class="nav-link text-light">About</a></li>
-            <li class="nav-item"><a href="admission_form" class="nav-link text-light">Add Student</a></li>
-            <li class="nav-item"><a href="signup" class="nav-link text-light">Signup</a></li>
-            <li class="nav-item"><a href="login" class="nav-link text-light">Signin</a></li>
-            <li class="nav-item"><a href="{{url('login')}}" class="nav-link text-light">Dashboard</a></li>
-          
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url('/')}}">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url('admission_form')}}">Add Student</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url('signup')}}">Sign up</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url('login')}}">Sign in</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url('admin_dashboard')}}">Dashboard</a>
+            </li>
         </ul>
-    </nav>
-</body>
-</html>
+    </div>
+</nav>
