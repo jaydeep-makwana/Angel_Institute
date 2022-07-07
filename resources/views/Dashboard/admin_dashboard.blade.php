@@ -8,17 +8,31 @@
     <title>Admin</title>
     <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url('CSS/dashboard.css')}}">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
-  
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#click").click(function(){
+        swal({
+            title: "User created!",
+            text: "Suceess message sent!!",
+            icon: "success",
+            button: "Ok",
+            timer: 2000
+        });
+    });
+    });
+</script>
+<button id="click" type="submit">alert</button>
     <div class="container-fluid p-0 text-center" id="main">
         <div class="row">
             <div class="col-lg-12">
 
-                @include('navbar')
+                @include('Dashboard.navbar')
             </div>
 
         </div>
@@ -239,7 +253,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
