@@ -21,6 +21,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{url('admin_dashboard')}}">Dashboard</a>
             </li>
+        
         </ul>
     </div>
 </nav>

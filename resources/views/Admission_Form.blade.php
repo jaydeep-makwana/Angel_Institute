@@ -6,25 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url('CSS/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ url('CSS/style.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+    <link rel="stylesheet" href="{{ url('CSS/admission.css')}}">
     <title>Admission_Form</title>
-    <style>
-        .my-animation {
-            animation: backInDown;
-            /* animation-iteration-count: infinite; */
-            animation-duration: 3s;
-        }
-    </style>
+   
 
 </head>
 
 <body>
     @include('navbar')
 
-    <div class="container-fluid  h-100 p-5">
-        <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow-lg ">
+    <div class="container-fluid  p-5 mb-2">
+        <form action="add_student" method="POST" enctype="multipart/form-data" class="border shadow-lg">
             @csrf
             <div class="row w-100">
                 <div class="col-lg-6">
@@ -117,7 +109,7 @@
                                     <select name="Course" class="form-control" id="Course">
                                         <option value="" selected disabled>--Choose Courses--</option>
                                         @foreach($data as $info)
-                                        <option value="{{$info->courseName}}" @if(old('Course')=='{{$info->courseName}}' )checked @endif>{{$info->courseName}}</option>
+                                        <option value="{{$info->courseName}}" @if(old('Course')=='{{$info->courseName}}')checked @endif>{{$info->courseName}}</option>
                                         @endforeach
                                     </select>
                                     <span class="text-danger">@error('Course'){{$message}} @enderror</span>
@@ -136,6 +128,10 @@
                                     <label for="inputDuration" class="form-check-label">Duration</label>
                                     <input type="text" placeholder="Duration" name="Duration" class="form-control" value="{{old('Duration')}}">
                                     <span class="text-danger">@error('Duration'){{$message}} @enderror</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputDiscount_Offer" class="form-check-label">Discount Offer</label>
+                                    <input type="text" placeholder="Discount Offer" name="Discount_Offer" class="form-control" value="{{old('Discount_Offer')}}">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -159,10 +155,7 @@
                                     <input type="text" placeholder="Net Amount" name="Net_Fees" class="form-control" value="{{old('Net_Fees')}}">
                                     <span class="text-danger">@error('Net_Fees'){{$message}} @enderror</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="inputDiscount_Offer" class="form-check-label">Discount Offer</label>
-                                    <input type="text" placeholder="Discount Offer" name="Discount_Offer" class="form-control" value="{{old('Discount_Offer')}}">
-                                </div>
+                               
                                 <div class="form-group">
                                     <label for="inputJoin_Date" class="form-check-label">Join Date :</label>
                                     <input type="date" placeholder="Join_Date" name="Join_Date" class="form-control" value="{{old('Join_Date')}}">
