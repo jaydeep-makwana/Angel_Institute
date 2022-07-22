@@ -1,6 +1,6 @@
 <div id="mySidenav" class="sidenav">
     <!-- Button trigger modal -->
-    <a href="#">Add Student</a>
+    <a href="add_student">Add Student</a>
     <a type="button" data-toggle="modal" data-target="#exampleModal" data-bs-whatever="@getbootstrap">Add course</a>
     <a href="#" id="batch">Batch</a>
     <a href="{{url('bDay')}}">Birthday</a>
